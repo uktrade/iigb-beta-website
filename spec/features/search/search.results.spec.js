@@ -8,7 +8,7 @@ describe('IIGB Search Functionality', function() {
 			.url(base + '/int/industries')
 			.waitForExist('body');
 
-		var searchInput = $('#searchInput')
+		var searchInput = $('#search')
 		var searchResult = $('.search-result')
 
 		if (browser.isVisible('.navbar-toggle')) {
