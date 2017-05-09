@@ -1,6 +1,4 @@
 var base = process.env.BASE_IIGB_URL;
-require('jasmine');
-
 
 describe('IIGB Search Functionality', function() {
 	it('returns results for "finance"', function() {

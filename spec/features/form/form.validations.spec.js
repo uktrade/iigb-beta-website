@@ -1,7 +1,4 @@
 var base = process.env.BASE_IIGB_URL;
-require('jasmine');
-
-//TODO use url base from env vars in url
 
 describe('IIGB Form Functionality', function() {
 	it('validates 6 fields on form', function() {
