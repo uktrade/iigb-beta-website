@@ -1,5 +1,5 @@
-var expect = require('chai').expect
 var base = process.env.BASE_IIGB_URL;
+require('jasmine');
 
 
 describe('IIGB Search Functionality', function() {
@@ -24,7 +24,7 @@ describe('IIGB Search Functionality', function() {
 		searchResult.waitForVisible(10000);
 
 		browser.elements('.search-result', function(err, res) {
-			expect(res.value.length, 'redirected url').to.be.above(1);
+			expect(res.value.length, 'redirected url').toBeGreaterThan(1);
 		});
 	});
 });

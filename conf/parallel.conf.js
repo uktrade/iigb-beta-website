@@ -5,7 +5,7 @@ exports.config = {
   updateJob: false,
   specs: [
     './spec/features/search.js',
-    './spec/features/form.js',
+    // './spec/features/form.js',  //  TODO Reimplement for the new form MN
     './spec/features/georedirect.js'
   ],
   exclude: [],
@@ -58,11 +58,23 @@ exports.config = {
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
 
-  framework: 'mocha',
-  mochaOpts: {
-    ui: 'bdd',
-    timeout: 45000
-  }
+  framework: 'jasmine',
+  jasmineNodeOpts: {
+    //
+    // Jasmine default timeout
+    defaultTimeoutInterval: 45000,
+    //
+    // The Jasmine framework allows it to intercept each assertion in order to log the state of the application
+    // or website depending on the result. For example it is pretty handy to take a screenshot every time
+    // an assertion fails.
+    expectationResultHandler: function(passed, assertion) {
+        // do something
+    },
+    //
+    // Make use of Jasmine-specific grep functionality
+    grep: null,
+    invertGrep: null
+  },
 }
 
 // Code to support common capabilities

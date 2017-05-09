@@ -1,5 +1,5 @@
-var expect = require('chai').expect
 var base = process.env.BASE_IIGB_URL;
+require('jasmine');
 
 
 describe('IIGB Search Functionality', function() {
@@ -21,6 +21,6 @@ describe('IIGB Search Functionality', function() {
 		searchInput.waitForVisible(5000);
 		searchInput.setValue(searchTerm);
 		browser.pause(5000);
-		expect(browser.isVisible('.search-result', 'Search results are not visible')).to.equal(false);
+		expect(browser.isVisible('.search-result', 'Search results are not visible')).toEqual(false);
 	});
 });

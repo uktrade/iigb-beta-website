@@ -1,6 +1,5 @@
 var base = process.env.BASE_IIGB_URL;
-
-var expect = require('chai').expect
+require('jasmine');
 
 //TODO use url base from env vars in url
 
