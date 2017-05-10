@@ -1,4 +1,4 @@
-var base = process.env.BASE_IIGB_URL;
+var base = process.env.BASE_IIGB_URL || 'http://localhost:3000';
 
 describe('IIGB Form Functionality', function() {
 	it('validates 2 fields on form', function() {

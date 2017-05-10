@@ -1,4 +1,4 @@
-var base = process.env.BASE_IIGB_URL;
+var base = process.env.BASE_IIGB_URL || 'http://localhost:3000';
 
 describe('IIGB Search Functionality', function() {
 	it('returns no results with fake search term', function() {

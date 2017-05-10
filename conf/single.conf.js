@@ -49,5 +49,5 @@ exports.config = {
     // Make use of Jasmine-specific grep functionality
     grep: null,
     invertGrep: null
-  },
+  }
 }
