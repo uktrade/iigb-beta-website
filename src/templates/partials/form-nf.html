@@ -200,18 +200,19 @@ formBlock:
                                     <input name="multilingual[form_website]"
                                            type="hidden"
                                            value="{{ labels.form_website[locale.code] }}">
-                                    <input
+                                    <div class="multiple-choice checkbox-line">
+                                        <input
                                             type="checkbox"
                                             id="mailing_list_checkbox"
                                             name="user[mailing_list]"
                                             value="true"
-                                    />
-                                    <label class="col-md-8 dit-not-label"
-                                           style="padding: 10px 0 0 0;"
-                                           for="mailing_list_checkbox">
-                                        {{ labels.form_do_not_have_website[locale.code]
-                                        }}
-                                    </label>
+                                        />
+                                        <label class="dit-not-label"
+                                            for="mailing_list_checkbox">
+                                            {{ labels.form_do_not_have_website[locale.code]
+                                            }}
+                                        </label>
+                                    </div>
                                     <input name="english[form_mailing_list]"
                                            type="hidden"
                                            value="{{ labels.form_mailing_list['en_US'] }}">
@@ -255,7 +256,7 @@ formBlock:
                                         {{ labels.form_enter_staff_number[locale.code] }}</p>
                                     <p class="dit-label">{{ labels.form_staff_number.label[locale.code] }}</p>
                                     {% for o in labels.form_staff_number.options[locale.code] %}
-                                    <div class="form-group-mb-0 col-md-8 transform-wrap">
+                                    <div class="form-group-mb-0 col-md-8 transform-wrap multiple-choice">
                                         <input name="organisation[number_of_employees]"
                                                class="dit-radio"
                                                type="radio"
