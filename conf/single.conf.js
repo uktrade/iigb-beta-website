@@ -1,3 +1,5 @@
+var browserstack = require('browserstack-local')
+
 exports.config = {
   user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
   key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
@@ -22,9 +24,27 @@ exports.config = {
     'os_version': '10',
     'browser': 'Chrome',
     name: 'single_test',
-    build: 'webdriver-browserstack'
+    build: 'webdriver-browserstack',
+    'browserstack.local': true
   }],
-
+  // Code to start browserstack local before start of test
+  onPrepare: function(config, capabilities) {
+    console.log("Connecting local")
+    return new Promise(function(resolve, reject) {
+      exports.bs_local = new browserstack.Local()
+      exports.bs_local.start({
+        'key': exports.config.key
+      }, function(error) {
+        if (error) return reject(error)
+        console.log('Connected. Now testing...')
+        resolve()
+      })
+    })
+  },
+  // Code to stop browserstack local after end of test
+  onComplete: function(capabilties, specs) {
+    exports.bs_local.stop(function() {})
+  },
   logLevel: 'verbose',
   coloredLogs: true,
   // screenshotPath: './errorShots/',
@@ -43,7 +63,7 @@ exports.config = {
     // or website depending on the result. For example it is pretty handy to take a screenshot every time
     // an assertion fails.
     expectationResultHandler: function(passed, assertion) {
-        // do something
+      // do something
     },
     //
     // Make use of Jasmine-specific grep functionality
