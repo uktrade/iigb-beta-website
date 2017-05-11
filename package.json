@@ -25,7 +25,7 @@
     "assets": "./lib/build-assets.sh",
     "predeploy": "npm install && npm run postinstall && npm run build && npm test && node lib/build-redirect-rules.js",
     "deploy": "node_modules/iigb-aws-helpers/deploy.sh && node_modules/iigb-aws-helpers/uploadRedirects.sh s3-redirects.json && node node_modules/iigb-aws-helpers/refreshSingleSearch.js build/ ",
-    "test": "node ./lib/run-tests.js && npm run browser-test-single",
+    "test": "node ./lib/run-tests.js && ./lib/run-integration-tests.sh",
     "browser-test-full": "node_modules/.bin/wdio conf/parallel.conf.js",
     "browser-test-single": "node_modules/.bin/wdio conf/single.conf.js",
     "browser-test-local": "sh spec/features/runner.sh",
@@ -36,13 +36,10 @@
   "dependencies": {
     "async": "^2.1.5",
     "bootstrap": "^3.3.7",
-    "chai": "^3.5.0",
     "html5shiv": "^3.7.3",
     "jquery": "^3.1.1",
     "respond.js": "^1.4.2",
-    "selectivizr": "^1.0.3",
-    "wdio-jasmine-framework": "^0.3.1",
-    "webdriverio": "^4.6.2"
+    "selectivizr": "^1.0.3"
   },
   "devDependencies": {
     "browserify": "^13.3.0",
@@ -68,6 +65,7 @@
     "uglify-js": "^2.7.5",
     "underscore": "^1.8.3",
     "watchify": "^3.8.0",
+    "webdriverio": "^4.6.2",
     "wdio-jasmine-framework": "^0.3.1"
   }
 }
