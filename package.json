@@ -26,6 +26,7 @@
     "predeploy": "npm install && npm run postinstall && npm run build && npm test && node lib/build-redirect-rules.js",
     "deploy": "node_modules/iigb-aws-helpers/deploy.sh && node_modules/iigb-aws-helpers/uploadRedirects.sh s3-redirects.json && node node_modules/iigb-aws-helpers/refreshSingleSearch.js build/ ",
     "test": "node ./lib/run-unit-tests.js && ./lib/run-integration-tests.sh",
+    "full-test-suite": "sh lib/full-testing.sh",
     "browser-test-full": "node_modules/.bin/wdio conf/parallel.conf.js",
     "browser-test-single": "node_modules/.bin/wdio conf/single.conf.js",
     "browser-test-local": "sh spec/features/runner.sh",
