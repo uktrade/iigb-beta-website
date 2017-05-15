@@ -6,6 +6,7 @@
   margin: 0 -15px;
   overflow: hidden;
 
+
   &__item {
     padding: 15px;
     width: 100%;
@@ -16,6 +17,11 @@
     overflow: hidden;
     color: $text-colour;
 
+    @media (max-width: $screen-xs-max) {
+      padding: 0;
+      border: none;
+    }
+    
     &:hover {
       background-color: $toc-colour;
       border: 1px solid $link-colour;

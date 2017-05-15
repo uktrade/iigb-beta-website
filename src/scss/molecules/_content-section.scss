@@ -8,6 +8,11 @@
   border-bottom: 5px solid $red-line-colour;
   overflow: hidden;
 
+  @media (max-width: $screen-xs-max) {
+    padding: 10px;
+    border: none;
+  }
+
   &:focus {
     outline: $white auto 1px;
   }
