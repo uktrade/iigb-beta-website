@@ -45,12 +45,10 @@ function init() {
 
   }
 
-
 }
 
 function onLoaded() {
   try {
-    enhance()
     smoothScroll()
     addActive()
     checkHeight()
@@ -60,8 +58,7 @@ function onLoaded() {
     search()
     jsSearch()
     responsiveTable()
-    heroVideoReload()
-    playVidTest()
+    playVid()
     jsEnhanceExternalLinks()
   } catch (e) {
     error('On loaded failed!', e)
@@ -69,36 +66,20 @@ function onLoaded() {
   removeloading()
 }
 
-function enhance() {
-  enhance_videobg()
-}
-
-
 function removeloading() {
   debug('Removing loading overlay')
   $('.dit-loading').fadeOut(400)
   $('.dit-loading-spinner').fadeOut(400)
 }
 
-function playVidTest() {
+function playVid() {
   debug('Playing video')
-  $('#heroVideo').on('show.bs.modal', function() {
+  $('#playVid').on('click', function() {
+    $('.dit-hero__content').hide() // Hide jumobtron text from screen readers
     var extVid = $('.video-wrapper').attr('data-video')
-    var ytApi = '<iframe width="560" height="315" src="' + extVid + '" frameborder="0" allowfullscreen></iframe>'
+    var ytApi = '<iframe width="560" height="315" src="' + extVid + '&amp;modestbranding=1&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>'
+    $('.video-wrapper').addClass('video-active') // This class adds z-index to video-wrapper in order to cover jumbotron
     $('.video-wrapper').append(ytApi)
-  })
-}
-
-function enhance_videobg() {
-  debug('Enhancing video backgroud')
-  if ($('#bgVid').length > 0 || $('#bgImg').length > 0) {
-    $('.jumbotron').addClass('bg--transparent')
-  }
-}
-
-function heroVideoReload() {
-  $('#closeHeroVideo').click(function() {
-    $('#heroVideo iframe').attr('src', $('#heroVideo iframe').attr('src'))
   })
 }
 
@@ -386,3 +367,8 @@ function jsEnhanceExternalLinks() {
     })
     .attr('target', '_blank')
 }
+
+
+
+
+
