@@ -78,7 +78,7 @@ npm run dev
 
 - Any source change triggers a build when dev server is running.
 
-    Running `npm run develop` sets the variable `DIT_ENV` to `development` which enables watching source files and re-building(sass,js, html). 
+    Running `npm run dev` sets the variable `DIT_ENV` to `development` which enables watching source files and re-building(sass,js, html). 
 
 - To reload/restart the dev server at any time type `rs` the console where app is running.
 
@@ -126,7 +126,8 @@ Below snippet outlines project structure. This snippet only lists files of impor
 -------       |---------  |----------   |
 IIGB_SEARCH   |  https://5dle4b7qu3.execute-api.eu-west-1.amazonaws.com/prod | AWS Cloud api for site search |
 CMS_BRANCH    | develop | Branch to use from [iigb-beta-structure](https://github.com/uktrade/iigb-beta-structure) |
-IIGB_BUILD    |             | Folder name for assets to be copied under. Unix timestamp is set as IIGB_BUILD to when [deployed](#deployment) using Docker deploy script. All references to assets linked in html output use this environment variable to link static assets (images, css, javascript, etc.)
+IIGB_BUILD    |             | Folder name for assets to be copied under. Unix timestamp is set as IIGB_BUILD to when [deployed](#deployment) using Docker deploy script. All references to assets linked in html output use this environment variable to link static assets (images, css, javascript, etc.)|
+BASE_IIGB_URL |             | The root domain URL for the environment.
 
 
 ### Development flow
