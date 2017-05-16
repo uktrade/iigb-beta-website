@@ -103,6 +103,7 @@
         {% for tile in list %}
             <li class="col-xs-12 col-md-6">
                 <a class="dit-ind-side-desc-list__item" href="/{{ base }}{{ tile.link }}">
+                    <span class="visually-hidden">Links to {{ tile.content.title }}</span>
                     <div class="row">
                         <div class="col-xs-3 col-sm-4 dit-ind-side-desc-list__link-wrap">
                           <img src="/{{assets}}/media/thumbnail-4-4/{{ tile.thumbnail }}" alt="{{ tile.content.title }}" class="dit-ind-side-desc-list__image">
@@ -126,6 +127,7 @@
         {% for tile in list %}
             <li class="col-xs-12 col-sm-4">
                 <a class="dit-ind-bottom-desc-list__item" href="/{{ base }}{{ tile.link }}">
+                    <span class="visually-hidden">Links to {{ tile.content.title }}</span>
                     <div class="row">
                         <div class="col-md-12 dit-ind-bottom-desc-list__link-wrap">
                           <img src="/{{assets}}/media/thumbnail-4-3/{{ tile.thumbnail }}" alt="{{ tile.content.title }}" class="dit-ind-bottom-desc-list__image">
