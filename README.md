@@ -80,6 +80,18 @@ The following prefixes are used for special branches:
 
 [http://danielkummer.github.io/git-flow-cheatsheet](http://danielkummer.github.io/git-flow-cheatsheet/)
 
+### Testing
+
+**Accessibility Testing**
+
+The project contains automated accessibility tests, these can be run using 
+
+```bash
+npm run accessibility-test
+```
+
+Running these tests is dependant on having the local development server running on port 3000 and having firefox installed locally.
+
 ### Deployment & Release
 
 `develop` branch is continuously deployed to [staging environment](https://staging.invest.great.gov.uk/) for QA purposes. All new features are available on staging soon after the pull request is approved by a team member and feature is finished.
