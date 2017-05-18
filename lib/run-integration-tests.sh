@@ -23,7 +23,16 @@ function on_error() {
 trap on_error ERR SIGINT
 
 function wait_for_server() {
-  timeout 40 bash -c 'until { echo > /dev/tcp/localhost/3000; } 2>/dev/null; do sleep 2; done'
+  local timeout=40 #seconds
+  local count=$((timeout/2))
+  until { echo > /dev/tcp/localhost/3000; } 2>/dev/null; do
+    if [[ $count -eq 0  ]]; then
+      return 1
+    fi
+    sleep 2;
+    echo "Remaining attempts to connect to server: $count"
+    count=$((count-1))
+  done
 }
 
 function run_integration_tests() {
