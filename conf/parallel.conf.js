@@ -14,21 +14,24 @@ exports.config = {
   commonCapabilities: {
     name: 'parallel_test',
     build: 'webdriver-browserstack',
-    'resolution': '1600x1200'
+    'resolution': '1600x1200',
+    'browserstack.local' :true
 
   },
 
   capabilities: [{
       browser: 'chrome',
-    }, {
+    } , {
       browser: 'firefox'
     }, {
       'browser': 'IE',
       'browser_version': '10.0',
-    }, {
+    },
+    {
       'browser': 'safari',
       'browser_version': '9.0',
-    }, {
+    },
+    {
       browser: 'safari'
     }
     // {
@@ -49,10 +52,9 @@ exports.config = {
     //   'browser_version': '9.0',
     // }
   ],
-
   logLevel: 'verbose',
   coloredLogs: true,
-  // screenshotPath: './errorShots/',
+  screenshotPath: './errorShots/',
   baseUrl: '',
   waitforTimeout: 30000,
   connectionRetryTimeout: 90000,
@@ -68,7 +70,7 @@ exports.config = {
     // or website depending on the result. For example it is pretty handy to take a screenshot every time
     // an assertion fails.
     expectationResultHandler: function(passed, assertion) {
-        // do something
+      // do something
     },
     //
     // Make use of Jasmine-specific grep functionality

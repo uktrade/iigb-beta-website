@@ -16,7 +16,7 @@ describe('IIGB Search Functionality', function() {
 
 		browser.waitForExist('#searchBtn');
 		browser.click('#searchBtn');
-		searchInput.waitForVisible(5000);
+		searchInput.waitForVisible(10000);
 		searchInput.setValue('finance');
 
 		searchResult.waitForVisible(10000);

@@ -5,19 +5,22 @@ server_pid=
 
 function stop_server()
 {
-  # run if user hits control-c
-  # stop server if it wasn't already up before tests
-  echo -en "\n*** Tests failed!***\n"
   if [[ $server_already_running = false ]]; then
     echo "Stopping server"
     kill "$server_pid"
   fi
+}
 
+function on_error() {
+  # run if user hits control-c
+  # stop server if it wasn't already up before tests
+  echo -en "\n*** Tests failed!***\n"
+  stop_server
 }
 
 # trap keyboard interrupt (control-c) or any other errors to stop server
 # if started with test suite
-trap stop_server ERR SIGINT
+trap on_error ERR SIGINT
 
 function wait_for_server() {
   timeout 40 bash -c 'until { echo > /dev/tcp/localhost/3000; } 2>/dev/null; do sleep 2; done'
@@ -37,7 +40,8 @@ function run_integration_tests() {
   exec 6>&- # close output connection
   exec 6<&- # close input connection
 
-  node_modules/.bin/wdio conf/single.conf.js
+  node lib/run-integration-tests.js
+  stop_server
 }
 
 run_integration_tests
