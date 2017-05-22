@@ -41,7 +41,7 @@ function run_integration_tests() {
     server_already_running=true
     echo "Server is already running,using app running on port 3000 for tests"
   else
-    echo "Server is not runnung locally, starting server for integration tests"
+    echo "Server is not running locally, starting server for integration tests"
     node lib/server.js &
     server_pid=$!
     wait_for_server || { echo "Server startup timedout"; stop_server; exit 1; }
