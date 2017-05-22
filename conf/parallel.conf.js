@@ -56,7 +56,7 @@ exports.config = {
   coloredLogs: true,
   screenshotPath: './errorShots/',
   baseUrl: '',
-  waitforTimeout: 30000,
+  waitforTimeout: 250000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
 
@@ -64,7 +64,7 @@ exports.config = {
   jasmineNodeOpts: {
     //
     // Jasmine default timeout
-    defaultTimeoutInterval: 45000,
+    defaultTimeoutInterval: 250000,
     //
     // The Jasmine framework allows it to intercept each assertion in order to log the state of the application
     // or website depending on the result. For example it is pretty handy to take a screenshot every time

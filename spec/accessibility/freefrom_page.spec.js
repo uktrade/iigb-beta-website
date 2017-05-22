@@ -1,26 +1,17 @@
 var baseUrl = process.env.BASE_IIGB_URL || 'http://localhost:3000';
 
-var driver, browser;
-
 describe('Accessibility testing', function() {
 
   beforeEach(function(done) {
-    driver = new selenium.Builder()
-      .forBrowser('firefox');
-
-    browser = driver.build();
-
-    browser.manage().timeouts().setScriptTimeout(60000);
-
-    browser.get(baseUrl + '/int/industries/food-and-drink-manufacturing/freefrom').then(function () {
-      browser.executeAsyncScript(function(callback) {
+    driver.get(baseUrl + '/int/industries/food-and-drink-manufacturing/freefrom').then(function () {
+      driver.executeAsyncScript(function(callback) {
         var script = document.createElement('script');
         script.innerHTML = 'document.documentElement.classList.add("axe-is-ready");';
         document.documentElement.appendChild(script);
         callback();
       })
       .then(function () {
-        return browser.wait(selenium.until.elementsLocated(selenium.By.css('.axe-is-ready')));
+        return driver.wait(selenium.until.elementsLocated(selenium.By.css('.axe-is-ready')));
       })
       .then(function(){
         done();
@@ -28,15 +19,8 @@ describe('Accessibility testing', function() {
     });
   });
 
-  // Close the website after each test is run (so that it is opened fresh each time)
-  afterEach(function(done) {
-    browser.quit().then(function () {
-      done();
-    });
-  });
-
   it('the freefrom manufacturing page should be accessible', function (done) {
-    AxeBuilder(browser)
+    AxeBuilder(driver)
       .analyze(function(results) {
         writeOutput("Freefrom manufacturing page");
         writeOutViolations(results.violations);
