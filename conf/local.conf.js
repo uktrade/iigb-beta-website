@@ -24,7 +24,7 @@ exports.config = {
   connectionRetryCount: 3,
   framework: 'jasmine',
   jasmineNodeOpts: {
-    defaultTimeoutInterval: 450000,
+    defaultTimeoutInterval: 600000,
     expectationResultHandler: function(passed, assertion) {
       // do something
     }
