@@ -30,7 +30,7 @@ function buildOutput(pageHeader, results) {
       violationOutput.affectedNodes.push('- ' + results.violations[i].nodes[j].html);
     }
     violationOutput.affectedNodes = JSON.stringify(violationOutput.affectedNodes);
-    outputContent.violations.push(JSON.stringify(violationOutput));
+    outputContent.violations.push(violationOutput);
   }
   outputContent.fullDetails = JSON.stringify(results.violations);
   outputContent.reviewCount = results.incomplete.length;
