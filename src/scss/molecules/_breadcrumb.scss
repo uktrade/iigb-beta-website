@@ -1,11 +1,12 @@
 //_breadcrumb.scss
 
 .breadcrumb {
-  background: $toc-colour;
+  background: $background-colour;
   border-bottom: 1px solid $tile-border-colour;
   border-radius: 0;
-  color: $light-gray;
   padding: 16px 0 12px 0;
+  margin-bottom: none;
+  color: #676969;
 
   &>li+li:before {
     content: ">\00a0";
