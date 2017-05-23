@@ -1,9 +1,11 @@
 {% macro section(s, labels, language) %}
     <section id="{{ s.content.title|slug(language) }}" class="dit-content-section" tabindex="-1">
         <div class="col-md-10 col-sm-10 dit-main-content__body">
-        <header>
-            <h2>{{ s.content.title }}</h2>
-        </header>
+        {% if s.content.title %}
+          <header>
+              <h2>{{ s.content.title }}</h2>
+          </header>
+        {% endif %}
 
         {{ s.content.contents|safe }}
 
@@ -57,15 +59,20 @@
         <div class="row">
             {% if header %}
                 <div class="col-md-10 dit-content-section__lead">
-                    <h4 class="dit-content-section__heading">{{ header.content.title }}</h4>
+                    <h2 class="dit-content-section__heading">{{ header.content.title }}</h2>
                     {{ header.content.contents | safe }}
                 </div>
             {% endif %}
             <ol class="dit-big-list">
                 {% for l in list %}
                     <li class="dit-big-list__item--home-guide">
-                        <h3><a href="/{{base}}{{ l.link }}">{{ l.content.title }}</a></h3>
-                        {{ l.content.contents | safe }}
+                        {% if header %}
+                          <h3><a href="/{{base}}{{ l.link }}">{{ l.content.title }}</a></h3>
+                          {{ l.content.contents | safe }}
+                        {% else %}
+                          <h2 class="dit-big-list__title"><a href="/{{base}}{{ l.link }}">{{ l.content.title }}</a></h2>
+                          {{ l.content.contents | safe }}
+                        {% endif %}
                     </li>
                 {% endfor %}
             </ol>
@@ -97,13 +104,13 @@
 
 
     {% if header %}
-        <h4 class="dit-content-section__heading">{{ header }}</h4>
+        <h2 class="dit-content-section__heading">{{ header }}</h2>
     {% endif %}
     <ul class="dit-ind-side-desc-list check-height">
         {% for tile in list %}
             <li class="col-xs-12 col-md-6">
                 <a class="dit-ind-side-desc-list__item" href="/{{ base }}{{ tile.link }}">
-                    <span class="visually-hidden">Links to {{ tile.content.title }}</span>
+                    <span class="visuallyhidden">Links to {{ tile.content.title }}</span>
                     <div class="row">
                         <div class="col-xs-3 col-sm-4 dit-ind-side-desc-list__link-wrap">
                           <img src="/{{assets}}/media/thumbnail-4-4/{{ tile.thumbnail }}" alt="{{ tile.content.title }}" class="dit-ind-side-desc-list__image">
@@ -127,7 +134,7 @@
         {% for tile in list %}
             <li class="col-xs-12 col-sm-4">
                 <a class="dit-ind-bottom-desc-list__item" href="/{{ base }}{{ tile.link }}">
-                    <span class="visually-hidden">Links to {{ tile.content.title }}</span>
+                    <span class="visuallyhidden">Links to {{ tile.content.title }}</span>
                     <div class="row">
                         <div class="col-md-12 dit-ind-bottom-desc-list__link-wrap">
                           <img src="/{{assets}}/media/thumbnail-4-3/{{ tile.thumbnail }}" alt="{{ tile.content.title }}" class="dit-ind-bottom-desc-list__image">
