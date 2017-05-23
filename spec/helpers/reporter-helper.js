@@ -27,7 +27,7 @@ function buildOutput(pageHeader, results) {
     violationOutput.impact = results.violations[i].impact;
     violationOutput.affectedNodes = [];
     for (var j = 0; j < results.violations[i].nodes.length; j++) {
-      violationOutput.affectedNodes.push('- ' + results.violations[i].nodes[j].html.toString());
+      violationOutput.affectedNodes.push('- ' + JSON.stringify(results.violations[i].nodes[j].html));
     }
     outputContent.violations.push(violationOutput);
   }
