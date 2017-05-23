@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the location guide page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Location Guide page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Location Guide page", results);
         expect(results.violations.length).toBe(0);
         done();
       })

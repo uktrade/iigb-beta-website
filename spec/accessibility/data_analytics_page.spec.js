@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the data analytics page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Data analytics page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Data analytics page", results);
         expect(results.violations.length).toBe(0);
         done();
       })

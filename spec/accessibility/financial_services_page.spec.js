@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the financial services page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Financial services page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Financial services page", results);
         expect(results.violations.length).toBe(0);
         done();
       })

@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the oil and gas page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Oil and gas page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Oil and gas page", results);
         expect(results.violations.length).toBe(0);
         done();
       })

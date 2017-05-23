@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the feedback form page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Feedback Form page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Feedback Form page", results);
         expect(results.violations.length).toBe(0);
         done();
       })

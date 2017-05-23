@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the technology page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Technology page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Technology page", results);
         expect(results.violations.length).toBe(0);
         done();
       })

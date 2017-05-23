@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the open a business account page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Open a business account page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Open a business account page", results);
         expect(results.violations.length).toBe(0);
         done();
       })

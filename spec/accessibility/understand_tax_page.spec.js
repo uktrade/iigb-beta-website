@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the understand tax page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Understand tax page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Understand tax page", results);
         expect(results.violations.length).toBe(0);
         done();
       })

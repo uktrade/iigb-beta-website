@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the nuclear page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Nuclear page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Nuclear page", results);
         expect(results.violations.length).toBe(0);
         done();
       })

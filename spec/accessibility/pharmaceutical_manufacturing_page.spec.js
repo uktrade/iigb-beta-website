@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the pharmaceutical manufacturing page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Pharmaceutical manufacturing page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Pharmaceutical manufacturing page", results);
         expect(results.violations.length).toBe(0);
         done();
       })

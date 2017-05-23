@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the energy from waste page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Energy from waste page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Energy from waste page", results);
         expect(results.violations.length).toBe(0);
         done();
       })

@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the digital media page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Digital media page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Digital media page", results);
         expect(results.violations.length).toBe(0);
         done();
       })

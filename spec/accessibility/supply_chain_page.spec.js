@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the supply chain page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Supply chain page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Supply chain page", results);
         expect(results.violations.length).toBe(0);
         done();
       })

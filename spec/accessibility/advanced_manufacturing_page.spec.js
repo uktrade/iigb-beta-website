@@ -22,9 +22,7 @@ describe('Accessibility testing', function() {
   it('the advanced manufacturing page should be accessible', function (done) {
     AxeBuilder(driver)
       .analyze(function(results) {
-        writeOutput("Advanced manufacturing page");
-        writeOutViolations(results.violations);
-        writeOutReviews(results.incomplete);
+        buildOutput("Advanced manufacturing page", results);
         expect(results.violations.length).toBe(0);
         done();
       })
