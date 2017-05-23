@@ -27,9 +27,10 @@ function buildOutput(pageHeader, results) {
     violationOutput.impact = results.violations[i].impact;
     violationOutput.affectedNodes = [];
     for (var j = 0; j < results.violations[i].nodes.length; j++) {
-      violationOutput.affectedNodes.push('- ' + JSON.stringify(results.violations[i].nodes[j].html));
+      violationOutput.affectedNodes.push('- ' + results.violations[i].nodes[j].html);
     }
-    outputContent.violations.push(violationOutput);
+    violationOutput.affectedNodes = JSON.stringify(violationOutput.affectedNodes);
+    outputContent.violations.push(JSON.stringify(violationOutput));
   }
   outputContent.fullDetails = JSON.stringify(results.violations);
   outputContent.reviewCount = results.incomplete.length;
