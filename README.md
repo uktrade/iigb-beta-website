@@ -14,6 +14,7 @@ This application is written using the [Node.js](https://nodejs.org/en/) JavaScri
   * [Production build](#production-build)
   * [Environment variables](#environment-variables)
   * [Development flow](#development-flow)
+  * [Testing](#testing)
 - [Deployment & Release](#deployment--release)
   * [Release](#release)
     + [Rollback or Deploy a specific version](#rollback-or-deploy-a-specific-version)
@@ -146,15 +147,39 @@ The following prefixes are used for special branches:
 
 ### Testing
 
-**Accessibility Testing**
+All testing on the website is carried out using the Jasmine testing framework.
 
-The project contains automated accessibility tests, these can be run using 
+**Unit Testing**
 
+The project contains unit tests that check the functionality of each of the templates used to build the website pages.
+
+They can be run using:
 ```bash
-npm run accessibility-test
+npm run unit-tests
 ```
 
-Running these tests is dependant on having the local development server running on port 3000 and having firefox installed locally.
+**Integration Testing**
+
+The project contains integration tests that check the integration between the website and the backend services that support it.
+
+They are run through the Browserstack local API against your local host. *(an internet connection is therefore required)*
+
+The tests will start a localhost instance if one is not currently running.
+
+They can be run using:
+```bash
+npm run integration-tests
+```
+
+**Accessibility Testing**
+
+The project contains automated accessibility tests that check each of the pages in the site meet the required accessibility requirements, they are run as part of the integration testing.
+
+They can be run using the same command as the integration testing (see above).
+
+The pages the tested are defined in pageData.json; each entry in the file contains the page name, the url extension fo the site (url - domain name) and a list of exclusions for the page.
+
+The exclusions are a list of selectors that represent HTML elements that should be ignored by the accessibility tests. If there are elements in HTML shared across multiple pages (header/footer code etc) that need to be ignored, these can be added to  globalExclusions.json and will be applied to every page tested.
 
 ## Deployment & Release
 

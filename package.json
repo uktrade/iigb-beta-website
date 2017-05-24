@@ -26,11 +26,10 @@
     "predeploy": "npm install && npm run postinstall && npm run build && npm test && node lib/build-redirect-rules.js",
     "deploy": "node_modules/iigb-aws-helpers/deploy.sh && node_modules/iigb-aws-helpers/uploadRedirects.sh s3-redirects.json && node node_modules/iigb-aws-helpers/refreshSingleSearch.js build/ ",
     "test": "node ./lib/run-unit-tests.js && ./lib/run-integration-tests.sh",
-    "full-test-suite": "sh lib/full-testing.sh",
+    "unit-tests": "node ./lib/run-unit-tests.js",
+    "integration-tests": "./lib/run-integration-tests.sh",
     "browser-test-full": "node_modules/.bin/wdio conf/parallel.conf.js",
     "browser-test-single": "node_modules/.bin/wdio conf/single.conf.js",
-    "browser-test-local": "sh spec/features/runner.sh",
-    "accessibility-test": "node ./lib/run-accessibility-tests.js",
     "postinstall": "npm install uktrade/iigb-beta-structure#\"$npm_package_config_cms_branch\"",
     "release": "node_modules/iigb-aws-helpers/release.sh",
     "rollback": "node_modules/iigb-aws-helpers/rollback.sh"
