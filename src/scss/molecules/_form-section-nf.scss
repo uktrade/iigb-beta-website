@@ -31,19 +31,17 @@
   }
 
   &__progress-bar {
-    background-color: $smoke;
+    background-color: $background-colour;
+    border-bottom: 2px solid $teal;
     min-height: 100px;
 
     .progress-stages {
       a {
-        padding: 42px 0px 20px;
-        color: $light-gray;
+        color: $text-colour;
+        padding: 42px 0px 21px;
 
         &.active {
           color: $teal;
-          font-size: 24px;
-          font-weight: 500;
-          padding-top: 36px;
           border-bottom: 10px solid $teal;
 
           .number-circle {
@@ -63,7 +61,6 @@
     input {
       border-radius: 3px;
       height: 48px;
-      background-color: $background-colour-table-alt;
     }
   }
 
@@ -95,9 +92,8 @@
     height: 36px;
     padding: 8px 14px;
 
-    background: $smoke;
-    border: 2px solid $light-gray;
-    color: $light-gray;
+    border: 2px solid $text-colour;
+    color: $text-colour;
     text-align: center;
     margin-right: 12px;
   }
@@ -229,11 +225,11 @@
 
     // Focused state
     [type=radio]:focus + label::before {
-      box-shadow: 0 0 0 3px #FFBF47;
+      box-shadow: 0 0 0 3px rgba(102,175,233,.8);
     }
 
     [type=checkbox]:focus + label::before {
-      box-shadow: 0 0 0 3px #FFBF47;
+      box-shadow: 0 0 0 3px rgba(102,175,233,.8);
     }
 
     // Selected state
@@ -332,7 +328,7 @@
 }
 
 .help-text {
-  color: #828282;
+  color: #676969;
 }
 
 .no-gutter {
