@@ -4,6 +4,8 @@
 {% include "partials/top-bar.html" %}
 {% include "partials/header-nav.html" %}
 
+<div id="content" tabindex="-1"></div> <!--"Skip to content" link navigates to this in order to skip naviagtion links-->
+
 <div class="jumbotron--auto">
     <div class="container">
         <div class="dit-hero__content">
@@ -20,7 +22,7 @@
   {% include "partials/breadcrumb.html" %}
 </section>
 
-<div class="container">
+<main role="main" class="container">
     <section class="dit-content-section">
         <div class="col-md-10 col-sm-10 dit-main-content__body">
             {{ overview.content.contents | safe }}
@@ -77,6 +79,6 @@
               </form>
           </div>
     </section>
-</div>
+</main>
 
 {% endblock %}

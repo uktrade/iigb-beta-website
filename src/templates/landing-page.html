@@ -3,9 +3,11 @@
 
 {% block page_content %}
 
+<div id="content" tabindex="-1"></div> <!--"Skip to content" link navigates to this in order to skip naviagtion links-->
+
 {% include "partials/jumbotron-short.html" %}
 
-<div class="container">
+<main role="main" class="container">
     <section class="dit-industries-tiles-landing">
         <div class="row">
             <div class="col-md-12 margin-top--4">
@@ -48,6 +50,6 @@
             </div>
         </div>
     </section>
-</div>
+</main>
 
 {% endblock %}

@@ -79,7 +79,6 @@
     background-color: $link-colour;
     padding: 4px 10px;
     margin: flip-side-values(14px 15px 0 0);
-    float: #{$right};
   }
 
   @media (max-width: $screen-xs-max) {
@@ -92,7 +91,6 @@
     color: $white !important;
     background-color: $link-colour;
     margin: flip-side-values(14px 0 16px 40px);
-    float: #{$left};
   }
 }
 

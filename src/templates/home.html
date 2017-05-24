@@ -7,9 +7,11 @@
 
 {% include "partials/header-nav.html" %}
 
+<div id="content" tabindex="-1"></div> <!--"Skip to content" link navigates to this in order to skip naviagtion links-->
+
 {% include "partials/jumbotron.html" %}
 
-<div class="container">
+<main role="main" class="container">
 
 <section class="dit-content-section">
     <div class="row">
@@ -28,6 +30,6 @@
 {% include "partials/about-us.html" %}
 
 
-</div>
+</main>
 {% endblock %}
 
