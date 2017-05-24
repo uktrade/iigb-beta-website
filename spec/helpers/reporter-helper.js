@@ -34,7 +34,7 @@ function buildOutput(pageHeader, results) {
   }
   outputContent.fullDetails = JSON.stringify(results.violations);
   outputContent.reviewCount = results.incomplete.length;
-  outputContent.reviewDetails = JSON.stringify(results.incomplete);
+  // outputContent.reviewDetails = JSON.stringify(results.incomplete);
   writeOutput(outputContent);
   writeOutput('\n----\n');
 }

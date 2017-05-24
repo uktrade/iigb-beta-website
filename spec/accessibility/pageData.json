@@ -1,0 +1,236 @@
+[
+  {
+    "pageName": "Access Talent",
+    "urlExtension": "/int/setup-guide/access-talent",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Advanced Manufacturing",
+    "urlExtension": "/int/industries/advanced-manufacturing",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Aerospace",
+    "urlExtension": "/int/industries/aerospace",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Apply For Visa",
+    "urlExtension": "/int/setup-guide/apply-for-visa",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Asset Management",
+    "urlExtension": "/int/industries/financial-services/asset_management",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Automotive",
+    "urlExtension": "/int/industries/automotive",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Contact",
+    "urlExtension": "/int/contact",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Content and Production",
+    "urlExtension": "/int/industries/creative/content-and-production",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Creative",
+    "urlExtension": "/int/industries/creative",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Data Analytics",
+    "urlExtension": "/int/industries/technology/data-analytics",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Digital Media",
+    "urlExtension": "/int/industries/creative/digital-media",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Electrical Networks",
+    "urlExtension": "/int/industries/energy/electrical-networks",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Energy From Waste",
+    "urlExtension": "/int/industries/energy/energy-from-waste",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Energy",
+    "urlExtension": "/int/industries/energy",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Establish Address",
+    "urlExtension": "/int/setup-guide/establish-address",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Feedback",
+    "urlExtension": "/int/feedback",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Financial Services",
+    "urlExtension": "/int/industries/financial-services",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Financial Technology",
+    "urlExtension": "/int/industries/financial-services/financial-technology",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Food and Drink Manufacturing",
+    "urlExtension": "/int/industries/food-and-drink-manufacturing",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Freefrom Manufacturing",
+    "urlExtension": "/int/industries/food-and-drink-manufacturing/freefrom",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Health and Life",
+    "urlExtension": "/int/industries/health-and-life",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Home",
+    "urlExtension": "",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "How To Setup",
+    "urlExtension": "/int/setup-guide/how-to-setup",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Industries",
+    "urlExtension": "/int/industries",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Location Guide",
+    "urlExtension": "/int/location-guide",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Medical Technology",
+    "urlExtension": "/int/industries/health-and-life/medical-technology",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Motorsport",
+    "urlExtension": "/int/industries/automotive/motorsport",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Nuclear",
+    "urlExtension": "/int/industries/energy/nuclear",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Offshore Wind",
+    "urlExtension": "/int/industries/energy/offshore-wind",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Oil and Gas",
+    "urlExtension": "/int/industries/energy/oil-and-gas",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Open a Business Account",
+    "urlExtension": "/int/setup-guide/open-a-business-account",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Pharmaceutical Manufacturing",
+    "urlExtension": "/int/industries/health-and-life/pharmaceutical-manufacturing",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Research and Development",
+    "urlExtension": "/int/industries/automotive/research-and-development",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Retail",
+    "urlExtension": "/int/industries/retail",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Setup Guide",
+    "urlExtension": "/int/setup-guide",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Supply Chain",
+    "urlExtension": "/int/industries/automotive/supply-chain",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Technology",
+    "urlExtension": "/int/industries/technology",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Understand Legal",
+    "urlExtension": "/int/setup-guide/understand-legal",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Understand Tax",
+    "urlExtension": "/int/setup-guide/understand-tax",
+    "exclusions": [
+    ]
+  }
+]
