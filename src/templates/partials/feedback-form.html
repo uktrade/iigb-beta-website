@@ -1,20 +1,22 @@
 <section class="dit-form-section col-md-8">
-    <div class="col-md-12" id="formSuccess" tabindex="1">
-        <div class="grid-row">
-            <div class="column-two-thirds">
-                <div class="dit-form-section__highlight">
-                    <h1 class="bold-large">{{ formBlock.content.submitted }}</h1>
-                    <p>
-                        {{ formBlock.content.reference }}<br>
-                        <strong class="heading-medium" id="enquiry_Id"></strong>
-                    </p>
-                </div>
-                <p>{{ formBlock.content.confirmation_email}}</p>
-                <h2 class="heading-medium">{{ formBlock.content.next_title}}</h2>
-                <p>{{ formBlock.content.next_detail}}</p>
-            </div>
-        </div>
-    </div>
+    {% if formBlock.content.submitted %}
+      <div class="col-md-12" id="formSuccess" tabindex="1">
+          <div class="grid-row">
+              <div class="column-two-thirds">
+                  <div class="dit-form-section__highlight">
+                      <h2 class="bold-large">{{ formBlock.content.submitted }}</h2>
+                      <p>
+                          {{ formBlock.content.reference }}<br>
+                          <strong class="heading-medium" id="enquiry_Id"></strong>
+                      </p>
+                  </div>
+                  <p>{{ formBlock.content.confirmation_email}}</p>
+                  <h2 class="heading-medium">{{ formBlock.content.next_title}}</h2>
+                  <p>{{ formBlock.content.next_detail}}</p>
+              </div>
+          </div>
+      </div>
+    {% endif %}
     <!--<div class="col-md-4 dit-form-section__info">-->
     <!--<h3>{{ formBlock.content.title }}</h3>-->
     <!--<p>-->
