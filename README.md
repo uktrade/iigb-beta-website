@@ -177,7 +177,7 @@ The project contains automated accessibility tests that check each of the pages 
 
 They can be run using the same command as the integration testing (see above).
 
-The pages the tested are defined in pageData.json; each entry in the file contains the page name, the url extension fo the site (url - domain name) and a list of exclusions for the page.
+The pages to be tested are defined in pageData.json; each entry in the file contains the page name, the url extension fo the site (url - domain name) and a list of exclusions for the page.
 
 The exclusions are a list of selectors that represent HTML elements that should be ignored by the accessibility tests. If there are elements in HTML shared across multiple pages (header/footer code etc) that need to be ignored, these can be added to  globalExclusions.json and will be applied to every page tested.
 
