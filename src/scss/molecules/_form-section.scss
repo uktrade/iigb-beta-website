@@ -1,7 +1,6 @@
 //form-section.scss
 
 .dit-form-section {
-  padding: 0;
   margin: 10px 0 50px;
   border: 1px solid $tile-border-colour;
   border-bottom: 5px solid $red-line-colour;
@@ -197,10 +196,14 @@
   }
 }
 
-.dit-form-wrapper {
+.dit-form-wrapper-old {
   overflow: hidden;
   float: left;
   position: relative;
+}
+
+.dit-form-wrapper {
+  padding: 20px;
 }
 
 .setup-content {
