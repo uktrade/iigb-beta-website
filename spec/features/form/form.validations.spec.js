@@ -1,8 +1,4 @@
-var base = process.env.BASE_IIGB_URL;
-
-var expect = require('chai').expect
-
-//TODO use url base from env vars in url
+var base = process.env.BASE_IIGB_URL || 'http://localhost:3000';
 
 describe('IIGB Form Functionality', function() {
 	it('validates 6 fields on form', function() {

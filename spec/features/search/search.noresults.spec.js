@@ -1,6 +1,4 @@
-var expect = require('chai').expect
-var base = process.env.BASE_IIGB_URL;
-
+var base = process.env.BASE_IIGB_URL || 'http://localhost:3000';
 
 describe('IIGB Search Functionality', function() {
 	it('returns no results with fake search term', function() {
@@ -8,7 +6,7 @@ describe('IIGB Search Functionality', function() {
 			.url(base + '/int/industries')
 			.waitForExist('body');
 
-		var searchInput = $('#searchInput')
+		var searchInput = $('#search')
 		var searchTerm = 'xbiasbxksbkha'
 
 		if (browser.isVisible('.navbar-toggle')) {
@@ -18,9 +16,9 @@ describe('IIGB Search Functionality', function() {
 
 		browser.waitForExist('#searchBtn');
 		browser.click('#searchBtn');
-		searchInput.waitForVisible(5000);
+		searchInput.waitForVisible(10000);
 		searchInput.setValue(searchTerm);
 		browser.pause(5000);
-		expect(browser.isVisible('.search-result', 'Search results are not visible')).to.equal(false);
+		expect(browser.isVisible('.search-result', 'Search results are not visible')).toEqual(false);
 	});
 });

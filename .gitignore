@@ -59,5 +59,12 @@ jspm_packages
 
 s3-redirects.json
 
+# Accessibility Test Reports
+test_reports/
+errorShots/
+
+# idea files
+.idea
+
 # VSCode settings
 .vscode
