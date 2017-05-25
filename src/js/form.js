@@ -51,7 +51,7 @@ function resolveForms() {
 /** IST FORM **/
 function prepareISTForm(form, formBody) {
   debug('Preparing')
-  var formWrapper = formBody.find('.dit-form-wrapper')
+  var formWrapper = formBody.find('.dit-form-wrapper-old')
   var stepWrappers = form.find('.setup-content')
   enhanceISTForm()
 
@@ -259,8 +259,8 @@ function prepareISTFormNF(form, formBody) {
 /** OTHER FORMS **/
 function prepareForm(form) {
   var formBody = $('.dit-form-section__body')
-  var formWrapper = form.find('div').first()
-  var width=formBody.width()
+  // var formWrapper = form.find('div').first()
+  // var width=formBody.width()
   debug('Preparing')
   enhanceForm()
   form.submit(submit)
@@ -269,14 +269,14 @@ function prepareForm(form) {
     debug('Enhancing')
     setJsSwitch(form)
     disableNativeValidation(form)
-    wrap(formWrapper, 1, width)
+    // wrap(formWrapper, 1, width)
     listenInputs(form)
   }
 
   function submit(e) {
     e.preventDefault()
     if (validateInputs(form)) {
-      shift(formWrapper, -1 * width, true)
+      // shift(formWrapper, -1 * width, true)
       submitForm(form, formBody)
     }
   }
