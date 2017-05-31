@@ -22,8 +22,23 @@ module.exports = {
 window.radioButtonGroup = false
 
 function init() {
+  setFormsActionAttribute()
   resolveForms()
 }
+
+function setFormsActionAttribute() {
+  if (process.env.FORMS_PROCESSOR === 'development') {
+    $('form').each(function() {
+      var form = $(this)
+      if (form.attr('id') === 'ist-form') {
+        form.attr('action', 'https://iigb-forms-staging.herokuapp.com/form')
+      } else if (form.attr('id') === 'feedback-form') {
+        form.attr('action', 'https://iigb-forms-staging.herokuapp.com/feedback')
+      }
+    });
+  }
+}
+
 
 function resolveForms() {
   $('form').each(function() {
