@@ -1,0 +1,13 @@
+.form-control {
+  -webkit-appearance: none;
+  border-radius: 0;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid $text-colour;
+
+  &:focus {
+    border-color: $text-colour;
+    outline: 3px solid rgba(102,175,233,.8);
+    outline-offset: 0;
+  }
+}

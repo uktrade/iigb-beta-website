@@ -6,6 +6,8 @@
 
 {% include "partials/header-nav.html" %}
 
+<div id="content" tabindex="-1"></div> <!--"Skip to content" link navigates to this in order to skip naviagtion links-->
+
 {% include "partials/jumbotron-short.html" %}
 
 <section class="dit-toc">
@@ -13,9 +15,9 @@
 </section>
 
 {% block page_content %}
-<div class="container dit-info">
+<main role="main" class="container dit-info">
       {% include "partials/feedback-form.html" %}
-</div>
+</main>
 
 {% endblock %}
 

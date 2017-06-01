@@ -14,14 +14,14 @@
             {{firstSection.content.contents|safe}}
             <!--<h3 class="dit-content-section__subheading">{{firstSection.content.listTitle}}</h3>-->
         </div>
-        <ol class="dit-list-reasons">
+        <ul class="dit-list-reasons">
         {% for l in firstSection.content.list %}
             <li class="dit-list-reasons__item">
                 <div class="dit-icon dit-icon-{{l.icon}}"></div>
                 {{l.text | safe}}
             </li>
         {% endfor %}
-        </ol>
+        </ul>
     </div>
 </section>
 {% endif %}

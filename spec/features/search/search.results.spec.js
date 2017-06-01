@@ -1,6 +1,4 @@
-var expect = require('chai').expect
-var base = process.env.BASE_IIGB_URL;
-
+var base = process.env.BASE_IIGB_URL || 'http://localhost:3000';
 
 describe('IIGB Search Functionality', function() {
 	it('returns results for "finance"', function() {
@@ -8,7 +6,7 @@ describe('IIGB Search Functionality', function() {
 			.url(base + '/int/industries')
 			.waitForExist('body');
 
-		var searchInput = $('#searchInput')
+		var searchInput = $('#search')
 		var searchResult = $('.search-result')
 
 		if (browser.isVisible('.navbar-toggle')) {
@@ -18,13 +16,13 @@ describe('IIGB Search Functionality', function() {
 
 		browser.waitForExist('#searchBtn');
 		browser.click('#searchBtn');
-		searchInput.waitForVisible(5000);
+		searchInput.waitForVisible(10000);
 		searchInput.setValue('finance');
 
 		searchResult.waitForVisible(10000);
 
 		browser.elements('.search-result', function(err, res) {
-			expect(res.value.length, 'redirected url').to.be.above(1);
+			expect(res.value.length, 'redirected url').toBeGreaterThan(1);
 		});
 	});
 });

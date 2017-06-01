@@ -8,6 +8,11 @@
   border-bottom: 5px solid $red-line-colour;
   overflow: hidden;
 
+  @media (max-width: $screen-xs-max) {
+    padding: 10px;
+    border: none;
+  }
+
   &:focus {
     outline: $white auto 1px;
   }
@@ -32,6 +37,18 @@
     height: 14px;
     @extend .dit-icon-external-link;
     margin-left: 4px;
+  }
+
+  .dit-big-list {
+    &__title {
+      font-size: 24px;
+      margin: flip-side-values(20px 0 24px 0);
+      font-weight: 300;
+
+      @media (max-width: 991px) {
+        font-size: 20px;
+      }
+    }
   }
 
   &__heading {

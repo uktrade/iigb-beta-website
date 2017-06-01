@@ -5,7 +5,7 @@
 </div>
 </div>
 
-<nav class="dit-footer">
+<div role="contentinfo" class="dit-footer">
     <div class="container">
         <div class="row">
             <div class="col-sm-7 col-md-8 col-lg-9">
@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-</nav>
+</div>
 <!--modals for language selector-->
 <div class="modal fade" id="languageSelectorXs" tabindex="-1" role="dialog">
     <div class="modal-dialog dit-selector-wrapper" role="document">
@@ -41,80 +41,7 @@
             <div class="modal-body">
                 <p></p>
                 <span class="glyphicon glyphicon-remove dit-close-icon" data-dismiss="modal"></span>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                            <div class="panel panel-default modal-lang-selector">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <div class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
-                                           href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <div>
-                                                <h1>{{ labels.language[locale.code] }}</h1>
-                                                <p>{{ labels.choose_language[locale.code] }}</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
-                                     aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li class="col-xs-4"><a href="/int">English</a></li>
-                                            <li class="col-xs-4"><a href="/int/zh">中国</a></li>
-                                            <li class="col-xs-4"><a href="/int/de">Deutsch</a></li>
-                                            <li class="col-xs-4"><a href="/int/ja">日本語</a></li>
-                                            <li class="col-xs-4"><a href="/int/es">Español</a></li>
-                                            <li class="col-xs-4"><a href="/int/pt">Português</a></li>
-                                            <li class="col-xs- GREAT.gov.uk GREAT.gov.uk GREAT.gov.uk GREAT.gov.uk GREAT.gov.uk GREAT.gov.uk GREAT.gov.uk GREAT.gov.uk GREAT.gov.uk4"><a href="/int/ar">عربى</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default modal-reg-selector">
-                                <div class="panel-heading" role="tab" id="headingTwo">
-                                    <div class="panel-title">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                           data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
-                                           aria-controls="collapseTwo">
-                                            <div>
-                                                <h1>{{ labels.country_region[locale.code] }}</h1>
-                                                <p>{{ labels.country_text[locale.code] }}</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
-                                     aria-labelledby="headingTwo">
-                                    <div>
-                                        <ul>
-                                            <li class="col-xs-6"><a href="/us"><span
-                                                    class="great-flag-circle great-flag-circle--us"></span>United States</a>
-                                            </li>
-                                            <li class="col-xs-6"><a href="/cn"><span
-                                                    class="great-flag-circle great-flag-circle--cn"></span>中国</a></li>
-                                            <li class="col-xs-6"><a href="/in"><span
-                                                    class="great-flag-circle great-flag-circle--in"></span>India</a>
-                                            </li>
-                                            <li class="col-xs-6"><a href="/de"><span
-                                                    class="great-flag-circle great-flag-circle--de"></span>Deutschland</a>
-                                            </li>
-                                            <li class="col-xs-6"><a href="/es"><span
-                                                    class="great-flag-circle great-flag-circle--es"></span>España</a>
-                                            </li>
-                                            <li class="col-xs-6"><a href="/br"><span
-                                                    class="great-flag-circle great-flag-circle--br"></span>Brasil</a>
-                                            </li>
-                                            <li class="col-xs-6"><a href="/jp"><span
-                                                    class="great-flag-circle great-flag-circle--jp"></span>日本</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% include "partials/selector-xs.html" %}
             </div>
         </div>
     </div>
