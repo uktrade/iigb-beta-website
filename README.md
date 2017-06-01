@@ -191,12 +191,8 @@ Branch `stable` is continuously deployed to [production environment](https://inv
 
 To take a cut for releasing from `develop`: 
 
-  - Run `npm release (major|minor|version)` (on any branch) with no un-committed changes. This will bump the version (major, minor or patch) and merge the release into branch `stable` to be deployed. 
+  - Run `npm release (major|minor|patch)` (on any branch) with no un-committed changes. This will bump the version (major, minor or patch) and merge the release into branch `stable` to be deployed. 
 
-  - Push `develop` ,`master` and `stable` branches:
-      ```
-      git push --all
-      ```
   For more details of performed release steps see [release.sh](https://github.com/uktrade/iigb-aws-helpers#release.sh) utility from [iigb-aws-helpers](https://github.com/uktrade/iigb-aws-helpers).
 
 #### Rollback or Deploy a specific version
