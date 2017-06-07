@@ -1,86 +1,82 @@
-<section class="dit-small-form-section col-md-8">
-  <div class="row">
-    {% if formBlock.content.submitted %}
-      <div class="col-md-12" id="formSuccess" tabindex="1">
-          <div class="grid-row">
-              <div class="column-two-thirds">
-                  <div class="dit-form-section__highlight">
-                      <h2 class="bold-large">{{ formBlock.content.submitted }}</h2>
-                      <p>
-                          {{ formBlock.content.reference }}<br>
-                          <strong class="heading-medium" id="enquiry_Id"></strong>
-                      </p>
-                  </div>
-                  <p>{{ formBlock.content.confirmation_email}}</p>
-                  <h2 class="heading-medium">{{ formBlock.content.next_title}}</h2>
-                  <p>{{ formBlock.content.next_detail}}</p>
-              </div>
-          </div>
+<section class="dit-form-section-small col-md-8">
+
+  {% if formBlock.content.submitted %}
+    <div id="formSuccess" tabindex="1">
+      <div class="dit-form-section__highlight">
+          <h2 class="bold-large">{{ formBlock.content.submitted }}</h2>
+          <p>
+              {{ formBlock.content.reference }}<br>
+              <strong class="heading-medium" id="enquiry_Id"></strong>
+          </p>
       </div>
-    {% endif %}
-    <!--<div class="col-md-4 dit-form-section__info">-->
-    <!--<h3>{{ formBlock.content.title }}</h3>-->
-    <!--<p>-->
-    <!--{{ formBlock.content.contents | safe }}-->
-    <!--</p>-->
-    <!--<p>-->
-    <!--<strong>{{ formBlock.content.listTitle }}</strong>-->
-    <!--</p>-->
-    <!--{% for l in formBlock.content.list %}-->
-    <!--<div class="row bottom-buffer">-->
-    <!--<div class="col-xs-2 dit-icon-sm dit-icon-{{l.icon}}"></div>-->
-    <!--<div class="col-xs-10 col-md-9 col-lg-10">-->
-    <!--<p class="light-grey">{{ l.text | safe }}</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--{% endfor %}-->
-    <!--</div>-->
-    <div class="col-md-12 dit-form-section__body">
-        <div id="loading-overlay">
-          <img src="/{{assets}}/media/spin.gif" alt="loading_spinner" id="img-load">
-        </div>
-        <div class="dit-form-wrapper">
-          <form enctype='application/x-www-form-urlencoded' role="form"
-              action="https://forms.invest.great.gov.uk/feedback"
-              method="post" autocomplete="off">
-            <div class="form-group form_top_block">
-                <label class="control-label" for="userName">{{ labels.feedback_name[locale.code] }}</label>
-                <p class="error-help">{{ labels.form_enter_full_name[locale.code] }}</p>
-                <input id="hidden_field" name="user[language]" type="hidden" value="{{locale.language}}">
-                <input type="text" name="user[name]" id="userName" required="required" class="form-control" placeholder=""/>
-                <!--                                 <input name="english[form_full_name]" type="hidden"
-                value="{{ labels.form_full_name['en_US'] }}">
-                <input name="multilingual[form_full_name]" type="hidden"
-                value="{{ labels.form_full_name[locale.code] }}"> -->
-            </div>
-            <div class="form-group">
-                <label class="control-label" for="userEmail">{{ labels.feedback_email[locale.code] }}</label>
-                <p class="error-help email_help">{{ labels.form_enter_email[locale.code] }}</p>
-                <p class="validation_error">{{ labels.form_enter_valid_email[locale.code] }}</p>
-                <input type="email" name="user[email]" id="userEmail" required="required"
-                class="form-control"
-                placeholder=""/>
-                <!--                                 <input name="english[form_email]" type="hidden" value="{{ labels.form_email['en_US'] }}">
-                <input name="multilingual[form_email]" type="hidden"
-                value="{{ labels.form_email[locale.code] }}"> -->
-            </div>
-            <div class="form-group">
-                <label class="control-label" for="userFeedback">{{ labels.feedback_feedback[locale.code] }}</label>
-                <textarea class="form-control" name="user[feedback]" rows="10" id="comment" placeholder="{{ labels.report_problem_placeholder[locale.code] }}"></textarea>
-                <input name="js" class="js_switch" type="hidden" value="false">
-                <!--                                 <input name="english[form_phone]" type="hidden" value="{{ labels.form_phone['en_US'] }}">
-                <input name="multilingual[form_phone]" type="hidden"
-                value="{{ labels.form_phone[locale.code] }}"> -->
-            </div>
-            <div class="form-group__button feedback-button">
-                <button id="ga-send-js" class="dit-btn--sm submitBtn"
-                type="submit">
-                {{ labels.form_submit[locale.code] }}
-                <span class="glyphicon glyphicon-send"></span>
-                </button>
-            </div>
-          </form>
-        </div>
+      <p>{{ formBlock.content.confirmation_email}}</p>
+      <h2 class="heading-medium">{{ formBlock.content.next_title}}</h2>
+      <p>{{ formBlock.content.next_detail}}</p>
     </div>
+  {% endif %}
+  <!--<div class="col-md-4 dit-form-section__info">-->
+  <!--<h3>{{ formBlock.content.title }}</h3>-->
+  <!--<p>-->
+  <!--{{ formBlock.content.contents | safe }}-->
+  <!--</p>-->
+  <!--<p>-->
+  <!--<strong>{{ formBlock.content.listTitle }}</strong>-->
+  <!--</p>-->
+  <!--{% for l in formBlock.content.list %}-->
+  <!--<div class="row bottom-buffer">-->
+  <!--<div class="col-xs-2 dit-icon-sm dit-icon-{{l.icon}}"></div>-->
+  <!--<div class="col-xs-10 col-md-9 col-lg-10">-->
+  <!--<p class="light-grey">{{ l.text | safe }}</p>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--{% endfor %}-->
+  <!--</div>-->
+  <div class="dit-form-section-small__body">
+      <div id="loading-overlay">
+        <img src="/{{assets}}/media/spin.gif" alt="loading_spinner" id="img-load">
+      </div>
+      <div class="dit-form-wrapper">
+        <form enctype='application/x-www-form-urlencoded' role="form"
+            action="https://forms.invest.great.gov.uk/feedback"
+            method="post" autocomplete="off">
+          <div class="form-group form_top_block">
+              <label class="control-label" for="userName">{{ labels.feedback_name[locale.code] }}</label>
+              <p class="error-help">{{ labels.form_enter_full_name[locale.code] }}</p>
+              <input id="hidden_field" name="user[language]" type="hidden" value="{{locale.language}}">
+              <input type="text" name="user[name]" id="userName" required="required" class="form-control" placeholder=""/>
+              <!--                                 <input name="english[form_full_name]" type="hidden"
+              value="{{ labels.form_full_name['en_US'] }}">
+              <input name="multilingual[form_full_name]" type="hidden"
+              value="{{ labels.form_full_name[locale.code] }}"> -->
+          </div>
+          <div class="form-group">
+              <label class="control-label" for="userEmail">{{ labels.feedback_email[locale.code] }}</label>
+              <p class="error-help email_help">{{ labels.form_enter_email[locale.code] }}</p>
+              <p class="validation_error">{{ labels.form_enter_valid_email[locale.code] }}</p>
+              <input type="email" name="user[email]" id="userEmail" required="required"
+              class="form-control"
+              placeholder=""/>
+              <!--                                 <input name="english[form_email]" type="hidden" value="{{ labels.form_email['en_US'] }}">
+              <input name="multilingual[form_email]" type="hidden"
+              value="{{ labels.form_email[locale.code] }}"> -->
+          </div>
+          <div class="form-group">
+              <label class="control-label" for="userFeedback">{{ labels.feedback_feedback[locale.code] }}</label>
+              <textarea class="form-control" name="user[feedback]" rows="10" id="comment" placeholder="{{ labels.report_problem_placeholder[locale.code] }}"></textarea>
+              <input name="js" class="js_switch" type="hidden" value="false">
+              <!--                                 <input name="english[form_phone]" type="hidden" value="{{ labels.form_phone['en_US'] }}">
+              <input name="multilingual[form_phone]" type="hidden"
+              value="{{ labels.form_phone[locale.code] }}"> -->
+          </div>
+          <div class="form-group__button feedback-button">
+              <button id="ga-send-js" class="dit-btn--sm submitBtn"
+              type="submit">
+              {{ labels.form_submit[locale.code] }}
+              <span class="glyphicon glyphicon-send"></span>
+              </button>
+          </div>
+        </form>
+      </div>
   </div>
+
 </section>

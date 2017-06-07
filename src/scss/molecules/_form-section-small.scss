@@ -1,0 +1,31 @@
+//form-section.scss
+
+.dit-form-section-small {
+  margin: 10px 0 50px;
+  border: 1px solid $tile-border-colour;
+  border-bottom: 5px solid $red-line-colour;
+  overflow: hidden;
+  background: $white;
+
+  #formSuccess {
+    display: none;
+  }
+
+  .dit-form-wrapper {
+    padding: 40px;
+  }
+  
+  .validation_error {
+    display: none;
+    color: #a94442;
+    font-weight: 700;
+  }
+
+  .checkbox-label {
+    background: #dee0e2;
+    border: 1px solid #dee0e2;
+    padding: flip-side-values(18px 30px 15px 24px);
+    font-weight: 400;
+    margin-top: 10px;
+  }
+}
