@@ -206,6 +206,20 @@
   padding: 20px;
 }
 
+.dit-small-form-section {
+  margin: 10px 0 50px;
+  border: 1px solid #D8D8D8;
+  border-bottom: 5px solid #B00D23;
+  overflow: hidden;
+  background: #fff;
+}
+
+#step-1, #step-2 {
+  margin-top: 60px;
+  border-bottom: 1px solid $tile-border-colour;
+  padding-bottom: 40px;
+}
+
 .setup-content {
   float: left;
   display: inline-block;
