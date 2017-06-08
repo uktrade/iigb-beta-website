@@ -173,18 +173,16 @@
     {% if header %}
         <h4 class="dit-content-section__heading">{{ header }}</h4>
     {% endif %}
-    <ul class="dit-industries-list">
+    <div class="dit-industries-grid">
         {% for tile in list %}
-            <li class="dit-industries-list__item col-xs-6 col-md-4">
-                <div class="dit-industries-list__link-wrap">
-                    <a href="/{{ base }}{{ tile.link }}">
-                      <img src="/{{assets}}/media/thumbnail-4-3/{{ tile.thumbnail }}" alt="{{ tile.content.title }}" class="dit-industries-list__image">
-                        <span class="dit-industries-list__text">{{ tile.content.title }}</span>
-                    </a>
-                </div>
-            </li>
+        <div class="dit-industries-grid__item">    
+            <a href="/{{ base }}{{ tile.link }}" class="dit-industries-grid__link">
+                <div class="dit-industries-grid__text">{{ tile.content.title }}</div>
+                <img src="/{{assets}}/media/hero-img/{{ tile.thumbnail }}" alt="{{ tile.content.title }}" class="dit-industries-grid__image">
+            </a>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
 {% endmacro %}
 
 {% macro tilesSector(header, list, base, assets) %}
@@ -192,16 +190,14 @@
     {% if header %}
         <h4 class="dit-content-section__heading">{{ header }}</h4>
     {% endif %}
-    <ul class="dit-sectors-list">
-        {% for tile in list %}
-            <li class="dit-sectors-list__item col-xs-6 col-md-3">
-                <div class="dit-sectors-list__link-wrap">
-                    <a href="/{{ base }}{{ tile.link }}">
-                      <img src="/{{assets}}/media/thumbnail-4-4/{{ tile.thumbnail }}" alt="{{ tile.content.title }}" class="dit-sectors-list__image">
-                        <span class="dit-sectors-list__text">{{ tile.content.title }}</span>
-                    </a>
-                </div>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="dit-sectors">
+        <span class="dit-sectors__info">{{ labels.watch_video[locale.code] }}</span>
+        <ul class="dit-sectors__list">
+            {% for tile in list %}
+                <li class="dit-sectors__list-item">
+                    <a href="/{{ base }}{{ tile.link }}" class="dit-sectors__list-link">{{ tile.content.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endmacro %}
