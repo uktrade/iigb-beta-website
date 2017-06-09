@@ -185,13 +185,13 @@
     </div>
 {% endmacro %}
 
-{% macro tilesSector(header, list, base, assets) %}
+{% macro tilesSector(header, list, base, assets, labels, locale) %}
 
     {% if header %}
         <h4 class="dit-content-section__heading">{{ header }}</h4>
     {% endif %}
     <div class="dit-sectors">
-        <span class="dit-sectors__info">{{ labels.watch_video[locale.code] }}</span>
+        <span class="dit-sectors__info">{{ labels.specific_categories[locale.code] }}</span>
         <ul class="dit-sectors__list">
             {% for tile in list %}
                 <li class="dit-sectors__list-item">
