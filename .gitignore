@@ -71,3 +71,9 @@ errorShots/
 
 # Package_lock.json
 .package-lock.json
+
+# VSCode settings
+.vscode
+
+# environment config
+.env
