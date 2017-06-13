@@ -26,6 +26,10 @@
   display: inline-block;
   margin: flip-side-values(11px 0px);
   padding-#{$left}: 4px;
+
+  @media (max-width: $screen-xs-max) {
+    margin: flip-side-values(0px 0px 11px 0px);
+  }
 }
 
 .dit-great-link {
