@@ -67,3 +67,6 @@ errorShots/
 
 # DS_Store
 .DS_Store
+
+# Package_lock.json
+.package-lock.json
