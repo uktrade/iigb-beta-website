@@ -170,34 +170,42 @@
             label: Link target for thumbnail
     [/cms-fields]
       -->
-    {% if header %}
-        <h4 class="dit-content-section__heading">{{ header }}</h4>
-    {% endif %}
-    <div class="dit-industries-grid">
-        {% for tile in list %}
-        <div class="dit-industries-grid__item">    
-            <a href="/{{ base }}{{ tile.link }}" class="dit-industries-grid__link">
-                <div class="dit-industries-grid__text">{{ tile.content.title }}</div>
-                <img src="/{{assets}}/media/hero-img/{{ tile.thumbnail }}" alt="{{ tile.content.title }}" class="dit-industries-grid__image">
-            </a>
+
+    <div class="row">
+        <div class="dit-industries">
+            {% if header %}
+                <h4 class="dit-content-section__heading">{{ header }}</h4>
+            {% endif %}
+            {% for tile in list %}
+            <div class="col-xs-12 col-sm-6 dit-industries__item">    
+                <a href="/{{ base }}{{ tile.link }}" class="dit-industries__link">
+                    <div class="dit-industries__text">{{ tile.content.title }}</div>
+                    <img src="/{{assets}}/media/hero-img/{{ tile.thumbnail }}" alt="{{ tile.content.title }}" class="dit-industries__image">
+                </a>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 {% endmacro %}
 
 {% macro tilesSector(header, list, base, assets, labels, locale) %}
+    <div class="row">
+        <div class="col-md-6">
 
-    {% if header %}
-        <h4 class="dit-content-section__heading">{{ header }}</h4>
-    {% endif %}
-    <div class="dit-sectors">
-        <span class="dit-sectors__info">{{ labels.specific_categories[locale.code] }}</span>
-        <ul class="dit-sectors__list">
-            {% for tile in list %}
-                <li class="dit-sectors__list-item">
-                    <a href="/{{ base }}{{ tile.link }}" class="dit-sectors__list-link">{{ tile.content.title }}</a>
-                </li>
-            {% endfor %}
-        </ul>
+            {% if header %}
+                <h4 class="dit-content-section__heading">{{ header }}</h4>
+            {% endif %}
+            <div class="dit-sectors">
+                <span class="dit-sectors__info">{{ labels.specific_categories[locale.code] }}</span>
+                <ul class="dit-sectors__list">
+                    {% for tile in list %}
+                        <li class="dit-sectors__list-item">
+                            <a href="/{{ base }}{{ tile.link }}" class="dit-sectors__list-link">{{ tile.content.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
     </div>
 {% endmacro %}
