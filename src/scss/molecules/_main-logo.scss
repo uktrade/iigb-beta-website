@@ -13,7 +13,7 @@
 }
 
 .dit-hmg_logo {
-  height: 40px;
+  min-height: 40px;
   background-color: #333;
   width: 100%;
   z-index: 1;
@@ -24,8 +24,12 @@
   font-size: 14px;
   border-#{$left}: 1px solid $white;
   display: inline-block;
-  margin: flip-side-values(11px 0 0 8px);
+  margin: flip-side-values(11px 0px);
   padding-#{$left}: 4px;
+
+  @media (max-width: $screen-xs-max) {
+    margin: flip-side-values(0px 0px 11px 0px);
+  }
 }
 
 .dit-great-link {
@@ -46,7 +50,9 @@
 .dit-logo {
   height: 24px;
   margin-top: 8px;
+  margin-bottom: 8px;
   margin-#{$left}: -2px;
+  margin-#{$right}: 8px;
   padding: 0;
 }
 
@@ -89,7 +95,7 @@
   text-transform: uppercase;
 
   @media (max-width: $screen-xs-max) {
-    vertical-align: bottom;
+    vertical-align: middle;
   }
 
   &-selector-mobile {

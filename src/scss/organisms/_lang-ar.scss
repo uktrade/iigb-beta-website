@@ -93,6 +93,10 @@
     border-right: none;
     display: inline-block;
     margin: 8px 4px 0 0;
+
+    @media (max-width: $screen-xs-max) {
+      margin: 0px 4px 0px 0px;
+    }
   }
 
   .dit-nav-language {
