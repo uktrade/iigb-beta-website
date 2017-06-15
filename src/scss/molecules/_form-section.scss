@@ -206,6 +206,12 @@
   padding: 20px;
 }
 
+#step-1, #step-2 {
+  margin-top: 60px;
+  border-bottom: 1px solid $tile-border-colour;
+  padding-bottom: 40px;
+}
+
 .setup-content {
   float: left;
   display: inline-block;
