@@ -1,60 +1,105 @@
 //form-section.scss
 
 .dit-form-section {
-  margin: 10px 0 50px;
-  border: 1px solid $tile-border-colour;
-  border-bottom: 5px solid $red-line-colour;
+  padding: 0;
+  //border: 1px solid $tile-border-colour;
   overflow: hidden;
   background: $white;
 
+  &__header-panel {
+    background-color: $teal;
+    color: $white;
+    h1 {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  &__lead {
+    padding: 7px 0px;
+    border-bottom: 1px solid #FFF;
+    margin-top: 15px;
+  }
+
   &__heading {
-    font-size: 40px;
-    font-weight: 100;
+    font-size: 32px;
+    font-weight: 500;
 
     @media (max-width: $screen-xs-max) {
       font-size: 40px;
     }
   }
 
-  &__info {
-    //min-height: 58rem;
-    padding-#{$left}: 24px;
-    background-color: $white;
+  &__progress-bar {
+    background-color: $background-colour;
+    border-bottom: 2px solid $teal;
+    min-height: 97px;
 
-    .light-grey {
-      font-weight: 100;
-      color: #6F777B;
-    }
-  }
+    .progress-stages {
+      a {
+        color: $text-colour;
+        padding: 42px 0px 21px;
 
-  @media (max-width: $screen-xs-max) {
-    &__info {
-      border-#{$right}: 0;
-    }
-  }
+        &.active {
+          color: $teal;
+          border-bottom: 10px solid $teal;
 
-  @media (max-width: $screen-sm-max) {
-    &__info {
-      border-#{$right}: 0;
+          .number-circle {
+            color: $teal;
+            border: 2px solid $teal;
+            padding: 8px 16px;
+          }
+        }
+      }
     }
   }
 
   &__body {
-    //min-height: 58rem;
+    margin-top: 40px;
     background-color: $white;
-    border-#{$left}: 1px solid $tile-border-colour;
+
+    input {
+      border-radius: 3px;
+      height: 48px;
+    }
   }
 
-  .glyphicon-triangle-#{$left} {
-    margin-top: 1px !important;
+  &__inputs {
+    margin: 0;
+    padding: 0;
   }
 
-  .dit-form-section__highlight {
+  &__category {
+    h2 {
+      font-size: 32px;
+      font-weight: 500;
+    }
+  }
+
+  &__highlight {
     margin: 1em 0;
     padding: 2em 0 1em;
     color: $white;
     background: #28a197;
     text-align: center;
+  }
+
+  .number-circle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+    width: 46px;
+    height: 36px;
+    padding: 8px 14px;
+
+    border: 2px solid $text-colour;
+    color: $text-colour;
+    text-align: center;
+    margin-right: 12px;
+  }
+
+  .glyphicon-triangle-#{$left} {
+    margin-top: 1px !important;
   }
 
   #formSuccess {
@@ -69,6 +114,153 @@
     margin-#{$right}: 15px;
   }
 
+  .panel-section {
+    margin: 60px 0 50px;
+
+    ul {
+      padding-left: 0;
+      margin: 20px 0 40px;
+    }
+
+    li {
+      margin: 10px 0 0 30px;
+    }
+
+    p {
+      margin: 20px 0 0 0;
+    }
+  }
+
+  input[type="checkbox"] {
+    opacity: 0;
+  }
+
+  input[type="radio"] {
+    opacity: 0;
+  }
+
+  .multiple-choice {
+
+    display: block;
+    float: none;
+    clear: #{$left};
+    position: relative;
+
+    padding-#{$left}: 38px;
+    margin-bottom: 12px;
+
+    // Absolutely position inputs within label, to allow text to wrap
+    input {
+      position: absolute;
+      cursor: pointer;
+      #{$left}: 0;
+      top: 0;
+      width: 38px;
+      height: 38px;
+      z-index: 1;
+    }
+
+    label {
+      cursor: pointer;
+      padding: 8px 12px 9px 12px;
+      display: block;
+
+      // remove 300ms pause on mobile
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+    }
+
+    [type=radio] + label::before {
+      content: "";
+      border: 2px solid;
+      background: transparent;
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      top: 0;
+      #{$left}: 0;
+      border-radius: 50%;
+    }
+
+    [type=radio] + label::after {
+      content: "";
+      border: 10px solid;
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 7px;
+      #{$left}: 7px;
+      border-radius: 50%;
+      opacity: 0;
+    }
+
+    [type=checkbox] + label::before {
+      content: "";
+      border: 2px solid;
+      background: transparent;
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      top: 0;
+      #{$left}: 0;
+    }
+
+    [type=checkbox] + label::after {
+      content: "";
+      border: solid;
+      border-width: 0 0 5px 5px;
+      background: transparent;
+      width: 17px;
+      height: 7px;
+      position: absolute;
+      top: 13px;
+      #{$left}: 8px;
+      -moz-transform: rotate(-45deg); // Firefox 15 compatibility
+      -o-transform: rotate(-45deg); // Opera 12.0 compatibility
+      -webkit-transform: rotate(-45deg); // Safari 8 compatibility
+      -ms-transform: rotate(-45deg); // IE9 compatibility
+      transform: rotate(-45deg);
+      opacity: 0;
+    }
+
+    // Focused state
+    [type=radio]:focus + label::before {
+      box-shadow: 0 0 0 3px rgba(102,175,233,.8);
+    }
+
+    [type=checkbox]:focus + label::before {
+      box-shadow: 0 0 0 3px rgba(102,175,233,.8);
+    }
+
+    // Selected state
+    input:checked + label::after {
+      opacity: 1;
+    }
+
+    // Disabled state
+    input:disabled + label {
+      opacity: 0.5;
+    }
+
+    &:last-child,
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .checkbox-line {
+    margin-top: 15px;
+  }
+}
+
+#step-1, #step-2 {
+  margin-top: 60px;
+  border-bottom: 1px solid $tile-border-colour;
+  padding-bottom: 40px;
+}
+
+#step-3 {
+  margin: 60px 0 120px;
 }
 
 .autocomplete-suggestions {
@@ -101,173 +293,18 @@
   border-bottom: 1px solid #000;
 }
 
-.bottom-buffer {
-  margin-bottom: 2rem;
-}
-
-.progress-indicators {
-  font-size: 2rem;
-  margin-#{$right}: 2.5rem;
-  color: $link-colour;
-}
-
-.progress-indicators.active {
-  border-radius: 50%;
-  behavior: url(PIE.htc); /* remove if you don't care about IE8 */
-
-  width: 36px;
-  height: 36px;
-  background: $background-colour;
-  border: 2px solid $link-colour;
-  text-align: center;
-  font: 32px Arial, sans-serif;
-
-}
-
-.stepwizard-step p {
-  margin-top: 10px;
-}
-
-.stepwizard {
-  position: absolute;
-  direction: ltr;
-  #{$right}: 10px;
-  top: 0;
-  color: $link-colour;
-  z-index:1;
-
-  @media (max-width: $screen-sm-max) {
-    #{$right}: 0px;
-    top: -50px;
-  }
-}
-
-.stepwizard-row:before {
-}
-
-.stepwizard-step {
-  display: table-cell;
-  text-align: center;
-  position: relative;
-
-  a[disabled] {
-    pointer-events: none;
-    cursor: default;
-    opacity: 1 !important;
-    filter: alpha(opacity=100) !important;
-  }
-
-  a {
-    color: $link-colour;
-    text-decoration: none;
-    cursor: pointer;
-  }
-}
-
 .form-group {
   margin-bottom: 25px;
   padding-#{$left}: 0;
-
-  &__button {
-    direction: ltr;
-    margin-bottom: 25px;
-    float: right;
-    //position: absolute;
-    //bottom: 20px;
-    //#{$right}: 0;
-
-    .glyphicon {
-      margin: 0 8px;
-      top: 2px;
-
-      @media (max-width: $screen-xs-max) {
-        margin: 0;
-      }
-    }
-
-    @media (max-width: $screen-xs-max) {
-    }
-  }
 }
 
-@media (max-width: $screen-xs-max) {
-  .feedback-button {
-    bottom: 0px;
-  }
-}
-
-.dit-form-wrapper-old {
-  overflow: hidden;
-  float: left;
-  position: relative;
-}
-
-.dit-form-wrapper {
-  padding: 20px;
-}
-
-#step-1, #step-2 {
-  margin-top: 60px;
-  border-bottom: 1px solid $tile-border-colour;
-  padding-bottom: 40px;
-}
-
-.setup-content {
-  float: left;
-  display: inline-block;
-  margin: 0;
-}
-
-.stepBigNumber {
-  margin-#{$right}: 15px;
-}
-
-.active-selection {
-  font-size: 60px;
-  font-weight: 500;
-}
-
-.stepwizard {
-  display: none;
-}
-
-.prevBtn {
-  display: none;
-}
-
-.nextBtn {
-  display: none;
-}
-
-.submitBtn {
-  margin-bottom: 10px;
-}
-
-.location_block {
-  display: none;
-}
-
-.final_step {
-  padding-bottom: 70px;
-}
-
-#loading-overlay {
-  opacity: 0.5;
-  top: 0px;
-  width: 2.22222px;
-  //height: 100%;
-  position: absolute;
-  margin: 0 auto;
-  z-index: 10;
-  display: none;
-}
-
-#img-load {
-  position: absolute;
+.form-group-mb-0 {
+  padding-#{$left}: 0;
+  margin-bottom: 0;
 }
 
 .control-label {
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .error-help {
@@ -289,50 +326,121 @@
   padding-#{$left}: 15px;
 }
 
-.checkbox-label {
-  position: relative;
-  background: #dee0e2;
-  border: 1px solid #dee0e2;
-  padding: flip-side-values(18px 30px 15px 24px);
-  font-weight: 400;
-  margin-top: 10px;
-}
-
-.disclaimer_block {
-  margin-bottom: 85px !important;
-  padding-#{$left}: 0;
-}
-
-.form_heading {
-  font-weight: 400 !important;
-}
-
-.form-detail {
-  padding-#{$left}: 0;
-  color: #6F777B;
-  font-weight: 100;
-}
-
 .help-text {
   color: #676969;
 }
 
-.form_top_block {
-  margin-top: 30px;
+.no-gutter {
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.validation_error {
+.dit-disclaimer {
+  margin-top: 40px !important;
+  font-size: 16px;
+}
+
+.transform-wrap {
+  -webkit-transform: translateZ(0);
+}
+
+//input[type="radio"] {
+//  vertical-align: middle;
+//  height: auto;
+//  width: auto;
+//  margin: 0 15px 0 7px;
+//  transform: scale(2);
+//  -moz-transform: scale(2);
+//  -ms-transform: scale(2);
+//  -webkit-transform: scale(2);
+//  -o-transform: scale(2);
+//}
+//
+//input[type="checkbox"] {
+//  vertical-align: middle;
+//  height: auto;
+//  width: auto;
+//  margin: 0 15px 0 7px;
+//  transform: scale(2);
+//  -moz-transform: scale(2);
+//  -ms-transform: scale(2);
+//  -webkit-transform: scale(2);
+//  -o-transform: scale(2);
+//}
+
+.dit-label {
+  font-weight: 500;
+}
+
+.dit-not-label {
+  font-weight: 300;
+  height: 36px;
+}
+
+.dit-form-confirmation-section {
+  &__lead {
+    margin: 160px 0 40px;
+
+    @media (max-width: $screen-xs-max) {
+      margin: 80px 0;
+    }
+  }
+
+  &__list {
+    &-title {
+      p {
+        padding: 60px 0;
+        border-top: 1px solid $white;
+      }
+    }
+
+    .number-circle {
+      border-radius: 50%;
+      behavior: url(PIE.htc);
+      width: 40px;
+      height: 40px;
+      padding: 6px 12px;
+      background: #007EA3;
+      border: 2px solid #FFF;
+      color: #FFF;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &-text {
+      padding: 20px 0 60px;
+    }
+  }
+
+  &__footer {
+    padding-bottom: 80px;
+
+    a {
+      color: $white;
+      border-bottom: 1px solid $white;
+
+      &:hover {
+        color: $white;
+      }
+
+      &:visited {
+        color: $white;
+      }
+    }
+  }
+}
+
+#loading-overlay {
+  opacity: 0.5;
+  top: 0px;
+  width: 2.22222px;
+  //height: 100%;
+  position: absolute;
+  margin: 0 auto;
+  z-index: 10;
   display: none;
-  color: #a94442;
-  font-weight: 700;
 }
 
-.select_month {
-  width: 100px;
+#img-load {
+  position: absolute;
 }
-
-.optsForm {
-  position: relative !important;
-  bottom: 0 !important;
-}
-
