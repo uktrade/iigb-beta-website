@@ -1,0 +1,33 @@
+.dit-industries__item {
+  height: 160px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.dit-industries__link {
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
+
+.dit-industries__text {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: $screen-sm-max) {
+     font-size: 18px;
+  }
+}
+
+.dit-industries__image {
+  width: 100%;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+

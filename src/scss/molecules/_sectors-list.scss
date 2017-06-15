@@ -1,76 +1,24 @@
-//sectors-list.scss
+.dit-sectors {
+  border-top: solid 1px #ccc;
+  margin: 20px 0 60px 0;
+  padding-top: 20px;
+  font-size: 22px;
+}
 
-.dit-sectors-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 -15px 50px;
-  overflow: hidden;
-  #{$left}: 0;
+.dit-sectors__info {
+  color: #666;
+}
 
-  &__item {
-    margin: 16px 0;
+.dit-sectors__list {
+  list-style-type: none;
+  margin-top: 20px;
+  padding-#{$left}: 0;
 
-    //@media (max-width: $screen-sm-max) {
-    //  width: 50%;
-    //}
+  .dit-sectors__list-item {
+    margin-bottom: 1em;
 
-    a {
-      color: $white;
-      font-size: 22px;
-      display: block;
-      overflow: hidden;
-      position: relative;
-      transition: all .2s ease-in-out;
-
-      @media (max-width: $screen-xs-max) {
-        font-size: 20px;
-      }
-
-      &:hover {
-        transform: scale(1.05);
-
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          #{$left}: 0;
-          #{$right}: 0;
-          background: rgba(0, 0, 0, 0.5);
-        }
-      }
-      &:focus {
-        transform: scale(1.05);
-
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          #{$left}: 0;
-          #{$right}: 0;
-          background: rgba(0, 0, 0, 0.5);
-        }
-      }
+    .dit-sectors__list-link {
+      text-decoration: underline;
     }
-  }
-
-  &__image {
-    width: 100%;
-    height: auto;
-    //border-radius: 10px;
-  }
-
-  &__text {
-    width: 100%;
-    position: absolute;
-    padding: 15px;
-    bottom: 0px;
-    #{$left}: 0;
-    background: $great-blue;
-  }
-
-  &__link-wrap {
-    overflow: hidden;
   }
 }
