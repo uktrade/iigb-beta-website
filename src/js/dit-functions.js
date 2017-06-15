@@ -60,6 +60,7 @@ function onLoaded() {
     responsiveTable()
     playVid()
     jsEnhanceExternalLinks()
+    addAltTrackingPixel()
   } catch (e) {
     error('On loaded failed!', e)
   }
@@ -368,6 +369,12 @@ function jsEnhanceExternalLinks() {
     .attr('target', '_blank')
 }
 
+function addAltTrackingPixel() {
+  setTimeout(function(){
+    // Adds empty alt attribute to tracking pixel (marketing) meaning it's a decorative image so that it passes accessibility
+    $('img[src$="https://stags.bluekai.com/site/38648?limit=1"]').attr('alt', '');
+  }, 500);
+}
 
 
 
