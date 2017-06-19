@@ -14,70 +14,129 @@
     <div class="dit-generic-section">
         <div class="container">
             <div class="row">
-                <div class="col-xs-6">
-                    <p>
+                <div class="col-sm-12 col-md-6">
+                    <p class="big-paragraph">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
+                        tempor incididunt ut labore et dolore magna aliqua.
                     </p>
-                    <p>
+                    <p class="big-paragraph">
                         Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        cillum dolore eu fugiat nulla pariatur.
                     </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium saepe, quaerat adipisci. Dolore numquam sequi vero incidunt, voluptates nemo optio deleniti. Nobis ex recusandae aliquam nisi deserunt alias magnam incidunt.
+                    <p class="big-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium saepe, quaerat adipisci. Dolore numquam sequi vero incidunt, voluptates nemo optio deleniti.
                     </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit asperiores sed iure numquam maiores et molestias possimus, perferendis aspernatur eius, iusto voluptates impedit enim, animi earum, voluptate officiis labore quaerat.
+                    <p class="big-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </p>
                 </div>
-                <div class="col-xs-6">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis fugiat, ad commodi rem autem laborum? Fugit perferendis deserunt, omnis quidem. Quo iure voluptatibus dignissimos cumque beatae culpa praesentium animi, minus?
+                <div class="col-sm-12 col-md-6">
+                    <p class="big-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis fugiat, ad commodi rem autem laborum? Fugit perferendis deserunt, omnis quidem.
                     </p>
                     <img src="http://via.placeholder.com/465x220">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni iste corporis obcaecati impedit, quaerat a necessitatibus expedita deleniti unde sed quisquam quod perspiciatis libero odio ipsam ratione, dolorem ab, eius.
+                    <p class="big-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bleed-row">
-        <p class="bleed-quote">
+    <div class="quote">
+        <p class="quote__quoted">
+            <img src="/{{assets}}/media/icons/dit-quote-left.png" alt="Quote left" class="quote__left-quote-icon">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate omnis recusandae quia ipsa iusto, nemo iure commodi culpa, blanditiis consectetur fugiat beatae consequatur velit dolores aperiam! Odit, facilis alias neque.
+            <img src="/{{assets}}/media/icons/dit-quote-right.png" alt="Quote left" class="quote__right-quote-icon">
         </p>
+        <p class="quote__quote-source">Neil Rami, Chief Executive of Marketing Birmingham</p>
     </div>
     <div class="dit-generic-section">
         <div class="container">
             <div class="row">
-                <div class="col-xs-6">
-                    <div class="map-tools">
-                        <div class="map-layers">
+                <div class="col-sm-12 col-md-8 col-lg-offset-1 col-lg-7">
+                    <div class="map-tools hidden-xs hidden-sm">
+                        <div class="map-tools__layers">
+                            <fieldset>
+                                <legend class="map-legend">Select map layers</legend>
+                                <div class="multiple-choice">
+                                    <input type="checkbox" value="map-labels">
+                                    <label class="dit-not-label">Labels</label>
+                                </div>
+                                <div class="multiple-choice">
+                                    <input type="checkbox" value="map-labels">
+                                    <label class="dit-not-label">Transport Links</label>
+                                </div>
+                            </fieldset>
                         </div>
-                        <div class="map-filters">
+                        <div class="map-tools__filters">
+                            <fieldset>
+                                <div class="multiple-choice">
+                                    <input type="checkbox" value="map-filters">
+                                    <label class="dit-not-label">Significant businesses</label>
+                                </div>
+                                <div class="multiple-choice">
+                                    <input type="checkbox" value="map-filters">
+                                    <label class="dit-not-label">Financial incentives</label>
+                                </div>
+                                <div class="multiple-choice">
+                                    <input type="checkbox" value="map-filters">
+                                    <label class="dit-not-label">R & D Hubs</label>
+                                </div>
+                            </fieldset>
                         </div>
                     </div>
                     <div class="map-box">
-                        <img src="http://via.placeholder.com/600x715">
+                        <img src="http://via.placeholder.com/620x740" class="region-map">
                     </div>
                 </div>
-                <div class="col-xs-6">
-                   <ul>
-                       <li>Show All</li>
-                       <li>Aerospace</li>
-                       <li>Advanced manufacturing</li>
-                       <li>Automotive</li>
-                       <li>Creative</li>
-                       <li>Energy generation</li>
-                       <li>Financial services</li>
-                       <li>Food and drink manufacturing</li>
-                       <li>Health and life sciences</li>
-                       <li>Retail</li>
-                       <li>Technology</li>
-                   </ul>
+                <div class="hidden-xs hidden-sm col-md-4 col-lg-3">
+                    <div class="map-industries">
+                        <div class="map-legend">Filter by industry</div>
+                        <div class="multiple-choice">
+                            <input type="radio" class="dit-radio" name="industry_filter[industry]" id="show-all" value="Show All">
+                            <label class="dit-not-label" for="show-all">Show All</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input type="radio" class="dit-radio" name="industry_filter[industry]" id="aerospace" value="Aerospace">
+                            <label class="dit-not-label" for="aerospace">Aerospace</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input type="radio" class="dit-radio" name="industry_filter[industry]" id="advanced-manufacturing" value="Advanced Manufacturing">
+                            <label class="dit-not-label" for="advanced-manufacturing">Advanced Manufacturing</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input type="radio" class="dit-radio" name="industry_filter[industry]" id="automotive" value="Automotive">
+                            <label class="dit-not-label" for="automotive">Automotive</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input type="radio" class="dit-radio" name="industry_filter[industry]" id="creative" value="Creative">
+                            <label class="dit-not-label" for="creative">Creative</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input type="radio" class="dit-radio" name="industry_filter[industry]" id="energy-generation" value="Energy Generation">
+                            <label class="dit-not-label" for="energy-generation">Energy Generation</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input type="radio" class="dit-radio" name="industry_filter[industry]" id="financial-services" value="Financial Services">
+                            <label class="dit-not-label" for="financial-services">Financial Services</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input type="radio" class="dit-radio" name="industry_filter[industry]" id="food-and-drink-manufacturing" value="Food and drink manufacturing">
+                            <label class="dit-not-label" for="food-and-drink-manufacturing">Food and drink manufacturing</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input type="radio" class="dit-radio" name="industry_filter[industry]" id="health-and-life-sciences" value="Health and life sciences">
+                            <label class="dit-not-label" for="health-and-life-sciences">Health and life sciences</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input type="radio" class="dit-radio" name="industry_filter[industry]" id="retail" value="Retail">
+                            <label class="dit-not-label" for="retail">Retail</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input type="radio" class="dit-radio" name="industry_filter[industry]" id="technology" value="Technology">
+                            <label class="dit-not-label" for="technology">Technology</label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

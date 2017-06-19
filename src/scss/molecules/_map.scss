@@ -1,0 +1,28 @@
+.map-legend {
+	font-weight: 600;
+	border: none;
+	margin-bottom: 20px;
+}
+
+.map-tools {
+	font-size: 19px;
+
+
+	&__layers {
+		display: inline-block;
+		width: 45%;
+		margin-right: 5%;
+	}
+
+	&__filters {
+		display: inline-block;
+	}
+}
+
+.map-industries {
+	font-size: 19px;
+}
+
+.region-map {
+	width: 100%;
+}

@@ -9,6 +9,7 @@
 @import "utilities/colours";
 @import "utilities/loading";
 @import "utilities/skip-to-content-links";
+@import "utilities/paragraph";
 
 //atoms
 @import "atoms/body";
@@ -43,6 +44,7 @@
 @import "molecules/content-section";
 @import "molecules/form-section";
 @import "molecules/form-section-small";
+@import "molecules/inputs";
 @import "molecules/contact-tile";
 @import "molecules/hero";
 @import "molecules/toc";
@@ -54,7 +56,8 @@
 @import "molecules/page-header";
 @import "molecules/regions-selector";
 @import "molecules/generic-section";
-@import "molecules/bleed-row";
+@import "molecules/quote";
+@import "molecules/map";
 
 
 //organisms
