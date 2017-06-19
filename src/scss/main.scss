@@ -9,7 +9,6 @@
 @import "utilities/colours";
 @import "utilities/loading";
 @import "utilities/skip-to-content-links";
-@import "utilities/paragraph";
 
 //atoms
 @import "atoms/body";
@@ -19,6 +18,9 @@
 @import "atoms/anchors";
 @import "atoms/table";
 @import "atoms/forms";
+@import "atoms/icons";
+@import "atoms/inputs";
+@import "atoms/paragraphs";
 
 
 //molecules
@@ -40,11 +42,9 @@
 @import "molecules/home-section-anchors";
 @import "molecules/big-list";
 @import "molecules/list-reasons";
-@import "molecules/icons";
 @import "molecules/content-section";
 @import "molecules/form-section";
 @import "molecules/form-section-small";
-@import "molecules/inputs";
 @import "molecules/contact-tile";
 @import "molecules/hero";
 @import "molecules/toc";
@@ -58,6 +58,9 @@
 @import "molecules/generic-section";
 @import "molecules/quote";
 @import "molecules/map";
+@import "molecules/references-list";
+@import "molecules/useful-links";
+@import "molecules/carousel-form";
 
 
 //organisms

@@ -1,19 +1,22 @@
 //table.scss
-
 table {
-  border-collapse: collapse; border-spacing: 0;
+	margin: 10px 0 20px;
+	font-weight: 400;
+	font-size: 19px;
 }
 
 th, td {
-  padding: flip-side-values(5px 8px 5px 8px);
+  padding: flip-side-values(10px 20px 10px 0px);
+  width: 50%;
+  vertical-align: top;
 }
 
 tr {
   border-bottom: 1px solid $light-gray;
 
-  &:nth-child(odd) td {
-    background: $background-colour-table-alt;
-  }
+  // &:nth-child(odd) td {
+  //   background: $background-colour-table-alt;
+  // }
 }
 
 .dit-table__responsive {

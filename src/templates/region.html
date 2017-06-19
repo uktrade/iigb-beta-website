@@ -141,6 +141,194 @@
             </div>
         </div>
     </div>
+    <div class="dit-generic-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h2>West Midlands, an engineering success story</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium saepe, quaerat adipisci. Dolore numquam sequi vero incidunt, voluptates nemo optio deleniti.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta fugiat aut, veritatis, nobis ab illo fugit consequatur maxime porro itaque culpa expedita hic nemo corrupti doloribus animi amet laborum quam?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quibusdam consectetur pariatur quaerat. Iure, tempora? Aperiam reprehenderit, perferendis vitae assumenda, numquam totam aut hic ullam tenetur, praesentium ab quaerat rerum.
+                    </p>
+                    <div class="references-list">
+                        <p class="references-list__header">References:</p>
+                        <ol>
+                            <li class="references-list__ref"><a href="#">UK Attractiveness survey</a>, 2015, EY</li>
+                            <li class="references-list__ref"><a href="#">FDI projects, West Midlands</a>, 2016, UK Invest</li>
+                            <li class="references-list__ref"><a href="#">Projects review</a>, 2017, Department for International Trade</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <table class="table-region-datapoints">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Datapoints for West Midlands</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Population</td>
+                                <td>5,713,000 (2013)</td>
+                            </tr>
+                            <tr>
+                                <td>Gross Value Added</td>
+                                <td>£110 billion</td>
+                            </tr>
+                            <tr>
+                                <td>GVA per capita</td>
+                                <td>£17,161</td>
+                            </tr>
+                            <tr>
+                                <td>Regional centre</td>
+                                <td>Birmingham</td>
+                            </tr>
+                            <tr>
+                                <td>Regional cities</td>
+                                <td>Coventry, Warwick, Stoke-on-trent, Wolverhampton</td>
+                            </tr>
+                            <tr>
+                                <td>Primary industries</td>
+                                <td><a href="#">Advanced manufacturing</a>, <a href="#">Automobile</a>, <a href="#">Aerospace</a>, <a href="#">Food manufacturing</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="useful-links">
+                        <p class="useful-links__header">Useful links</p>
+                        <p class="useful-links__item"><a href="#">UK Attractiveness survey</a>, 2015, EY</p>
+                        <p class="useful-links__item"><a href="#">FDI projects, West Midlands</a>, 2016, UK Invest</p>
+                        <p class="useful-links__item"><a href="#">Projects review</a>, 2017, Department for International Trade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dit-generic-section">
+        <div class="container">
+            <div class="contact-points">
+                <p>Contact our investment services team for:</p>
+                <ul>
+                    <li>Practical support and information about taking your investment forward</li>
+                    <li>Insights into the UK market</li>
+                    <li>Help building connections</li>
+                </ul>
+            </div>
+            
+            <div id="carousel-form" class="carousel-form carousel slide" data-ride="carousel" data-interval="false">
+                <form enctype='application/x-www-form-urlencoded'
+                      id="ist-form"
+                      role="form"
+                      action="#"
+                      method="post"
+                      autocomplete="off">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="carousel-form__step" id="carousel-step-1">
+                                <p>Page 1 of 3</p>
+                                <h2>Your details</h2>
+                                <div class="form-group">
+                                    <p class="error-help">{{ labels.form_enter_full_name[locale.code] }}</p>
+                                    <label class="control-label"
+                                           for="userName">
+                                        {{ labels.form_full_name[locale.code] }}
+                                    </label>
+                                    <input type="text"
+                                           name="user[name]"
+                                           id="userName"
+                                           required="required"
+                                           class="form-control"
+                                           placeholder=""/>
+                                </div>
+                                <div class="form-group">
+                                    <p class="error-help">{{ labels.form_enter_title[locale.code] }}</p>
+                                    <label class="control-label"
+                                           for="userTitle">
+                                        {{ labels.form_title[locale.code] }}
+                                    </label>
+                                    <input type="text"
+                                           name="user[title]"
+                                           id="userTitle"
+                                           required="required"
+                                           class="form-control"
+                                           placeholder=""/>
+                                </div>
+                                <div class="form-group">
+                                    <legend>
+                                        <span class="body-text">How do you want to be contacted?</span>
+                                    </legend>
+                                    <div class="multiple-choice checkbox-line">
+                                        <input
+                                            type="checkbox"
+                                            id="phone_option_checkbox"
+                                            name="user[phone_option]"
+                                            value="true"
+                                        />
+                                        <label class="dit-not-label"
+                                            for="phone_option_checkbox">
+                                            Phone
+                                        </label>
+                                    </div>
+                                    <div class="multiple-choice checkbox-line">
+                                        <input
+                                            type="checkbox"
+                                            id="email_option_checkbox"
+                                            name="user[email_option]"
+                                            value="true"
+                                        />
+                                        <label class="dit-not-label"
+                                            for="email_option_checkbox">
+                                            Email
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="carrousel-form__step" id="carousel-step-2">
+                            Form Step 2
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias nam tempore perferendis, deserunt fugiat asperiores itaque, accusantium quam exercitationem vitae? Voluptatibus nesciunt, iure fuga autem eius minima sequi at.
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="caroussel-form__step" id="carousel-step-2">
+                            Form Step 3
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias nam tempore perferendis, deserunt fugiat asperiores itaque, accusantium quam exercitationem vitae? Voluptatibus nesciunt, iure fuga autem eius minima sequi at.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Controls -->
+                    <!-- <a class="left carousel-form__control" href="#carousel-form" role="button" data-slide="prev">
+                        <button class="btn dit-btn" aria-hidden="true">Previous</span>
+                    </a> -->
+                    <a class="right carousel-form__control" href="#carousel-form" role="button" data-slide="next">
+                        <button class="btn dit-btn" aria-hidden="true">Continue</button>
+                    </a>
+
+                </form>  
+            </div>
+            
+        </div>
+    </div>
 </main>
 
 

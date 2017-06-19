@@ -1,0 +1,15 @@
+.useful-links {
+
+	&__header {
+		font-weight: bold;
+	}
+
+	&__item {
+		margin-bottom: 18px;
+		font-weight: 400;
+
+		a {
+			text-decoration: underline;
+		}
+	}
+}
