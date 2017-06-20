@@ -215,7 +215,7 @@ function validateField(field, keepErrors) {
 function listenInputs(parent) {
   parent
     .find('input:not([type=hidden])')
-    .filter(':visible')
+    // .filter(':visible')
     .each(function() {
       $(this)
         .blur(function() {
@@ -225,7 +225,7 @@ function listenInputs(parent) {
 
   parent
     .find('select')
-    .filter(':visible')
+    // .filter(':visible')
     .each(function() {
       $(this)
         .change(function() {
