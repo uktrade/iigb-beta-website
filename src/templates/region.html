@@ -222,111 +222,16 @@
     <div class="dit-generic-section">
         <div class="container">
             <div class="contact-points">
-                <p>Contact our investment services team for:</p>
-                <ul>
+                <div class="contact-points__header">Contact our investment services team for:</div>
+                <ul class="contact-points__list">
                     <li>Practical support and information about taking your investment forward</li>
                     <li>Insights into the UK market</li>
                     <li>Help building connections</li>
                 </ul>
             </div>
-            
-            <div id="carousel-form" class="carousel-form carousel slide" data-ride="carousel" data-interval="false">
-                <form enctype='application/x-www-form-urlencoded'
-                      id="ist-form"
-                      role="form"
-                      action="#"
-                      method="post"
-                      autocomplete="off">
 
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <div class="carousel-form__step" id="carousel-step-1">
-                                <p>Page 1 of 3</p>
-                                <h2>Your details</h2>
-                                <div class="form-group">
-                                    <p class="error-help">{{ labels.form_enter_full_name[locale.code] }}</p>
-                                    <label class="control-label"
-                                           for="userName">
-                                        {{ labels.form_full_name[locale.code] }}
-                                    </label>
-                                    <input type="text"
-                                           name="user[name]"
-                                           id="userName"
-                                           required="required"
-                                           class="form-control"
-                                           placeholder=""/>
-                                </div>
-                                <div class="form-group">
-                                    <p class="error-help">{{ labels.form_enter_title[locale.code] }}</p>
-                                    <label class="control-label"
-                                           for="userTitle">
-                                        {{ labels.form_title[locale.code] }}
-                                    </label>
-                                    <input type="text"
-                                           name="user[title]"
-                                           id="userTitle"
-                                           required="required"
-                                           class="form-control"
-                                           placeholder=""/>
-                                </div>
-                                <div class="form-group">
-                                    <legend>
-                                        <span class="body-text">How do you want to be contacted?</span>
-                                    </legend>
-                                    <div class="multiple-choice checkbox-line">
-                                        <input
-                                            type="checkbox"
-                                            id="phone_option_checkbox"
-                                            name="user[phone_option]"
-                                            value="true"
-                                        />
-                                        <label class="dit-not-label"
-                                            for="phone_option_checkbox">
-                                            Phone
-                                        </label>
-                                    </div>
-                                    <div class="multiple-choice checkbox-line">
-                                        <input
-                                            type="checkbox"
-                                            id="email_option_checkbox"
-                                            name="user[email_option]"
-                                            value="true"
-                                        />
-                                        <label class="dit-not-label"
-                                            for="email_option_checkbox">
-                                            Email
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="carrousel-form__step" id="carousel-step-2">
-                            Form Step 2
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias nam tempore perferendis, deserunt fugiat asperiores itaque, accusantium quam exercitationem vitae? Voluptatibus nesciunt, iure fuga autem eius minima sequi at.
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="caroussel-form__step" id="carousel-step-2">
-                            Form Step 3
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias nam tempore perferendis, deserunt fugiat asperiores itaque, accusantium quam exercitationem vitae? Voluptatibus nesciunt, iure fuga autem eius minima sequi at.
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Controls -->
-                    <!-- <a class="left carousel-form__control" href="#carousel-form" role="button" data-slide="prev">
-                        <button class="btn dit-btn" aria-hidden="true">Previous</span>
-                    </a> -->
-                    <a class="right carousel-form__control" href="#carousel-form" role="button" data-slide="next">
-                        <button class="btn dit-btn" aria-hidden="true">Continue</button>
-                    </a>
-
-                </form>  
-            </div>
-            
+            {% include "partials/carousel-form.html" %}
+                        
         </div>
     </div>
 </main>

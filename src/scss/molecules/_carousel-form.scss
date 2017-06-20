@@ -1,16 +1,35 @@
 .carousel-form {
 	margin: 20px 0 20px;
 
-	.carousel-inner {
-		min-height: 400px;
+	&__page-info {
+		color: #666;
 	}
 
 	&__step {
-		input {
-			width: 50%;
-			@media (max-width: $screen-xs-max) {
-		    	width: 100%
+		padding: 20px;
+
+		input, textarea {
+			width: 40%;
+			@media (max-width: $screen-sm-max) {
+		    	width: 60%
+		  	}
+		  	@media (max-width: $screen-xs-max) {
+		    	width: 80%
 		  	}
 		}
+	}
+
+	p {
+  		width: 40%;
+  		@media (max-width: $screen-sm-max) {
+	    	width: 60%
+	  	}
+	  	@media (max-width: $screen-xs-max) {
+	    	width: 80%
+	  	}
+	}
+
+	.help-text {
+		color: #666;
 	}
 }
