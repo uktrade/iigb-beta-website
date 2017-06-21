@@ -13,22 +13,26 @@
 				<div class="col-xs-4">
 					<div class="dit-regions">
 						<div class="dit-regions__header">Where ?</div>
-						<form class="dit-regions__form">
+						<!-- <form class="dit-regions__form">
 							<div class="form-group">
 								<label class="control-label dit-regions__info" for="region">Find a specific location</label>
 								<input type="text" class="form-control" id="region">              
 								<button type="submit" class="dit-btn--region-selector">Go</button>
 							</div>
+						</form> -->
+						<form>
+							{% for sector in mapItems %}
+							<div class="dit-regions__link">
+								<input type="radio" name="filter" class="sector-filter" id="{{sector.title}}" value="{{sector.title}}">
+								<label for="{{sector.title}}">
+									{{ sector.title }}
+								</label>
+							</div>
+							{% endfor %}
 						</form>
-						{% for region in mapItems %}
-						<div class="dit-regions__link">
-							<a href="/{{ base }}{{ region.link }}">{{ region.title }}</a>
-						</div>
-						{% endfor %}
 					</div>
 				</div>
-				<div class="col-xs-8">
-					<img src="http://via.placeholder.com/560x695">
+				<div id="mapCanvas" class="col-xs-8">
 				</div>
 			</div>
 		</div>

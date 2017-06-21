@@ -1,0 +1,64 @@
+#mapCanvas {
+  .uk-region {
+    cursor: pointer;
+    fill: #777777;
+  }
+
+  .uk-dot {
+    cursor: pointer;
+    display: none;
+
+    &.scotland {
+      fill: pink;
+    }
+
+    &.northern-ireland {
+      fill: green;
+    }
+
+    &.north-east-england {
+      fill: yellowgreen;
+    }
+
+    &.north-west-england {
+      fill: lightblue;
+    }
+
+    &.yorkshire-and-the-humber {
+      fill: green;
+    }
+
+    &.wales {
+      fill: orange;
+    }
+
+    &.west-midlands {
+      fill: pink;
+    }
+
+    &.east-midlands {
+      fill: orange;
+    }
+
+    &.east-of-england {
+      fill: lightblue;
+    }
+
+    &.south-west-england {
+      fill: yellowgreen;
+    }
+
+    &.south-east-england {
+      fill: green;
+    }
+
+    &.london {
+      fill: purple;
+    }
+  }
+
+  .non-uk-dot {
+    fill: #CCCCCC;
+    display: none;
+  }
+}
