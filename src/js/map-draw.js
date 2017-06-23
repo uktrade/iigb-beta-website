@@ -12,7 +12,6 @@ function mapDraw() {
     var dotRadius = data.radius;
     var dotData = data.points;
     var pathData = data.paths;
-    var pathScaleValue = gridBaseValue/15; // Initial paths were drawn based on gridBaseValue = 15. TO DO: match path values to dot initial values 
 
     var width = (Math.max.apply(Math,dotData.map(function(o){return o.x_axis;})) + 1) * gridBaseValue;
     var height = (dotData[dotData.length - 1].y_axis + 1) * gridBaseValue;
@@ -20,6 +19,7 @@ function mapDraw() {
     var mapCanvas = d3.select("#mapCanvas").append("svg")
                                             .attr( 'preserveAspectRatio',"xMinYMin meet")
                                             .attr("viewBox", "0 0 " + width + " " + height)
+
 
     var paths = mapCanvas.selectAll('paths')
                           .data(pathData)
@@ -29,7 +29,7 @@ function mapDraw() {
     var pathAttributes = paths
                           .attr('d', function(d) { return d.drawPoints })
                           .attr('class', function(d) {return d.class })
-                          .attr("transform", "scale(" + pathScaleValue + ")")
+                          .attr("transform", "scale(" + gridBaseValue + ")")
                           .on("click", function(d, i) { 
                             window.location.href = window.location.href + d.region;
                           });
