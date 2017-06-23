@@ -1,13 +1,27 @@
 #mapCanvas {
+  width: 540px;
+
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
+  }
+
   .uk-region {
     cursor: pointer;
-    fill: #777777;
+    fill: #CCC;
+    stroke: black;
+    // display: none;
+  }
+
+  .non-uk-region {
+    cursor: pointer;
+    fill: #CCC;
     stroke: red;
+    // display: none;
   }
 
   .uk-dot {
     cursor: pointer;
-    display: none;
+    // display: none;
 
     &.scotland {
       fill: pink;
@@ -59,7 +73,7 @@
   }
 
   .non-uk-dot {
-    fill: #CCCCCC;
-    display: none;
+    fill: #DCDCDC;
+    // display: none;
   }
 }
