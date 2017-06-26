@@ -25,6 +25,11 @@
 
 .region-map {
 	width: 100%;
+}
+
+#investment-chart {
+  width: 100%;
+}
 
 #mapCanvas {
   width: 540px;
@@ -35,21 +40,21 @@
 
   .uk-region {
     cursor: pointer;
-    fill: #CCC;
-    stroke: black;
+    fill: #EFEFEF;
+    stroke: #CCC;
     // display: none;
   }
 
   .non-uk-region {
     cursor: pointer;
-    fill: #CCC;
-    stroke: red;
+    fill: #EFEFEF;
+    stroke: #CCC;
     // display: none;
   }
 
   .uk-dot {
     cursor: pointer;
-    // display: none;
+    display: none;
 
     &.scotland {
       fill: pink;
@@ -101,7 +106,6 @@
   }
 
   .non-uk-dot {
-    fill: #DCDCDC;
-    // display: none;
+    display: none;
   }
 }

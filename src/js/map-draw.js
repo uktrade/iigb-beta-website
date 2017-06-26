@@ -1,11 +1,11 @@
-var d3 = require("d3");
+var d3 = require('d3');
 module.exports = mapDraw
 
 function mapDraw() {
   var filter;
 
   var build = document.iigbBuild ? document.iigbBuild + '/' : '';
-  var mapDataUrl = '/assets/' + build + 'uk-map-json.json';
+  var mapDataUrl = '/assets/' + build + 'uk-map.json';
 
   d3.json(mapDataUrl, function(error, data) {
     var gridBaseValue = data.baseValue;
@@ -16,9 +16,9 @@ function mapDraw() {
     var width = (Math.max.apply(Math,dotData.map(function(o){return o.x_axis;})) + 1) * gridBaseValue;
     var height = (dotData[dotData.length - 1].y_axis + 1) * gridBaseValue;
 
-    var mapCanvas = d3.select("#mapCanvas").append("svg")
-                                            .attr( 'preserveAspectRatio',"xMinYMin meet")
-                                            .attr("viewBox", "0 0 " + width + " " + height)
+    var mapCanvas = d3.select('#mapCanvas').append('svg')
+                                            .attr( 'preserveAspectRatio','xMinYMin meet')
+                                            .attr('viewBox', '0 0 ' + width + ' ' + height)
 
 
     var paths = mapCanvas.selectAll('paths')
@@ -30,25 +30,25 @@ function mapDraw() {
                           .attr('d', function(d) { return d.drawPoints })
                           .attr('class', function(d) {return d.class })
                           .attr('transform', 'scale(' + gridBaseValue + ')')
-                          .on("click", function(d, i) { 
+                          .on('click', function(d, i) { 
                             window.location.href = window.location.href + d.region;
                           });
 
-    // "vector-effect: non-scaling-stroke;" in CSS prevents stroke to be too thick once scaled but this isn't supported by older IE
+    // 'vector-effect: non-scaling-stroke;' in CSS prevents stroke to be too thick once scaled but this isn't supported by older IE
     // Instead we apply the inverse value of scale transform to stoke-with to end up with a 1px stroke-width
     mapCanvas.selectAll('path')
      .style('stroke-width', 1/gridBaseValue);
 
-    var dots = mapCanvas.selectAll("circle")
+    var dots = mapCanvas.selectAll('circle')
                             .data(dotData)
                             .enter()
-                            .append("circle");
+                            .append('circle');
 
     var dotAttributes = dots
-                         .attr("cx", function (d) { return (d.x_axis * gridBaseValue); })
-                         .attr("cy", function (d) { return (d.y_axis * gridBaseValue); })
-                         .attr("r", function (d) { return dotRadius; })
-                         .attr("class", function(d) { return d.class + " " + d.region; })
+                         .attr('cx', function (d) { return (d.x_axis * gridBaseValue); })
+                         .attr('cy', function (d) { return (d.y_axis * gridBaseValue); })
+                         .attr('r', function (d) { return dotRadius; })
+                         .attr('class', function(d) { return d.class + ' ' + d.region; })
                          .attr('data-automotive', function(d) { return d.automotive })
                          .attr('data-aerospace', function(d) { return d.aerospace })
                          .attr('data-energy-generation', function(d) { return d.energy })
@@ -67,10 +67,12 @@ function mapDraw() {
   var filters = $('.sector-filter');
   for (var i = 0; i < filters.length; i++) {
     $(filters[i]).on('change', function(e) {
-      filter = e.target.value.replace(/\s+/g, '-').toLowerCase();
+      filter = e.target.value;
       var mapPoints = $('.uk-dot');
       mapPoints.hide();
       for(var j = 0; j < mapPoints.length; j++) {
+        console.log(filter);
+        console.log(mapPoints[j].dataset, mapPoints[j].dataset[filter])
         if (mapPoints[j].dataset[filter] && mapPoints[j].dataset[filter] > 0) {
           $(mapPoints[j]).show();
         }
