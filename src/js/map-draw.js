@@ -29,10 +29,15 @@ function mapDraw() {
     var pathAttributes = paths
                           .attr('d', function(d) { return d.drawPoints })
                           .attr('class', function(d) {return d.class })
-                          .attr("transform", "scale(" + gridBaseValue + ")")
+                          .attr('transform', 'scale(' + gridBaseValue + ')')
                           .on("click", function(d, i) { 
                             window.location.href = window.location.href + d.region;
                           });
+
+    // "vector-effect: non-scaling-stroke;" in CSS prevents stroke to be too thick once scaled but this isn't supported by older IE
+    // Instead we apply the inverse value of scale transform to stoke-with to end up with a 1px stroke-width
+    mapCanvas.selectAll('path')
+     .style('stroke-width', 1/gridBaseValue);
 
     var dots = mapCanvas.selectAll("circle")
                             .data(dotData)
