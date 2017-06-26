@@ -51,13 +51,13 @@ function mapDraw() {
                          .attr('class', function(d) { return d.class + ' ' + d.region; })
                          .attr('data-automotive', function(d) { return d.automotive })
                          .attr('data-aerospace', function(d) { return d.aerospace })
-                         .attr('data-energy-generation', function(d) { return d.energy })
+                         .attr('data-energy', function(d) { return d.energy })
                          .attr('data-creative', function(d) { return d.creative })
-                         .attr('data-health-and-life-science', function(d) { return d.health })
-                         .attr('data-advanced-manufacturing', function(d) { return d.manufacturing })
+                         .attr('data-health', function(d) { return d.health })
+                         .attr('data-manufacturing', function(d) { return d.manufacturing })
                          .attr('data-retail', function(d) { return d.retail })
                          .attr('data-food', function(d) { return d.food })
-                         .attr('data-financial-services', function(d) { return d.financial })
+                         .attr('data-financial', function(d) { return d.financial })
                          .attr('data-technology', function(d) { return d.technology })
                          .on('click', function(d, i) { 
                             window.location.href = window.location.href + d.region;
@@ -71,8 +71,6 @@ function mapDraw() {
       var mapPoints = $('.uk-dot');
       mapPoints.hide();
       for(var j = 0; j < mapPoints.length; j++) {
-        console.log(filter);
-        console.log(mapPoints[j].dataset, mapPoints[j].dataset[filter])
         if (mapPoints[j].dataset[filter] && mapPoints[j].dataset[filter] > 0) {
           $(mapPoints[j]).show();
         }
