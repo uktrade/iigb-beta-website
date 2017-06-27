@@ -35,22 +35,30 @@
   }
 
   .uk-region {
-    cursor: pointer;
     fill: #AFAFAF;
     stroke: #CCC;
     // display: none;
   }
 
   .non-uk-region {
-    cursor: pointer;
     fill: #FFFFFF;
     stroke: #CCC;
     // display: none;
   }
 
+  .uk-map {
+    .uk-dot, .uk-region {
+      cursor: pointer;
+    }
+  }
+
+  .uk-mini-map {
+    fill: transparent;
+    stroke: #B3B3B3;
+  }
+
   .uk-dot {
-    cursor: pointer;
-    display: none;
+    // display: none;
 
     &.scotland {
       fill: pink;
@@ -98,6 +106,14 @@
 
     &.london {
       fill: purple;
+    }
+
+    &.outside-dot {
+      fill: #81CCEB;
+    }
+
+    &.mini-map-dot {
+      fill: #B3B3B3;
     }
   }
 

@@ -1,4 +1,5 @@
 {
+  "clickable": true,
   "radius": 6,
   "baseValue": 15,
   "points": [

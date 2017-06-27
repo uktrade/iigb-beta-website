@@ -13,13 +13,15 @@ function mapDraw() {
     var dotRadius = data.radius;
     var dotData = data.points;
     var pathData = data.paths;
+    var clickable = data.clickable;
 
     var width = (Math.max.apply(Math,dotData.map(function(o){return o.x_axis;})) + 1) * gridBaseValue;
-    var height = (dotData[dotData.length - 1].y_axis + 1) * gridBaseValue;
+    var height = (Math.max.apply(Math,dotData.map(function(o){return o.y_axis;})) + 1) * gridBaseValue;
 
     var mapCanvas = d3.select('#mapCanvas').append('svg')
                                             .attr( 'preserveAspectRatio','xMinYMin meet')
                                             .attr('viewBox', '0 0 ' + width + ' ' + height)
+                                            .attr('class', file.split('.')[0])
 
 
     var paths = mapCanvas.selectAll('paths')
@@ -31,8 +33,10 @@ function mapDraw() {
                           .attr('d', function(d) { return d.drawPoints })
                           .attr('class', function(d) {return d.class })
                           .attr('transform', 'scale(' + gridBaseValue + ')')
-                          .on('click', function(d, i) { 
-                            window.location.href = window.location.href + d.region;
+                          .on('click', function(d, i) {
+                            if (clickable) {
+                              window.location.href = window.location.href + d.region;
+                            }
                           });
 
     // 'vector-effect: non-scaling-stroke;' in CSS prevents stroke to be too thick once scaled but this isn't supported by older IE
@@ -61,7 +65,9 @@ function mapDraw() {
                          .attr('data-financial', function(d) { return d.financial })
                          .attr('data-technology', function(d) { return d.technology })
                          .on('click', function(d, i) { 
-                            window.location.href = window.location.href + d.region;
+                            if (clickable) {
+                              window.location.href = window.location.href + d.region;
+                            }
                           });
   });
 
