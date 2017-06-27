@@ -4,8 +4,9 @@ module.exports = mapDraw
 function mapDraw() {
   var filter;
 
+  var file = $('#mapCanvas')[0].dataset.file;
   var build = document.iigbBuild ? document.iigbBuild + '/' : '';
-  var mapDataUrl = '/assets/' + build + 'uk-map.json';
+  var mapDataUrl = '/assets/' + build + file;
 
   d3.json(mapDataUrl, function(error, data) {
     var gridBaseValue = data.baseValue;
