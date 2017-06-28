@@ -5,6 +5,12 @@ function mapDraw() {
   var filter;
 
   var file = $('#mapCanvas')[0].dataset.file;
+  var areaName = window.location.pathname.split('/')[3];
+  if (areaName === '') {
+    areaName = 'uk';
+  }
+  var file = areaName + '-map.json';
+  console.log(file);
   var build = document.iigbBuild ? document.iigbBuild + '/' : '';
   var mapDataUrl = '/assets/' + build + file;
 
