@@ -107,17 +107,46 @@
     &.london {
       fill: purple;
     }
+  }
 
-    &.outside-dot {
+  .region-dot {
+    fill: #E9E9E8;
+
+    &.highlight-out{
       fill: #81CCEB;
     }
 
-    &.mini-map-dot {
+    &.highlight-in {
+      stroke: #0D227F;
+    }
+
+    &.mini-map {
       fill: #B3B3B3;
     }
   }
 
   .non-uk-dot {
     display: none;
+  }
+
+  .label-highlight {
+    font-size: 9px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    text-anchor: middle;
+    dominant-baseline: middle;
+
+    &.out {
+      fill: #81CCEB;
+    }
+
+    &.in {
+      fill: black;
+    }
+
+    &.capital {
+      font-size: 10px;
+      font-weight: 600;
+    }
   }
 }

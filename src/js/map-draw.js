@@ -69,6 +69,19 @@ function mapDraw() {
                               window.location.href = window.location.href + d.region;
                             }
                           });
+
+    var labels = mapCanvas.selectAll('text')
+                          .data(dotData)
+                          .enter()
+                          .append('text');
+
+    var labelsAttributes = labels
+                            .attr('x', function(d) { return d.x_axis * gridBaseValue })
+                            .attr('y', function(d) { return d.y_axis * gridBaseValue })
+                            .attr('dx', function(d) { return d.x_offset * gridBaseValue })
+                            .attr('dy', function(d) { return d.y_offset * gridBaseValue })
+                            .text( function(d) { return d.label })
+                            .attr('class', function(d) { return d.labelClass });
   });
 
   var filters = $('.sector-filter');
