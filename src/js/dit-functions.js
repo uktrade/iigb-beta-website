@@ -65,6 +65,7 @@ function onLoaded() {
     addAltTrackingPixel()
     drawMap()
     renderInvestmentChart()
+    enablePinchZoom()
   } catch (e) {
     error('On loaded failed!', e)
   }
@@ -382,6 +383,12 @@ function addAltTrackingPixel() {
     // Adds empty alt attribute to tracking pixel (marketing) meaning it's a decorative image so that it passes accessibility
     $('img[src$="https://stags.bluekai.com/site/38648?limit=1"]').attr('alt', '');
   }, 500);
+}
+
+function enablePinchZoom() {
+  if (window.location.pathname.split('/')[2] === 'investment-opportunities') {
+    document.querySelector('meta[name=viewport]').setAttribute('content','width=device-width,initial-scale=1,maximum-scale=4,user-scalable=yes');
+  }
 }
 
 
