@@ -13,11 +13,12 @@ function mapDraw() {
   console.log(file);
   var build = document.iigbBuild ? document.iigbBuild + '/' : '';
   var mapDataUrl = '/assets/' + build + file;
+  var dotData;
 
   d3.json(mapDataUrl, function(error, data) {
     var gridBaseValue = data.baseValue;
     var dotRadius = data.radius;
-    var dotData = data.points;
+    dotData = data.points;
     var pathData = data.paths;
     var clickable = data.clickable;
 
@@ -97,7 +98,7 @@ function mapDraw() {
       var mapPoints = $('.uk-dot');
       mapPoints.hide();
       for(var j = 0; j < mapPoints.length; j++) {
-        if (mapPoints[j].dataset[filter] && mapPoints[j].dataset[filter] > 0) {
+        if (dotData[j][filter] && dotData[j][filter] > 0) {
           $(mapPoints[j]).show();
         }
       };
