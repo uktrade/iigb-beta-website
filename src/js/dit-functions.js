@@ -2,6 +2,7 @@ var geoLocation = require('./geo-location')
 var form = require('./form')
 var equalheight = require('./equalHeight')
 var drawMap = require('./map-draw.js');
+var ioppsToggles = require('./iopps.js');
 var renderInvestmentChart = require('./investment-chart')
 var logger = require('./logger')('DIT Functions')
 var debug = logger.debug
@@ -63,6 +64,7 @@ function onLoaded() {
     playVid()
     jsEnhanceExternalLinks()
     addAltTrackingPixel()
+    ioppsToggles()
     drawMap()
     renderInvestmentChart()
   } catch (e) {
