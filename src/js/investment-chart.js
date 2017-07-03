@@ -32,7 +32,10 @@ function renderInvestmentChart() {
 
 
   // load the data
-  d3.json('/assets/data.json', function(error, data) {
+  var build = document.iigbBuild ? document.iigbBuild + '/' : '';
+  var chartDataUrl = '/assets/' + build + 'data.json';
+  console.log(chartDataUrl);
+  d3.json(chartDataUrl, function(error, data) {
 
       data.forEach(function(d) {
           d.Year = d.Year;
