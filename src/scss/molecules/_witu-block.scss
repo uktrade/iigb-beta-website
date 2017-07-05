@@ -1,0 +1,61 @@
+.witu-block {
+	border-bottom: 1px solid #EEE;
+	padding-bottom: 20px;
+	
+	.sector-toggle, .filter-toggle {
+		color: skyblue;	
+	}
+
+	table {
+		width: 100%;
+		
+		td, th {
+			font-weight: 100;
+			font-size: 18px;
+		}
+
+		thead > tr { 
+			border-bottom: 2px solid;
+
+			th {
+				text-align: center;
+			}
+		}
+
+		tbody > tr {
+			border: none;
+		}
+
+		.map-indicator {
+			font-weight: bold;
+		}
+	}
+
+	#salary-difference-table {
+		tr:nth-child(5) {
+			border-bottom: 1px dashed #888;
+		}
+
+		.positive {
+			color: green;
+		}
+
+		.negative {
+			color: red;
+		}
+	}
+
+	#r-and-d-table {
+		th:nth-child(1), td:nth-child(1) {
+			width: 35%
+		}
+
+		th:nth-child(2), td:nth-child(2) {
+			width: 15%
+		}
+
+		th:nth-child(3), td:nth-child(3) {
+			width: 50%
+		}
+	}
+}
