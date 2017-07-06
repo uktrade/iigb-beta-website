@@ -130,7 +130,11 @@ function checkHeight() {
   debug('Applying equal heights')
   var elem = $('div').find('.check-height')
   if (elem.length > 0) {
-    equalheight(elem)
+    // equalheight needs to be slightly delayed becaused it is sometimes executed before content is fully loaded resulting in truncated divs
+    // Especially if content goes through safe filter, i.e.: {{ tile.content.contents | safe }} which is quite slow
+    setTimeout(function(){
+      equalheight(elem);
+    }, 500);
   }
 }
 
