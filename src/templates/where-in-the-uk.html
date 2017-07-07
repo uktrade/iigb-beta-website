@@ -124,8 +124,9 @@
 
             <div class="row">
               <div class="col-xs-12 col-sm-4">
-                <img src="/{{assets}}/media/cluster-maps/{{ clusterMap }}">
+                <img src="/{{assets}}/media/cluster-maps/{{ clusterMap.image }}">
               </div>
+
             </div>
           </div>
 
@@ -137,10 +138,15 @@
 
             <div class="row">
               <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-                <img src="/{{assets}}/media/universities-maps/{{ universitiesMap }}">
-              </div>
+                <img src="/{{assets}}/media/universities-maps/{{ universitiesMap.image }}">
+                <div class="image-mapping">
+                  {% for point in universitiesMap.content.mapping_points %}
+                    <div class="mapping-point" style="top: {{ point.top }};left: {{ point.left }};">{{ point.text }}</div>
+                  {% endfor %}
+                </div>
+              </div>              
 
-              <div class="col-xs-12 col-sm-8">
+              <div class="col-xs-12 col-sm-8">                
                 <table id="universities-table">
                   <thead>
                     <tr>
@@ -149,26 +155,12 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td><span class="map-indicator">1</span> Oxford</td>
-                      <td><a href="/{{ base }}/where-in-the-uk/south-east-england/">South East England</a></td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">2</span> Cambridge</td>
-                      <td><a href="/{{ base }}/where-in-the-uk/east-of-england/">East of England</a></td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">3</span> Leeds</td>
-                      <td><a href="/{{ base }}/where-in-the-uk/yorkshire-and-the-humber/">Yorkshire and the Humber</a></td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">4</span> Bristol</td>
-                      <td><a href="/{{ base }}/where-in-the-uk/south-west-england/">South West England</a></td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">5</span> Exeter</td>
-                      <td><a href="/{{ base }}/where-in-the-uk/south-west-england/">South West England</a></td>
-                    </tr>
+                    {% for row in universitiesTable.content.table_rows %}
+                      <tr>
+                        <td><span class="map-indicator">{{ row.map_indicator }}</span> {{ row.first_cell }}</td>
+                        <td><a href="/{{ base }}/where-in-the-uk/{{ row.link }}">{{ row.second_cell }}</a></td>
+                      </tr>
+                    {% endfor %}
                   </tbody>
                 </table>
               </div>
@@ -183,7 +175,12 @@
 
             <div class="row">
               <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-                <img src="/{{assets}}/media/salary-maps/{{ salaryMap }}">
+                <img src="/{{assets}}/media/salary-maps/{{ salaryMap.image }}">
+                <div class="image-mapping">
+                  {% for point in salaryMap.content.mapping_points %}
+                    <div class="mapping-point" style="top: {{ point.top }};left: {{ point.left }};">{{ point.text }}</div>
+                  {% endfor %}
+                </div>
               </div>
 
               <div class="col-xs-12 col-sm-8">
@@ -196,47 +193,12 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td><span class="map-indicator">1</span><a href="/{{ base }}/where-in-the-uk/london/"> London</a></td>
-                      <td class="positive">+10.5%</td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">2</span><a href="/{{ base }}/where-in-the-uk/south-east-england/"> South East England</a></td>
-                      <td class="positive">+8.2%</td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">3</span><a href="/{{ base }}/where-in-the-uk/east-of-england/"> East of England</a></td>
-                      <td class="positive">+7.8%</td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">4</span><a href="/{{ base }}/where-in-the-uk/yorkshire-and-the-humber/"> Yorkshire and the Humber</a></td>
-                      <td class="positive">+6.1%</td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">5</span><a href="/{{ base }}/where-in-the-uk/scotland/"> Scotland</a></td>
-                      <td class="positive">+4.2%</td>
-                    </tr>
-
-                    <tr>
-                      <td><span class="map-indicator">8</span><a href="/{{ base }}/where-in-the-uk/wales/"> Wales</a></td>
-                      <td class="negative">-3.6%</td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">9</span><a href="/{{ base }}/where-in-the-uk/south-west-england/"> South West England</a></td>
-                      <td class="negative">-4.5%</td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">10</span><a href="/{{ base }}/where-in-the-uk/northern-ireland/"> Northern Ireland</a></td>
-                      <td class="negative">-4.8%</td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">11</span><a href="/{{ base }}/where-in-the-uk/west-midlands/"> West Midlands</a></td>
-                      <td class="negative">-6.7%</td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">12</span><a href="/{{ base }}/where-in-the-uk/north-east-england/"> North East England</a></td>
-                      <td class="negative">-7.9%</td>
-                    </tr>
+                    {% for row in salaryTable.content.table_rows %}
+                      <tr>
+                        <td><span class="map-indicator">{{ row.map_indicator }}</span><a href="/{{ base }}/where-in-the-uk/{{ row.link }}"> {{ row.first_cell }}</td>
+                        <td>{{ row.second_cell }}</a></td>
+                      </tr>
+                    {% endfor %}
                   </tbody>
                 </table>
                 
@@ -252,7 +214,12 @@
 
             <div class="row">
               <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-                <img src="/{{assets}}/media/research-maps/{{ researchMap }}">
+                <img src="/{{assets}}/media/research-maps/{{ researchMap.image }}">
+                <div class="image-mapping">
+                  {% for point in researchMap.content.mapping_points %}
+                    <div class="mapping-point" style="top: {{ point.top }};left: {{ point.left }};">{{ point.text }}</div>
+                  {% endfor %}
+                </div>
               </div>
 
               <div class="col-xs-12 col-sm-8">
@@ -260,37 +227,17 @@
                 <table id="r-and-d-table">
                   <thead>
                     <tr>
-                      <th>{{ labels.r_d_hub[locale.code] }}</th>
-                      <th>{{ labels.size[locale.code] }}</th>
                       <th>{{ labels.region[locale.code] }}</th>
+                      <th>{{ labels.activity[locale.code] }}</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td><span class="map-indicator">1</span> Oxford</td>
-                      <td>£134m</td>
-                      <td><a href="/{{ base }}/where-in-the-uk/south-east-england/">South East England</a></td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">2</span> Cambridge</td>
-                      <td>£88m</td>
-                      <td><a href="/{{ base }}/where-in-the-uk/east-of-england/">East of England</a></td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">3</span> Leeds</td>
-                      <td>£76m</td>
-                      <td><a href="/{{ base }}/where-in-the-uk/yorkshire-and-the-humber/">Yorkshire and the Humber</a></td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">4</span> Bristol</td>
-                      <td>£56m</td>
-                      <td><a href="/{{ base }}/where-in-the-uk/south-west-england/">South West England</a></td>
-                    </tr>
-                    <tr>
-                      <td><span class="map-indicator">5</span> Exeter</td>
-                      <td>£12m</td>
-                      <td><a href="/{{ base }}/where-in-the-uk/south-west-england/">South West England</a></td>
-                    </tr>
+                    {% for row in researchTable.content.table_rows %}
+                      <tr>
+                        <td><span class="map-indicator">{{ row.map_indicator }}</span><a href="/{{ base }}/where-in-the-uk/south-east-england/"> {{ row.first_cell }}</td>
+                        <td>{{ row.second_cell }}</td>
+                      </tr>
+                    {% endfor %}
                   </tbody>
                 </table>
 
