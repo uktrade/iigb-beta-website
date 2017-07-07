@@ -43,7 +43,8 @@
           <a href="/{{ base }}/industries/technology/technology-in-the-uk" class="sector">{{ labels.sectors.technology[locale.code] }}</a>
         </div>
       </div>
-
+      
+      {% if blockHeader %}
       <div id="filter-list" class="witu-comparator-list--xs">
         <p>{{ labels.choose_a_comparator[locale.code] }}</p>
         <div class="witu-comparator-list__comparator">
@@ -58,6 +59,7 @@
           <a href="#r-and-d" class="filter">{{ labels.research_and_development_hubs[locale.code] }}</a>
         </div>
       </div>
+      {% endif %}
 
       <div class="row">
         <div class="col-sm-3 hidden-xs" id="sticky-nav">
@@ -93,7 +95,8 @@
               <a href="/{{ base }}/industries/technology/technology-in-the-uk" class="sector">{{ labels.sectors.technology[locale.code] }}</a>
             </div>
           </div>
-
+          
+          {% if blockHeader %}
           <div class="witu-comparator-list">
             <div class="witu-comparator-list__comparator">
               <a href="#universities">{{ labels.universities[locale.code] }}</a>
@@ -107,6 +110,7 @@
               <a href="#r-and-d">{{ labels.research_and_development_hubs[locale.code] }}</a>
             </div>
           </div>
+          {% endif %}
         </div>
 
         <div class="col-xs-12 col-sm-9">
@@ -291,6 +295,42 @@
                 </table>
 
               </div>
+            </div>
+          </div>
+
+          {% else %}
+
+          <div id="sector-list" class="hidden-sm hidden-md hidden-lg hidden-xl">
+            <p>{{ labels.investment_opts_select_industry[locale.code] }}</p>
+            <div class="witu-sector-list__sector">
+              <a href="/{{ base }}/industries/aerospace/aerospace-in-the-uk" class="sector">{{ labels.sectors.aerospace[locale.code] }}</a>
+            </div>
+            <div class="witu-sector-list__sector">
+              <a href="/{{ base }}/industries/advanced-manufacturing/advanced-manufacturing-in-the-uk" class="sector">{{ labels.sectors.advanced_manufacturing[locale.code] }}</a>
+            </div>
+            <div class="witu-sector-list__sector">
+              <a href="/{{ base }}/industries/automotive/automotive-in-the-uk" class="sector">{{ labels.sectors.automotive[locale.code] }}</a>
+            </div>
+            <div class="witu-sector-list__sector">
+              <a href="/{{ base }}/industries/creative/creative-in-the-uk" class="sector">{{ labels.sectors.creative[locale.code] }}</a>
+            </div>
+            <div class="witu-sector-list__sector">
+              <a href="/{{ base }}/industries/energy/energy-in-the-uk" class="sector">{{ labels.sectors.energy[locale.code] }}</a>
+            </div>
+            <div class="witu-sector-list__sector">
+              <a href="/{{ base }}/industries/financial-services/financial-services-in-the-uk" class="sector">{{ labels.sectors.financial_services[locale.code] }}</a>
+            </div>
+            <div class="witu-sector-list__sector">
+              <a href="/{{ base }}/industries/food-and-drink-manufacturing/food-and-drink-manufacturing-in-the-uk" class="sector">{{ labels.sectors.food_and_drink_manufacturing[locale.code] }}</a>
+            </div>
+            <div class="witu-sector-list__sector">
+              <a href="/{{ base }}/industries/health-and-life/health-and-life-in-the-uk" class="sector">{{ labels.sectors.health_and_life_sciences[locale.code] }}</a>
+            </div>
+            <div class="witu-sector-list__sector">
+              <a href="/{{ base }}/industries/retail/retail-in-the-uk" class="sector">{{ labels.sectors.retail[locale.code] }}</a>
+            </div>
+            <div class="witu-sector-list__sector">
+              <a href="/{{ base }}/industries/technology/technology-in-the-uk" class="sector">{{ labels.sectors.technology[locale.code] }}</a>
             </div>
           </div>
 
