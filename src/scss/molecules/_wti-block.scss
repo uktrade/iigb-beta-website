@@ -1,4 +1,4 @@
-.witu-block {
+.wti-block {
 	border-bottom: 1px solid #EEE;
 	padding-bottom: 20px;
 
@@ -43,16 +43,20 @@
 	}
 
 	#salary-difference-table {
+		tr:nth-child(-n+7) {
+			.color-value {
+				color: red;
+			}
+		}
+
+		tr:nth-child(n+7) {
+			.color-value {
+				color: green;
+			}
+		}
+
 		tr:nth-child(6) {
 			border-bottom: 1px dashed #888;
-		}
-
-		.positive {
-			color: green;
-		}
-
-		.negative {
-			color: red;
 		}
 	}
 }
