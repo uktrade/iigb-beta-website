@@ -119,9 +119,9 @@ function addActive() {
   } else if (url.match(/\/setup-guide\//)) {
     child = 'setup-guide/'
     debug('Adding active style to setup guide')
-  } else if (url.match('\/where-in-the-uk\/')) {
-    child = 'where-in-the-uk/'
-    debug('Adding active style to where in the uk')
+  } else if (url.match('\/where-to-invest\/')) {
+    child = 'where-to-invest/'
+    debug('Adding active style to where to invest')
   } else if (url.match(/\/\w{2,3}\/$/)) {
     debug('Not setting active style on current page')
     child = ''

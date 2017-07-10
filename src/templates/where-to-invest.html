@@ -116,7 +116,7 @@
         <div class="col-xs-12 col-sm-9">
           <h1>{{ labels.where_to_invest[locale.code] }}</h1>
 
-          {% if blockHeader %}
+        {% if blockHeader %}
           
           <div class="wti-block">
             <h2 class="hidden-xs">{{ labels.for[locale.code] }} <span class="sector-name">{{ blockHeader.content.title }}</span></h2>
@@ -124,7 +124,9 @@
 
             <div class="row">
               <div class="col-xs-12 col-sm-4">
-                <img src="/{{assets}}/media/cluster-maps/{{ clusterMap.image }}">
+                <div class="wti-map">
+                  <img src="/{{assets}}/media/wti-maps/{{ clusterMap.image }}">
+                </div>
               </div>
 
             </div>
@@ -138,11 +140,13 @@
 
             <div class="row">
               <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-                <img src="/{{assets}}/media/universities-maps/{{ universitiesMap.image }}">
-                <div class="image-mapping">
-                  {% for point in universitiesMap.content.mapping_points %}
-                    <div class="mapping-point" style="top: {{ point.top }};left: {{ point.left }};">{{ point.text }}</div>
-                  {% endfor %}
+                <div class="wti-map">
+                  <img src="/{{assets}}/media/wti-maps/{{ universitiesMap.image }}">
+                  <div class="wti-map__mapping">
+                    {% for point in universitiesMap.content.mapping_points %}
+                      <div class="wti-map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                    {% endfor %}
+                  </div>
                 </div>
               </div>              
 
@@ -158,7 +162,7 @@
                     {% for row in universitiesTable.content.table_rows %}
                       <tr>
                         <td><span class="map-indicator">{{ row.map_indicator }}</span> {{ row.first_cell }}</td>
-                        <td><a href="/{{ base }}/where-in-the-uk/{{ row.link }}">{{ row.second_cell }}</a></td>
+                        <td><a href="/{{ base }}/where-to-invest/{{ row.link }}">{{ row.second_cell }}</a></td>
                       </tr>
                     {% endfor %}
                   </tbody>
@@ -175,11 +179,13 @@
 
             <div class="row">
               <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-                <img src="/{{assets}}/media/salary-maps/{{ salaryMap.image }}">
-                <div class="image-mapping">
-                  {% for point in salaryMap.content.mapping_points %}
-                    <div class="mapping-point" style="top: {{ point.top }};left: {{ point.left }};">{{ point.text }}</div>
-                  {% endfor %}
+                <div class="wti-map">
+                  <img src="/{{assets}}/media/wti-maps/{{ salaryMap.image }}">
+                  <div class="wti-map__mapping">
+                    {% for point in salaryMap.content.mapping_points %}
+                      <div class="wti-map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                    {% endfor %}
+                  </div>
                 </div>
               </div>
 
@@ -195,8 +201,8 @@
                   <tbody>
                     {% for row in salaryTable.content.table_rows %}
                       <tr>
-                        <td><span class="map-indicator">{{ row.map_indicator }}</span><a href="/{{ base }}/where-in-the-uk/{{ row.link }}"> {{ row.first_cell }}</td>
-                        <td class="color-value">{{ row.second_cell }}</a></td>
+                        <td><span class="map-indicator">{{ row.mapIndicator }}</span><a href="/{{ base }}/where-to-invest/{{ row.link }}"> {{ row.cell1 }}</td>
+                        <td class="{{ 'positive' if row.cell2 > 0 else 'negative' }}">{{ row.cell2 }}</a></td>
                       </tr>
                     {% endfor %}
                   </tbody>
@@ -214,11 +220,13 @@
 
             <div class="row">
               <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
-                <img src="/{{assets}}/media/research-maps/{{ researchMap.image }}">
-                <div class="image-mapping">
-                  {% for point in researchMap.content.mapping_points %}
-                    <div class="mapping-point" style="top: {{ point.top }};left: {{ point.left }};">{{ point.text }}</div>
-                  {% endfor %}
+                <div class="wti-map">
+                  <img src="/{{assets}}/media/wti-maps/{{ researchMap.image }}">
+                  <div class="wti-map__mapping">
+                    {% for point in researchMap.content.mapping_points %}
+                      <div class="wti-map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                    {% endfor %}
+                  </div>
                 </div>
               </div>
 
@@ -234,8 +242,8 @@
                   <tbody>
                     {% for row in researchTable.content.table_rows %}
                       <tr>
-                        <td><span class="map-indicator">{{ row.map_indicator }}</span><a href="/{{ base }}/where-in-the-uk/south-east-england/"> {{ row.first_cell }}</td>
-                        <td>{{ row.second_cell }}</td>
+                        <td><span class="map-indicator">{{ row.mapIndicator }}</span><a href="/{{ base }}/where-to-invest/{{ row.link }}/"> {{ row.cell1 }}</td>
+                        <td>{{ row.cell2 }}</td>
                       </tr>
                     {% endfor %}
                   </tbody>
@@ -245,43 +253,23 @@
             </div>
           </div>
 
-          {% else %}
+        {% else %}
 
-          <div id="sector-list" class="hidden-sm hidden-md hidden-lg hidden-xl">
-            <p>{{ labels.investment_opts_select_industry[locale.code] }}</p>
-            <div class="wti-sector-list__sector">
-              <a href="/{{ base }}/industries/aerospace/aerospace-in-the-uk" class="sector">{{ labels.sectors.aerospace[locale.code] }}</a>
-            </div>
-            <div class="wti-sector-list__sector">
-              <a href="/{{ base }}/industries/advanced-manufacturing/advanced-manufacturing-in-the-uk" class="sector">{{ labels.sectors.advanced_manufacturing[locale.code] }}</a>
-            </div>
-            <div class="wti-sector-list__sector">
-              <a href="/{{ base }}/industries/automotive/automotive-in-the-uk" class="sector">{{ labels.sectors.automotive[locale.code] }}</a>
-            </div>
-            <div class="wti-sector-list__sector">
-              <a href="/{{ base }}/industries/creative/creative-in-the-uk" class="sector">{{ labels.sectors.creative[locale.code] }}</a>
-            </div>
-            <div class="wti-sector-list__sector">
-              <a href="/{{ base }}/industries/energy/energy-in-the-uk" class="sector">{{ labels.sectors.energy[locale.code] }}</a>
-            </div>
-            <div class="wti-sector-list__sector">
-              <a href="/{{ base }}/industries/financial-services/financial-services-in-the-uk" class="sector">{{ labels.sectors.financial_services[locale.code] }}</a>
-            </div>
-            <div class="wti-sector-list__sector">
-              <a href="/{{ base }}/industries/food-and-drink-manufacturing/food-and-drink-manufacturing-in-the-uk" class="sector">{{ labels.sectors.food_and_drink_manufacturing[locale.code] }}</a>
-            </div>
-            <div class="wti-sector-list__sector">
-              <a href="/{{ base }}/industries/health-and-life/health-and-life-in-the-uk" class="sector">{{ labels.sectors.health_and_life_sciences[locale.code] }}</a>
-            </div>
-            <div class="wti-sector-list__sector">
-              <a href="/{{ base }}/industries/retail/retail-in-the-uk" class="sector">{{ labels.sectors.retail[locale.code] }}</a>
-            </div>
-            <div class="wti-sector-list__sector">
-              <a href="/{{ base }}/industries/technology/technology-in-the-uk" class="sector">{{ labels.sectors.technology[locale.code] }}</a>
+          <div class="wti-block">
+            <h3 class="hidden-xs">{{ labels.select_your_industry[locale.code] }}</h3>
+            <h3 class="hidden-sm hidden-md hidden-lg hidden-xl"><span class="sector-toggle">{{ labels.select_your_industry[locale.code] }}</span></h3>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                <div class="wti-map">
+                  <img src="/{{assets}}/media/wti-maps/uk-map.png">
+                </div>
+              </div>
+
             </div>
           </div>
 
-          {% endif %}
+        {% endif %}
 
         </div>
 
