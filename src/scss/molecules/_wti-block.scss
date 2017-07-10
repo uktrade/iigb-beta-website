@@ -11,7 +11,6 @@
 			font-size: 14px;
 			text-align: center;
 			font-weight: bold;
-			cursor: pointer;
 		}
 	}
 	
@@ -23,8 +22,14 @@
 		width: 100%;
 		
 		td, th {
+			width: 47.5%;
 			font-weight: 100;
 			font-size: 18px;
+
+			&:first-child {
+				width: 5%;
+				padding-#{$left}: 0;
+			}
 		}
 
 		thead > tr { 
@@ -42,19 +47,25 @@
 		.map-indicator {
 			font-weight: bold;
 		}
+
+		.value {
+		    background-color: #e0de92;
+		    font-weight: 600;
+		    padding-left: 0.3em;
+		}
 	}
 
 	#salary-difference-table {
 		.positive {
-			color: green;
+			background-color: #B8E673;
+		    font-weight: 600;
+		    padding-left: 0.3em;
 		}
 
 		.negative { 
-			color: red;
+			background-color: #E98174;
+    		font-weight: 600;
+    		padding-left: 0.3em;
 		}
-
-		// tr:nth-child(6) {
-		// 	border-bottom: 1px dashed #888;
-		// }
 	}
 }

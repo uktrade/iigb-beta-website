@@ -132,7 +132,7 @@
             </div>
           </div>
 
-          <div id="universities" class="wti-block">
+<!--           <div id="universities" class="wti-block">
             <h2 class="hidden-xs">{{ labels.for[locale.code] }} <span class="sector-name">{{ blockHeader.content.title }}</span></h2>
             <h2 class="hidden-sm hidden-md hidden-lg hidden-xl">{{ labels.for[locale.code] }} <span class="sector-toggle sector-name">{{ blockHeader.content.title }}</span></h2>
             <h3 class="hidden-xs">{{ labels.showing[locale.code] }} <span class="filter-name">{{ labels.universities[locale.code] }}</span></h3>
@@ -144,7 +144,9 @@
                   <img src="/{{assets}}/media/wti-maps/{{ universitiesMap.image }}">
                   <div class="wti-map__mapping">
                     {% for point in universitiesMap.content.mapping_points %}
-                      <div class="wti-map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                      <a href="/{{ base }}/where-to-invest/{{ point.link }}/">
+                        <div class="wti-map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                      </a>
                     {% endfor %}
                   </div>
                 </div>
@@ -154,6 +156,7 @@
                 <table id="universities-table">
                   <thead>
                     <tr>
+                      <th><span class="visuallyhidden">{{ labels.map_indicator[locale.code] }}</span></th>
                       <th>{{ labels.university[locale.code] }}</th>
                       <th>{{ labels.region[locale.code] }}</th>
                     </tr>
@@ -161,15 +164,16 @@
                   <tbody>
                     {% for row in universitiesTable.content.table_rows %}
                       <tr>
-                        <td><span class="map-indicator">{{ row.map_indicator }}</span> {{ row.first_cell }}</td>
-                        <td><a href="/{{ base }}/where-to-invest/{{ row.link }}">{{ row.second_cell }}</a></td>
+                        <td><span class="map-indicator">{{ row.mapIndicator }}</span></td>
+                        <td>{{ row.cell1 }}</td>
+                        <td><a href="/{{ base }}/where-to-invest/{{ row.link }}">{{ row.cell2 }}</a></td>
                       </tr>
                     {% endfor %}
                   </tbody>
                 </table>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div id="salary" class="wti-block">
             <h2 class="hidden-xs">{{ labels.for[locale.code] }} <span class="sector-name">{{ blockHeader.content.title }}</span></h2>
@@ -183,7 +187,9 @@
                   <img src="/{{assets}}/media/wti-maps/{{ salaryMap.image }}">
                   <div class="wti-map__mapping">
                     {% for point in salaryMap.content.mapping_points %}
-                      <div class="wti-map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                      <a href="/{{ base }}/where-to-invest/{{ point.link }}/">
+                        <div class="wti-map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                      </a>
                     {% endfor %}
                   </div>
                 </div>
@@ -194,15 +200,21 @@
                 <table id="salary-difference-table">
                   <thead>
                     <tr>
+                      <th><span class="visuallyhidden">{{ labels.map_indicator[locale.code] }}</span></th>
                       <th>{{ labels.region[locale.code] }}</th>
                       <th>{{ labels.salary_difference[locale.code] }}</th>
                     </tr>
                   </thead>
                   <tbody>
+                    {% set lastRow = salaryTable.content.table_rows | last %}
+                    {% set maxValue = lastRow.cell2 | int | abs %}
+  
                     {% for row in salaryTable.content.table_rows %}
+                      {% set widthValue = ((row.cell2 | int | abs)/maxValue) * 100  %}
                       <tr>
-                        <td><span class="map-indicator">{{ row.mapIndicator }}</span><a href="/{{ base }}/where-to-invest/{{ row.link }}"> {{ row.cell1 }}</td>
-                        <td class="{{ 'positive' if row.cell2 > 0 else 'negative' }}">{{ row.cell2 }}</a></td>
+                        <td><span class="map-indicator">{{ row.mapIndicator }}</span></td>
+                        <td><a href="/{{ base }}/where-to-invest/{{ row.link }}">{{ row.cell1 }}</a></td>
+                        <td><div class="{{ 'positive' if row.cell2 | int > 0 else 'negative' }}" style="width: {{ widthValue }}%;">{{ row.cell2 }}</div></td>
                       </tr>
                     {% endfor %}
                   </tbody>
@@ -224,7 +236,9 @@
                   <img src="/{{assets}}/media/wti-maps/{{ researchMap.image }}">
                   <div class="wti-map__mapping">
                     {% for point in researchMap.content.mapping_points %}
-                      <div class="wti-map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                      <a href="/{{ base }}/where-to-invest/{{ point.link }}/">
+                        <div class="wti-map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                      </a>
                     {% endfor %}
                   </div>
                 </div>
@@ -235,6 +249,7 @@
                 <table id="r-and-d-table">
                   <thead>
                     <tr>
+                      <th><span class="visuallyhidden">{{ labels.map_indicator[locale.code] }}</span></th>
                       <th>{{ labels.region[locale.code] }}</th>
                       <th>{{ labels.activity[locale.code] }}</th>
                     </tr>
@@ -242,8 +257,9 @@
                   <tbody>
                     {% for row in researchTable.content.table_rows %}
                       <tr>
-                        <td><span class="map-indicator">{{ row.mapIndicator }}</span><a href="/{{ base }}/where-to-invest/{{ row.link }}/"> {{ row.cell1 }}</td>
-                        <td>{{ row.cell2 }}</td>
+                        <td><span class="map-indicator">{{ row.mapIndicator }}</span></td>
+                        <td><a href="/{{ base }}/where-to-invest/{{ row.link }}/">{{ row.cell1 }}</td>
+                        <td><div class="value" style="width: {{ row.cell2 / 2 }}rem;">{{ row.cell2 }}</div></td>
                       </tr>
                     {% endfor %}
                   </tbody>
