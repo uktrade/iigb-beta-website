@@ -1,7 +1,6 @@
 var geoLocation = require('./geo-location')
 var form = require('./form')
 var equalheight = require('./equalHeight')
-var drawMap = require('./map-draw.js');
 var ioppsToggles = require('./iopps.js');
 var renderInvestmentChart = require('./investment-chart')
 var logger = require('./logger')('DIT Functions')
@@ -45,9 +44,7 @@ function init() {
       checkHeight()
       setGradientHeight()
     })
-
   }
-
 }
 
 function onLoaded() {
@@ -65,8 +62,8 @@ function onLoaded() {
     jsEnhanceExternalLinks()
     addAltTrackingPixel()
     ioppsToggles()
-    drawMap()
     renderInvestmentChart()
+    showLabelsToggle()
   } catch (e) {
     error('On loaded failed!', e)
   }
@@ -384,6 +381,22 @@ function addAltTrackingPixel() {
     // Adds empty alt attribute to tracking pixel (marketing) meaning it's a decorative image so that it passes accessibility
     $('img[src$="https://stags.bluekai.com/site/38648?limit=1"]').attr('alt', '');
   }, 500);
+}
+
+function showLabelsToggle() {
+  toggle = $('#labels-toggle');
+  toggle.show();
+  var mapUrl = $('#clusterMapImage')[0].src
+  toggle.click(function() {
+    if (toggle.text() === 'Hide labels') {
+          replacedMapUrl = mapUrl.replace('labelled-', '');
+          $('#clusterMapImage')[0].src = replacedMapUrl;
+          toggle.text('Show labels');
+      } else {
+        $('#clusterMapImage')[0].src = mapUrl;
+        toggle.text('Hide labels');
+      }
+  })
 }
 
 

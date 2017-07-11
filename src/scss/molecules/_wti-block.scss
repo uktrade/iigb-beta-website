@@ -19,6 +19,18 @@
 			font-weight: bold;
 		}
 	}
+
+	#labels-toggle {
+		display: none;
+		cursor: pointer;
+		text-decoration: underline;
+		color: $link-colour;
+		font-size: 15px;
+
+		&:hover {
+			color: $link-colour-hover;
+		}
+	}
 	
 	.sector-toggle, .filter-toggle {
 		color: skyblue;	
