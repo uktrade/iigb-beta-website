@@ -47,9 +47,9 @@
       {% if blockHeader %}
       <div id="filter-list" class="wti-comparator-list--xs">
         <p>{{ labels.choose_a_comparator[locale.code] }}</p>
-        <div class="wti-comparator-list__comparator">
+        <!-- <div class="wti-comparator-list__comparator">
           <a href="#universities" class="filter">{{ labels.universities[locale.code] }}</a>
-        </div>
+        </div> -->
 
         <div class="wti-comparator-list__comparator">
           <a href="#salary" class="filter">{{ labels.salary[locale.code] }}</a>
@@ -98,9 +98,9 @@
           
           {% if blockHeader %}
           <div class="wti-comparator-list">
-            <div class="wti-comparator-list__comparator">
+            <!-- <div class="wti-comparator-list__comparator">
               <a href="#universities">{{ labels.universities[locale.code] }}</a>
-            </div>
+            </div> -->
 
             <div class="wti-comparator-list__comparator">
               <a href="#salary">{{ labels.salary[locale.code] }}</a>
@@ -123,9 +123,22 @@
             <h2 class="hidden-sm hidden-md hidden-lg hidden-xl">{{ labels.for[locale.code] }} <span class="sector-toggle">{{ blockHeader.content.title }}</span></h2>
 
             <div class="row">
-              <div class="col-xs-12 col-sm-4">
+              <div class="col-xs-12 col-sm-5">
                 <div class="wti-map">
-                  <img src="/{{assets}}/media/wti-maps/{{ clusterMap.image }}">
+                  <img src="/{{assets}}/media/wti-maps/{{ clusterMap.labelledImage }}">
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-5">
+                <div class="wti-summary">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                  <p>
+                    Alias id, exercitationem assumenda quas, cumque eos quo earum doloribus maiores neque velit, impedit hic!
+                  </p>
+                  <p>
+                    Dolor quod accusamus necessitatibus, quia fugiat error a ea omnis, earum, laboriosam possimus molestias repellat perferendis sed tempora placeat esse quidem nisi.
+                  </p>
                 </div>
               </div>
 
@@ -206,15 +219,11 @@
                     </tr>
                   </thead>
                   <tbody>
-                    {% set lastRow = salaryTable.content.table_rows | last %}
-                    {% set maxValue = lastRow.cell2 | int | abs %}
-  
                     {% for row in salaryTable.content.table_rows %}
-                      {% set widthValue = ((row.cell2 | int | abs)/maxValue) * 100  %}
                       <tr>
                         <td><span class="map-indicator">{{ row.mapIndicator }}</span></td>
                         <td><a href="/{{ base }}/where-to-invest/{{ row.link }}">{{ row.cell1 }}</a></td>
-                        <td><div class="{{ 'positive' if row.cell2 | int > 0 else 'negative' }}" style="width: {{ widthValue * 0.8 }}%;">{{ row.cell2 }}</div></td>
+                        <td><div class="{{ 'positive' if row.cell2 | int > 0 else 'negative' }}" style="width: {{ row.widthValue }};">{{ row.cell2 }}</div></td>
                       </tr>
                     {% endfor %}
                   </tbody>
@@ -259,7 +268,7 @@
                       <tr>
                         <td><span class="map-indicator">{{ row.mapIndicator }}</span></td>
                         <td><a href="/{{ base }}/where-to-invest/{{ row.link }}/">{{ row.cell1 }}</td>
-                        <td><div class="value" style="width: {{ row.cell2 / 2 }}rem;">{{ row.cell2 }}</div></td>
+                        <td><div class="value" style="width: {{ row.widthValue }};">{{ row.cell2 }}</div></td>
                       </tr>
                     {% endfor %}
                   </tbody>
