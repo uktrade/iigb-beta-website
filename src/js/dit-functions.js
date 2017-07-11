@@ -386,7 +386,7 @@ function addAltTrackingPixel() {
 }
 
 function enablePinchZoom() {
-  if (window.location.pathname.split('/')[2] === 'investment-opportunities') {
+  if (window.location.pathname.split('/')[2] === 'where-to-invest') {
     document.querySelector('meta[name=viewport]').setAttribute('content','width=device-width,initial-scale=1,maximum-scale=4,user-scalable=yes');
   }
 }
