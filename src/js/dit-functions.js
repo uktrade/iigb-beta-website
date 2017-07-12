@@ -386,18 +386,20 @@ function addAltTrackingPixel() {
 
 function showLabelsToggle() {
   toggle = $('#labels-toggle');
-  toggle.show();
-  var mapUrl = $('#clusterMapImage')[0].src
-  toggle.click(function() {
-    if (toggle.text() === 'Hide labels') {
-          replacedMapUrl = mapUrl.replace('labelled-', '');
-          $('#clusterMapImage')[0].src = replacedMapUrl;
-          toggle.text('Show labels');
-      } else {
-        $('#clusterMapImage')[0].src = mapUrl;
-        toggle.text('Hide labels');
-      }
-  })
+  if (toggle.length > 0) {
+    toggle.show();
+    var mapUrl = $('#clusterMapImage')[0].src
+    toggle.click(function() {
+      if (toggle.text() === 'Hide labels') {
+            replacedMapUrl = mapUrl.replace('labelled-', '');
+            $('#clusterMapImage')[0].src = replacedMapUrl;
+            toggle.text('Show labels');
+        } else {
+          $('#clusterMapImage')[0].src = mapUrl;
+          toggle.text('Hide labels');
+        }
+    })
+  }
 }
 
 function enablePinchZoom() {
