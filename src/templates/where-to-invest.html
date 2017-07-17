@@ -259,7 +259,7 @@
                       <tr>
                         <td><span class="map-indicator">{{ row.mapIndicator }}</span></td>
                         <td><!-- <a href="/{{ base }}/where-to-invest/{{ row.link }}/"> -->{{ row.cell1 }}<!-- </a> --></td>
-                        <td><div class="value" style="width: {{ row.widthValue }};">{{ row.cell2 }}</div></td>
+                        <td><div class="value {{ 'zero' if row.cell2 | int == 0 else '' }}" style="width: {{ row.widthValue }};">{{ row.cell2 }}</div></td>
                       </tr>
                     {% endfor %}
                   </tbody>
