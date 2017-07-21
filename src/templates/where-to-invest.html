@@ -302,12 +302,15 @@
                 <table id="airport-table">
                   <thead>
                     <tr>
-                      {% for headerRow in airportTable.content.table_headers %}
-                        <th><span class="visuallyhidden">{{ headerRow.map_indicator[locale.code] }}</span></th>
+                      <!-- {% for headerRow in airportTable.content.table_headers %} -->
                         <th>
-                          {{ labels[headerRow.cell1][locale.code] }}
+                          <!-- <span class="visuallyhidden">{{ headerRow.map_indicator[locale.code] }}</span> -->
                         </th>
                         <th>
+                          Airports
+                          <!-- {{ labels[headerRow.cell1][locale.code] }} -->
+                        </th>
+                        <!-- <th>
                           {{ labels[headerRow.cell2][locale.code] }}
                         </th>
                         <th>
@@ -321,24 +324,43 @@
                         </th>
                         <th>
                           {{ labels[headerRow.cell6][locale.code] }}
+                        </th> -->
+                        <th colspan="2">
+                          <!-- {{ labels[headerRow.cell7][locale.code] }} -->
+                          Destinations
                         </th>
-                        <th>
-                          {{ labels[headerRow.cell7][locale.code] }}
-                        </th>
-                      {% endfor %}
+                      <!-- {% endfor %} -->
                     </tr>
                   </thead>
                   <tbody>
                     {% for row in airportTable.content.table_rows %}
                       <tr>
-                        <td><span class="map-indicator">{{ row.mapIndicator }}</span></td>
-                        <td><!-- <a href="/{{ base }}/where-to-invest/{{ row.link }}/"> -->{{ row.cell1 }}<!-- </a> --></td>
-                        <td>{{ row.cell2 }}</td>
-                        <td>{{ row.cell3 }}</td>
-                        <td>{{ row.cell4 }}</td>
-                        <td>{{ row.cell5 }}</td>
-                        <td>{{ row.cell6 }}</td>
-                        <td>{{ row.cell7 }}</td>
+                        <td rowspan="6"><span class="map-indicator">{{ row.mapIndicator }}</span></td>
+                        <td rowspan="6"><!-- <a href="/{{ base }}/where-to-invest/{{ row.link }}/"> -->{{ row.cell1 }}<!-- </a> --></td>
+                        {% for headerRow in airportTable.content.table_headers %}
+                            <td>{{ headerRow.cell2 }}</td>
+                            <td>{{ row.cell2 }}</td>
+                          </tr>
+                          <tr>
+                            <td>{{ headerRow.cell3 }}</td>
+                            <td>{{ row.cell3 }}</td>
+                          </tr>
+                          <tr>
+                            <td>{{ headerRow.cell4 }}</td>
+                            <td>{{ row.cell4 }}</td>
+                          </tr>
+                          <tr>
+                            <td>{{ headerRow.cell5 }}</td>
+                            <td>{{ row.cell5 }}</td>
+                          </tr>
+                          <tr>
+                            <td>{{ headerRow.cell6 }}</td>
+                            <td>{{ row.cell6 }}</td>
+                          </tr>
+                          <tr>
+                            <td>{{ headerRow.cell7 }}</td>
+                            <td>{{ row.cell7 }}</td>
+                        {% endfor %}
                       </tr>
                     {% endfor %}
                   </tbody>
