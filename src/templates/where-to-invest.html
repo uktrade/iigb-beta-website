@@ -186,6 +186,17 @@
                         {{ row.cell1 }}
                       </a>
                     </td>
+                    <td>
+                      <div class="row">
+                        <div class="col-xs-3">
+                          {{ row.cell2 }}
+                        </div>
+                        <div class="col-xs-9">
+                          <div class="wti--table__value {{ 'zero' if row.cell2 | int == 0 else '' }}" style="width: {{ row.widthValue }};">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
                   </tr>
                 {% endfor %}
               </tbody>
