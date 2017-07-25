@@ -138,7 +138,21 @@
                         {{ row.cell1 }}
                       </a>
                     </td>
-                    <td><div class="{{ 'positive' if row.cell2 | int > 0 else 'negative' }}" style="width: {{ row.widthValue }};">{{ row.cell2 }}</div></td>
+                    <td>
+                      <div class="row">
+                        <div class="col-xs-4">
+                          <div class="left {{ 'positive' if row.cell2 | int > 0 else 'negative' }}" style="width: {{ row.widthValue }};">
+                          </div>
+                        </div>
+                        <div class="col-xs-4">
+                          {{ row.cell2 }}
+                        </div>
+                        <div class="col-xs-4">
+                          <div class="right {{ 'positive' if row.cell2 | int > 0 else 'negative' }}" style="width: {{ row.widthValue }};">
+                          </div>
+                        </div>
+                      </div>
+                    </td>
                   </tr>
                 {% endfor %}
               </tbody>

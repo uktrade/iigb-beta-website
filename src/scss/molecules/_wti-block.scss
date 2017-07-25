@@ -161,16 +161,19 @@
     }
 
     &#salary-difference-table {
-      .positive {
+      .right.positive {
         background-color: #B8E673;
         font-weight: 600;
         padding-left: 0.3em;
+        height: 25px;
       }
 
-      .negative { 
+      .left.negative { 
         background-color: #E98174;
-          font-weight: 600;
-          padding-left: 0.3em;
+        font-weight: 600;
+        padding-left: 0.3em;
+        height: 25px;
+        float: right;
       }
     }
   }
