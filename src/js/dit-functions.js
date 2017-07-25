@@ -385,7 +385,22 @@ function addAltTrackingPixel() {
 }
 
 function showLabelsToggle() {
-  toggle = $('#labels-toggle');
+  regionToggle = $('#region-labels-toggle');
+  if (regionToggle.length > 0) {
+    regionToggle.show();
+    var regionMapUrl = $('#regionMapImage')[0].src
+    regionToggle.click(function() {
+      if (regionToggle.text() === 'Hide labels') {
+            regionReplacedMapUrl = regionMapUrl.replace('labelled-', '');
+            $('#regionMapImage')[0].src = regionReplacedMapUrl;
+            regionToggle.text('Show labels');
+        } else {
+          $('#regionMapImage')[0].src = regionMapUrl;
+          regionToggle.text('Hide labels');
+        }
+    })
+  }
+  toggle = $('#clusters-labels-toggle');
   if (toggle.length > 0) {
     toggle.show();
     var mapUrl = $('#clusterMapImage')[0].src

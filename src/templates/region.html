@@ -1,241 +1,130 @@
-{% extends "base/generic.html" %}
+{% extends "base/index.html" %}
 
-{% block content_inner %}
+{% block content %}
+{% include "partials/top-bar-no_contact.html" %}
+{% include "partials/header-nav.html" %}
 
-<!--
-[cms-fields]
-  infoBlock:
-    type: content
-    label: Info block
-[/cms-fields]
+<div id="content" tabindex="-1"></div> <!--"Skip to content" link navigates to this in order to skip naviagtion links
 -->
 
+<div class="jumbotron--wti">  
+  <div class="container">
+    <div class="dit-hero__content">
+      <div class="row wti--block__page-header">
+        <div class="col-sm-10 col-md-10 wti--block__page-header--text">
+          <h1>
+            {{ blockHeader.content.title }}
+          </h1>
+          <h2 class="hidden-xs">
+            {{ blockHeader.content.tagline }}
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <main role="main">
-    <div class="dit-generic-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-8 col-lg-offset-1 col-lg-7">
-                    <div class="map-tools hidden-xs hidden-sm">
-                        <div class="map-tools__layers">
-                            <fieldset>
-                                <legend class="map-legend">Select map layers</legend>
-                                <div class="multiple-choice">
-                                    <input type="checkbox" value="map-labels">
-                                    <label class="dit-not-label">Labels</label>
-                                </div>
-                                <div class="multiple-choice">
-                                    <input type="checkbox" value="map-labels">
-                                    <label class="dit-not-label">Transport Links</label>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <div class="map-tools__filters">
-                            <fieldset>
-                                <div class="multiple-choice">
-                                    <input type="checkbox" value="map-filters">
-                                    <label class="dit-not-label">Significant businesses</label>
-                                </div>
-                                <div class="multiple-choice">
-                                    <input type="checkbox" value="map-filters">
-                                    <label class="dit-not-label">Financial incentives</label>
-                                </div>
-                                <div class="multiple-choice">
-                                    <input type="checkbox" value="map-filters">
-                                    <label class="dit-not-label">R & D Hubs</label>
-                                </div>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div id="mapCanvas" data-file="west-midlands-map.json"></div>
-                </div>
-                <div class="hidden-xs hidden-sm col-md-4 col-lg-3">
-                    <div class="map-industries">
-                        <div class="map-legend">Filter by industry</div>
-                            <!--                         <div class="multiple-choice">
-                            <input type="radio" class="dit-radio sector-filter" name="industry_filter[industry]" id="show-all" value="all">
-                            <label class="dit-not-label" for="show-all">Show All</label>
-                        </div> -->
-                        <div class="multiple-choice">
-                            <input type="radio" class="dit-radio sector-filter" name="industry_filter[industry]" id="aerospace" value="aerospace">
-                            <label class="dit-not-label" for="aerospace">Aerospace</label>
-                        </div>
-                        <div class="multiple-choice">
-                            <input type="radio" class="dit-radio sector-filter" name="industry_filter[industry]" id="advanced-manufacturing" value="manufacturing">
-                            <label class="dit-not-label" for="advanced-manufacturing">Advanced Manufacturing</label>
-                        </div>
-                        <div class="multiple-choice">
-                            <input type="radio" class="dit-radio sector-filter" name="industry_filter[industry]" id="automotive" value="automotive">
-                            <label class="dit-not-label" for="automotive">Automotive</label>
-                        </div>
-                        <div class="multiple-choice">
-                            <input type="radio" class="dit-radio sector-filter" name="industry_filter[industry]" id="creative" value="creative">
-                            <label class="dit-not-label" for="creative">Creative</label>
-                        </div>
-                        <div class="multiple-choice">
-                            <input type="radio" class="dit-radio sector-filter" name="industry_filter[industry]" id="energy-generation" value="energy">
-                            <label class="dit-not-label" for="energy-generation">Energy Generation</label>
-                        </div>
-                        <div class="multiple-choice">
-                            <input type="radio" class="dit-radio sector-filter" name="industry_filter[industry]" id="financial-services" value="financial">
-                            <label class="dit-not-label" for="financial-services">Financial Services</label>
-                        </div>
-                        <div class="multiple-choice">
-                            <input type="radio" class="dit-radio sector-filter" name="industry_filter[industry]" id="food-and-drink-manufacturing" value="food">
-                            <label class="dit-not-label" for="food-and-drink-manufacturing">Food and drink manufacturing</label>
-                        </div>
-                        <div class="multiple-choice">
-                            <input type="radio" class="dit-radio sector-filter" name="industry_filter[industry]" id="health-and-life-sciences" value="health">
-                            <label class="dit-not-label" for="health-and-life-sciences">Health and life sciences</label>
-                        </div>
-                        <div class="multiple-choice">
-                            <input type="radio" class="dit-radio sector-filter" name="industry_filter[industry]" id="retail" value="retail">
-                            <label class="dit-not-label" for="retail">Retail</label>
-                        </div>
-                        <div class="multiple-choice">
-                            <input type="radio" class="dit-radio sector-filter" name="industry_filter[industry]" id="technology" value="technology">
-                            <label class="dit-not-label" for="technology">Technology</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="dit-generic-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <p class="big-paragraph">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <p class="big-paragraph">
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur.
-                    </p>
-                    <p class="big-paragraph">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium saepe, quaerat adipisci. Dolore numquam sequi vero incidunt, voluptates nemo optio deleniti.
-                    </p>
-                    <p class="big-paragraph">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-6">
-                    <p class="big-paragraph">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis fugiat, ad commodi rem autem laborum? Fugit perferendis deserunt, omnis quidem.
-                    </p>
-                    <div id="investment-chart"></div>
-                    <div class="investment-highlight">
-                        <div class="investment-highlight__number">150</div>
-                        <div class="investment-highlight__text">Foreign direct investment projects in 2017, 105 in 2016</div>
-                    </div>
-                    <p class="big-paragraph">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="quote">
-        <p class="quote__quoted">
-            <img src="/{{assets}}/media/icons/dit-quote-left.png" alt="Quote left" class="quote__left-quote-icon">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate omnis recusandae quia ipsa iusto, nemo iure commodi culpa, blanditiis consectetur fugiat beatae consequatur velit dolores aperiam! Odit, facilis alias neque.
-            <img src="/{{assets}}/media/icons/dit-quote-right.png" alt="Quote left" class="quote__right-quote-icon">
-        </p>
-        <p class="quote__quote-source">Neil Rami, Chief Executive of Marketing Birmingham</p>
-    </div>
-    <div class="dit-generic-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <h2>West Midlands, an engineering success story</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium saepe, quaerat adipisci. Dolore numquam sequi vero incidunt, voluptates nemo optio deleniti.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta fugiat aut, veritatis, nobis ab illo fugit consequatur maxime porro itaque culpa expedita hic nemo corrupti doloribus animi amet laborum quam?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quibusdam consectetur pariatur quaerat. Iure, tempora? Aperiam reprehenderit, perferendis vitae assumenda, numquam totam aut hic ullam tenetur, praesentium ab quaerat rerum.
-                    </p>
-                    <div class="references-list">
-                        <p class="references-list__header">References:</p>
-                        <ol>
-                            <li class="references-list__ref"><a href="#">UK Attractiveness survey</a>, 2015, EY</li>
-                            <li class="references-list__ref"><a href="#">FDI projects, West Midlands</a>, 2016, UK Invest</li>
-                            <li class="references-list__ref"><a href="#">Projects review</a>, 2017, Department for International Trade</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6">
-                    <table class="table-region-datapoints">
-                        <thead>
-                            <tr>
-                                <th colspan="2">Datapoints for West Midlands</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Population</td>
-                                <td>5,713,000 (2013)</td>
-                            </tr>
-                            <tr>
-                                <td>Gross Value Added</td>
-                                <td>£110 billion</td>
-                            </tr>
-                            <tr>
-                                <td>GVA per capita</td>
-                                <td>£17,161</td>
-                            </tr>
-                            <tr>
-                                <td>Regional centre</td>
-                                <td>Birmingham</td>
-                            </tr>
-                            <tr>
-                                <td>Regional cities</td>
-                                <td>Coventry, Warwick, Stoke-on-trent, Wolverhampton</td>
-                            </tr>
-                            <tr>
-                                <td>Primary industries</td>
-                                <td><a href="#">Advanced manufacturing</a>, <a href="#">Automobile</a>, <a href="#">Aerospace</a>, <a href="#">Food manufacturing</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="useful-links">
-                        <p class="useful-links__header">Useful links</p>
-                        <p class="useful-links__item"><a href="#">UK Attractiveness survey</a>, 2015, EY</p>
-                        <p class="useful-links__item"><a href="#">FDI projects, West Midlands</a>, 2016, UK Invest</p>
-                        <p class="useful-links__item"><a href="#">Projects review</a>, 2017, Department for International Trade</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="dit-generic-section">
-        <div class="container">
-            <div class="contact-points">
-                <div class="contact-points__header">Contact our investment services team for:</div>
-                <ul class="contact-points__list">
-                    <li>Practical support and information about taking your investment forward</li>
-                    <li>Insights into the UK market</li>
-                    <li>Help building connections</li>
-                </ul>
+  <div class="wti">
+    <div class="container">
+      <div class="row wti--block__teal hidden-sm hidden-md hidden-lg hidden-xl">
+        <div class="col-xs-12">
+          <div class="wti--comparator-list">
+            <p class="wti--instruction">
+              {{ labels.select_comparator[locale.code] }}
+            </p>
+
+            <div class="wti--comparator-list__comparator">
+              <a href="#">{{regionOverview.content.invest_in}} {{ blockHeader.content.title }}</a>
             </div>
 
-            {% include "partials/carousel-form.html" %}
-                        
+            <div class="wti--comparator-list__comparator">
+              <a href="#">{{regionOverview.content.sectors_and_cities}}</a>
+            </div>
+
+            <div class="wti--comparator-list__comparator">
+              <a href="#">{{regionOverview.content.skills_and_research}}</a>
+            </div>
+
+            <div class="wti--comparator-list__comparator">
+              <a href="#">{{regionOverview.content.capital_invest_opps}}</a>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="row wti--block__yellow">
+        <div class="wti--block__header col-md-8">
+          <h2 class="hidden-sm hidden-md hidden-lg hidden-xl">
+            {{ blockHeader.content.tagline }}
+          </h2>
+
+          {{blockHeader.content.contents|safe}}
+        </div>
+      </div>
+    {% if quotation %}
+      </div>
+
+      <div class="wti--block__quote">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <blockquote class="wti--block__quote--quote" cite="{{quotation.content.source}}">
+                {{quotation.content.contents|safe}}
+                <small class="wti--block__quote--source">
+                  {{quotation.content.source}}
+                </small>
+              </blockquote>
+            </div>
+
+            <div class="col-sm-6 hidden-xs">
+              Image placeholder
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+    {% endif %}
+      {% for point in proofPoints %}
+        <div class="row wti--block__{{point.content.borderColour}}">
+          <div class="col-md-8">
+            <h2>
+              {{point.content.title}}
+            </h2>
+
+            {{point.content.contents|safe}}
+
+            {% if point.content.table_headers %}
+              <table class="wti--table">
+                <thead>
+                  {% for header in point.content.table_headers %}
+                    <tr>
+                      <th colspan="2">
+                        {{header.cell1}}
+                      </th>
+                    </tr>
+                  {% endfor %}
+                </thead>
+                <tbody>
+                  {% for row in point.content.table_rows %}
+                    <tr>
+                      <td>
+                        {{row.cell1}}
+                      </td>
+                      <td>
+                        {{row.cell2}}
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            {% endif %}
+          </div>
+        </div>  
+      {% endfor %}
     </div>
+  </div>
 </main>
 
 
