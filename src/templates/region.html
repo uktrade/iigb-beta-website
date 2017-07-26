@@ -4,6 +4,14 @@
 {% include "partials/top-bar-no_contact.html" %}
 {% include "partials/header-nav.html" %}
 
+{% if pageHeader.heroImage %}
+  <style>
+    .jumbotron--wti {
+      background-image: url("/{{assets}}/media/hero-img/{{pageHeader.heroImage}}");
+    }
+  </style>
+{% endif %}
+
 <div id="content" tabindex="-1"></div> <!--"Skip to content" link navigates to this in order to skip naviagtion links
 -->
 
@@ -11,7 +19,7 @@
   <div class="container">
     <div class="dit-hero__content">
       <div class="row wti--block__page-header">
-        <div class="col-sm-10 col-md-10 wti--block__page-header--text">
+        <div class="col-sm-10 col-md-10 wti--block__page-header__region--text">
           <h1>
             {{ blockHeader.content.title }}
           </h1>
@@ -35,25 +43,19 @@
             </p>
 
             <div class="wti--comparator-list__comparator">
-              <a href="#">{{regionOverview.content.invest_in}} {{ blockHeader.content.title }}</a>
+              <a href="#invest_in">{{regionOverview.content.invest_in}} {{ blockHeader.content.title }}</a>
             </div>
 
-            <div class="wti--comparator-list__comparator">
-              <a href="#">{{regionOverview.content.sectors_and_cities}}</a>
-            </div>
-
-            <div class="wti--comparator-list__comparator">
-              <a href="#">{{regionOverview.content.skills_and_research}}</a>
-            </div>
-
-            <div class="wti--comparator-list__comparator">
-              <a href="#">{{regionOverview.content.capital_invest_opps}}</a>
-            </div>
+            {% for point in proofPoints %}
+              <div class="wti--comparator-list__comparator">
+                <a href="#{{point.content.title | replace(' ', '_')}}">{{point.content.title}}</a>
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>
 
-      <div class="row wti--block__yellow">
+      <div id="invest_in" class="row wti--block__yellow">
         <div class="wti--block__header col-md-8">
           <h2 class="hidden-sm hidden-md hidden-lg hidden-xl">
             {{ blockHeader.content.tagline }}
@@ -68,7 +70,7 @@
       <div class="wti--block__quote">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-8">
               <blockquote class="wti--block__quote--quote" cite="{{quotation.content.source}}">
                 {{quotation.content.contents|safe}}
                 <small class="wti--block__quote--source">
@@ -77,9 +79,9 @@
               </blockquote>
             </div>
 
-            <div class="col-sm-6 hidden-xs">
+            <!-- <div class="col-sm-4 hidden-xs">
               Image placeholder
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -87,7 +89,7 @@
       <div class="container">
     {% endif %}
       {% for point in proofPoints %}
-        <div class="row wti--block__{{point.content.borderColour}}">
+        <div id="{{point.content.title | replace(' ', '_')}}" class="row wti--block__{{point.content.borderColour}}">
           <div class="col-md-8">
             <h2>
               {{point.content.title}}

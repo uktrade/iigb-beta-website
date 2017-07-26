@@ -5,11 +5,11 @@
 {% include "partials/header-nav.html" %}
 
 {% if pageHeader.heroImage %}
-    <style>
-        .jumbotron--wti {
-          background-image: url("/{{assets}}/media/hero-img/{{pageHeader.heroImage}}");
-        }
-    </style>
+  <style>
+    .jumbotron--wti {
+      background-image: url("/{{assets}}/media/hero-img/{{pageHeader.heroImage}}");
+    }
+  </style>
 {% endif %}
 
 <div id="content" tabindex="-1"></div> <!--"Skip to content" link navigates to this in order to skip naviagtion links-->
@@ -27,7 +27,7 @@
               {{ blockHeader.content.title }}
             </h2>
             <div class="wti--industry-link">
-              <a href="/int/where-to-invest/">{{ labels.change_industry[locale.code] }}</a>
+              <a href="/int/where-to-invest/change-industry">{{ labels.change_industry[locale.code] }}</a>
             </div>
           {% else %}
             <h2>
@@ -105,7 +105,7 @@
           </div>
           <div class="col-sm-6">
             <div class="wti-map">
-              <img id="clusterMapImage" class="img-responsive" src="/{{assets}}/media/wti-maps/{{ clusterMap.labelledImage }}">
+              <img id="clusterMapImage" class="wti--map--responsive" src="/{{assets}}/media/wti-maps/{{ clusterMap.labelledImage }}">
               <span id="clusters-labels-toggle" class="wti--labels-toggle">Hide labels</span>
             </div>
           </div>
@@ -160,7 +160,7 @@
           </div>
           <div class="col-sm-6">
             <div class="wti--map">
-              <img class="img-responsive" src="/{{assets}}/media/wti-maps/{{ salaryMap.image }}">
+              <img class="wti--map--responsive" src="/{{assets}}/media/wti-maps/{{ salaryMap.image }}">
               <div class="wti--map__mapping">
                 {% for point in salaryMap.content.mapping_points %}
                   <a href="/{{ base }}/where-to-invest/{{ point.link }}/">
@@ -219,7 +219,7 @@
 
           <div class="col-sm-6">
             <div class="wti--map">
-              <img class="img-responsive" src="/{{assets}}/media/wti-maps/{{ researchMap.image }}">
+              <img class="wti--map--responsive" src="/{{assets}}/media/wti-maps/{{ researchMap.image }}">
               <div class="wti--map__mapping">
                 {% for point in researchMap.content.mapping_points %}
                   <a href="/{{ base }}/where-to-invest/{{ point.link }}/">
@@ -340,14 +340,14 @@
                       {% endfor %}
                     </tr>
                   {% endfor %}
-                </details>
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+            </details>
           </div>
 
           <div class="col-sm-6">
             <div class="wti--map">
-              <img class="img-responsive" src="/{{assets}}/media/wti-maps/{{ airportMap.image }}">
+              <img class="wti--map--responsive" src="/{{assets}}/media/wti-maps/{{ airportMap.image }}">
               <div class="wti-map__mapping">
                 {% for point in airportMap.content.mapping_points %}
                   <a href="/{{ base }}/where-to-invest/{{ point.link }}/">
@@ -424,65 +424,70 @@
             </div>
           </div>
         </div>
-        <div class="row wti--block__yellow">
-          <div class="col-sm-6 hidden-xs">
-            <h2>{{regionBlock.content.title}}</h2>
 
-            <p>{{ regionBlock.content.introduction }}</p>
+        {% if regionMap %}
+          <div class="row wti--block__yellow">
+            <div class="col-sm-6 hidden-xs">
+              <h2>{{regionBlock.content.title}}</h2>
 
-            <table id="region-table" class="wti--table">
-              <tbody>
-                {% for row in regionTable.content.table_rows %}
-                  <tr>
-                    <td><span class="wti--table__map-indicator">{{ row.mapIndicator }}</span></td>
-                    <td>
-                      <a href="/{{ base }}/where-to-invest/{{ row.link }}/">
-                        {{ row.cell1 }}
-                      </a>  
-                    </td>
-                  </tr>
-                {% endfor %}
-              </tbody>
-            </table>
-          </div>
+              <p>{{ regionBlock.content.introduction }}</p>
 
-          <div class="col-sm-6">
-            <h2>{{regionBlock.content.title}}</h2>
-
-            <p>{{ regionBlock.content.introduction }}</p>
-
-            <div class="wti--map">
-              <img id="regionMapImage" class="img-responsive" src="/{{assets}}/media/wti-maps/uk-labelled-region-map.png">
-              <div class="wti-map__mapping">
-                {% for point in regionMap.content.mapping_points %}
-                  <a href="/{{ base }}/where-to-invest/{{ point.link }}/">
-                    <div class="wti--map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
-                  </a>
-                {% endfor %}
-              </div>
+              <table id="region-table" class="wti--table">
+                <tbody>
+                  {% for row in regionTable.content.table_rows %}
+                    <tr>
+                      <td><span class="wti--table__map-indicator">{{ row.mapIndicator }}</span></td>
+                      <td>
+                        <a href="/{{ base }}/where-to-invest/{{ row.link }}/">
+                          {{ row.cell1 }}
+                        </a>  
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
             </div>
-            <span id="region-labels-toggle" class="wti--labels-toggle">Hide labels</span>
-          </div>
 
-          <div class="col-sm-6 hidden-sm hidden-md hidden-lg hidden-xl">
-            <h2>{{labels.uk_regions[locale.code]}}</h2>
+            <div class="col-sm-6">
+              <div class="hidden-sm hidden-md hidden-lg hidden-xl">
+                <h2>{{regionBlock.content.title}}</h2>
 
-            <table id="region-table" class="wti--table">
-              <tbody>
-                {% for row in regionTable.content.table_rows %}
-                  <tr>
-                    <td><span class="wti--table__map-indicator">{{ row.mapIndicator }}</span></td>
-                    <td>
-                      <a href="/{{ base }}/where-to-invest/{{ row.link }}/">
-                        {{ row.cell1 }}
-                      </a>
-                    </td>
-                  </tr>
-                {% endfor %}
-              </tbody>
-            </table>
+                <p>{{ regionBlock.content.introduction }}</p>
+              </div>
+
+              <div class="wti--map">
+                <img id="regionMapImage" class="wti--map--responsive" src="/{{assets}}/media/wti-maps/uk-labelled-region-map.png">
+                <div class="wti-map__mapping">
+                  {% for point in regionMap.content.mapping_points %}
+                    <a href="/{{ base }}/where-to-invest/{{ point.link }}/">
+                      <div class="wti--map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                    </a>
+                  {% endfor %}
+                </div>
+              </div>
+              <span id="region-labels-toggle" class="wti--labels-toggle">Hide labels</span>
+            </div>
+
+            <div class="col-sm-6 hidden-sm hidden-md hidden-lg hidden-xl">
+              <h2>{{labels.uk_regions[locale.code]}}</h2>
+
+              <table id="region-table" class="wti--table">
+                <tbody>
+                  {% for row in regionTable.content.table_rows %}
+                    <tr>
+                      <td><span class="wti--table__map-indicator">{{ row.mapIndicator }}</span></td>
+                      <td>
+                        <a href="/{{ base }}/where-to-invest/{{ row.link }}/">
+                          {{ row.cell1 }}
+                        </a>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
+        {% endif %}
       {% endif %}
     </div>
   </div>

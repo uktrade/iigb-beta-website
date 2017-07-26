@@ -7,13 +7,17 @@
   height: auto;
   max-height: none;
   min-height: inherit;
+  background-repeat: no;
+  background-size: 100%;
 
   @media (max-width: $screen-sm-max) {
     background-position: right -200px top 0;
+    background-size: auto;
   }
 
   @media (max-width: $screen-xs-max) {
     background-position: right -400px top 0;
+    background-size: auto;
   }
 }
 
@@ -33,6 +37,18 @@
           font-size: 24px;
         }
       }
+
+      &__region {
+        &--text {
+          padding-top: 100px;
+          padding-bottom: 30px;
+
+          h2 {
+            margin-top:0px;
+            font-size: 24px;
+          }
+        }
+      }
     }
 
     &__teal {
@@ -45,6 +61,10 @@
 
     &__purple {
       border-left: 25px solid #4e167b;
+    }
+
+    &__turquoise {
+      border-left: 25px solid #8ae2fb
     }
 
     &__red {
@@ -91,6 +111,12 @@
 
   &--map {
     position: relative;
+
+    &--responsive {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
     &__mapping-point {
       position: absolute;
