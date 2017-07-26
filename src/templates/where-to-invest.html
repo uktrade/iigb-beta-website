@@ -19,10 +19,9 @@
     <div class="dit-hero__content">
       <div class="row wti--block__page-header">
         <div class="col-sm-10 col-md-10 wti--block__page-header--text">
-          <h1>{{ labels.where_to_invest[locale.code] }}</h1>
+          <h1>{{ labels.where_to_invest[locale.code] }} {{ labels.in_uk[locale.code] }}</h1>
           {% if blockHeader %}
-            <h2>
-              {{ labels.in_uk[locale.code] }} 
+            <h2> 
               {{ labels.for[locale.code] }} 
               {{ blockHeader.content.title }}
             </h2>
@@ -31,11 +30,8 @@
             </div>
           {% else %}
             <h2>
-              {{ labels.in_uk[locale.code] }}
-            </h2>
-            <p>
               {{ labels.find_best_region[locale.code] }}
-            </p>
+            </h2>
           {% endif %}
         </div>
       </div>
@@ -79,7 +75,7 @@
             </h2>
 
             <p>
-              {{blockTitles.content.clusters_introduction}}
+              <span style="text-transform:capitalize;">{{labels.the[locale.code]}}</span> {{ blockHeader.content.title }} {{blockTitles.content.clusters_introduction|safe}}
             </p>
 
             <div class="wti--comparator-list hidden-xs">
