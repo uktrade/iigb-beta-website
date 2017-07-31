@@ -396,11 +396,11 @@ function showLabelsToggle() {
           regionReplacedMapUrl = regionMapUrl.replace('labelled-', '');
           $('#regionMapImage')[0].src = regionReplacedMapUrl;
           regionToggleText.text('Show major cities');
-          toggleBox.text('');
+          regionToggleBox.text('');
         } else {
           $('#regionMapImage')[0].src = regionMapUrl;
           regionToggleText.text('Hide major cities');
-          toggleBox.html('&checkmark;');
+          regionToggleBox.html('&checkmark;');
         }
     })
   }
