@@ -386,32 +386,40 @@ function addAltTrackingPixel() {
 
 function showLabelsToggle() {
   regionToggle = $('#region-labels-toggle');
+  regionToggleText = $('#region-labels-text');
+  regionToggleBox = $('#region-labels-checkbox');
   if (regionToggle.length > 0) {
     regionToggle.show();
     var regionMapUrl = $('#regionMapImage')[0].src
     regionToggle.click(function() {
-      if (regionToggle.text() === 'Hide labels') {
-            regionReplacedMapUrl = regionMapUrl.replace('labelled-', '');
-            $('#regionMapImage')[0].src = regionReplacedMapUrl;
-            regionToggle.text('Show labels');
+      if (regionToggleText.text() === 'Hide major cities') {
+          regionReplacedMapUrl = regionMapUrl.replace('labelled-', '');
+          $('#regionMapImage')[0].src = regionReplacedMapUrl;
+          regionToggleText.text('Show major cities');
+          toggleBox.text('');
         } else {
           $('#regionMapImage')[0].src = regionMapUrl;
-          regionToggle.text('Hide labels');
+          regionToggleText.text('Hide major cities');
+          toggleBox.html('&checkmark;');
         }
     })
   }
   toggle = $('#clusters-labels-toggle');
+  toggleText = $('#clusters-labels-text');
+  toggleBox = $('#clusters-labels-checkbox');
   if (toggle.length > 0) {
     toggle.show();
     var mapUrl = $('#clusterMapImage')[0].src
     toggle.click(function() {
-      if (toggle.text() === 'Hide labels') {
+      if (toggleText.text() === 'Hide major cities') {
             replacedMapUrl = mapUrl.replace('labelled-', '');
             $('#clusterMapImage')[0].src = replacedMapUrl;
-            toggle.text('Show labels');
+            toggleText.text('Show major cities');
+            toggleBox.text('');
         } else {
           $('#clusterMapImage')[0].src = mapUrl;
-          toggle.text('Hide labels');
+          toggleText.text('Hide major cities');
+          toggleBox.html('&checkmark;');
         }
     })
   }

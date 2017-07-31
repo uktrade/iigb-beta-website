@@ -102,7 +102,15 @@
           <div class="col-sm-6">
             <div class="wti-map">
               <img id="clusterMapImage" class="wti--map--responsive" src="/{{assets}}/media/wti-maps/{{ clusterMap.labelledImage }}">
-              <span id="clusters-labels-toggle" class="wti--labels-toggle">Hide labels</span>
+              <div id="clusters-labels-toggle" class="wti--labels-toggle--wrapper">
+                <div id="clusters-labels-checkbox" class="wti--labels-toggle--checkbox">
+                  &checkmark;
+                </div>
+
+                <span id="clusters-labels-text" class="wti--labels-toggle--text">
+                  Hide major cities
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -461,7 +469,16 @@
                   {% endfor %}
                 </div>
               </div>
-              <span id="region-labels-toggle" class="wti--labels-toggle">Hide labels</span>
+
+              <div id="region-labels-toggle" class="wti--labels-toggle--wrapper">
+                <div id="region-labels-checkbox" class="wti--labels-toggle--checkbox">
+                  &checkmark;
+                </div>
+
+                <span id="region-labels-text" class="wti--labels-toggle--text">
+                  Hide major cities
+                </span>
+              </div>
             </div>
 
             <div class="col-sm-6 hidden-sm hidden-md hidden-lg hidden-xl">
