@@ -6,7 +6,7 @@
 
 {% if pageHeader.heroImage %}
   <style>
-    .jumbotron--wti {
+    .jumbotron--region {
       background-image: url("/{{assets}}/media/hero-img/{{pageHeader.heroImage}}");
     }
   </style>
@@ -15,11 +15,20 @@
 <div id="content" tabindex="-1"></div> <!--"Skip to content" link navigates to this in order to skip naviagtion links
 -->
 
-<div class="jumbotron--wti">  
+<div class="container">
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-banner--tag">BETA</strong>            
+      <span>This is a new service – your <a id="FeedbackLink" href="/int/feedback/">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+</div>
+
+<div class="jumbotron--region">  
   <div class="container">
     <div class="dit-hero__content">
-      <div class="row wti--block__page-header">
-        <div id="{{ blockHeader.content.title }}" class="col-sm-12 col-md-12 wti--block__page-header__region--text">
+      <div class="row region--block__page-header">
+        <div id="{{ blockHeader.content.title }}" class="col-sm-12 col-md-12 region--block__page-header--text">
           <h1>
             {{ blockHeader.content.title }}
           </h1>
@@ -33,72 +42,106 @@
 </div>
 
 <main role="main">
-  <div class="wti">
+  <div class="region">
     <div class="container">
-      <div class="row wti--block__teal hidden-sm hidden-md hidden-lg hidden-xl">
+      <div class="row region--block hidden-sm hidden-md hidden-lg hidden-xl">
         <div class="col-xs-12">
-          <div class="wti--comparator-list">
-            <p class="wti--instruction">
+          <div class="region--comparator-list">
+            <p class="region--instruction">
               {{ labels.select_comparator[locale.code] }}
             </p>
 
-            <div class="wti--comparator-list__comparator">
-              <a href="#invest_in">{{regionOverview.content.invest_in}} {{ blockHeader.content.title }}</a>
-            </div>
+            <ul class="region--list__bullet">
+              <li class="region--list__bullet--entry--bullet__teal">
+                <a class="region--list__bullet--entry" href="#invest_in">
+                  {{regionOverview.content.invest_in}} {{ blockHeader.content.title }}
+                </a>
+              </li>
 
-            {% for point in proofPoints %}
-              <div class="wti--comparator-list__comparator">
-                <a href="#{{point.content.title | replace(' ', '_')}}">{{point.content.title}}</a>
-              </div>
-            {% endfor %}
+              {% for point in proofPoints %}
+                <li class="region--list__bullet--entry--bullet__teal">
+                  <a class="region--list__bullet--entry" href="#{{point.content.title | replace(' ', '_')}}">
+                    {{point.content.title}}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
           </div>
         </div>
       </div>
 
-      <div id="invest_in" class="row wti--block__yellow">
-        <div class="wti--block__header col-md-8">
-          <h2 class="hidden-sm hidden-md hidden-lg hidden-xl">
-            {{ blockHeader.content.tagline }}
-          </h2>
-
-          {{blockHeader.content.contents|safe}}
-        </div>
-      </div>
-    {% if quotation %}
-      </div>
-
-      <div class="wti--block__quote">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8">
-              <blockquote class="wti--block__quote--quote" cite="{{quotation.content.source}}">
-                {{quotation.content.contents|safe}}
-                <small class="wti--block__quote--source">
-                  {{quotation.content.source}}
-                </small>
-              </blockquote>
-            </div>
-
-            <!-- <div class="col-sm-4 hidden-xs">
-              Image placeholder
-            </div> -->
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-    {% endif %}
-      {% for point in proofPoints %}
-        <div id="{{point.content.title | replace(' ', '_')}}" class="row wti--block__{{point.content.borderColour}}">
-          <div class="col-md-8">
+      <div id="invest_in" class="row region--block">
+        <div class="region--block__header col-sm-8">
+          <div class="region--section-heading hidden-sm hidden-md hidden-lg hidden-xl">
             <h2>
-              {{point.content.title}}
+              {{ blockHeader.content.tagline }}
             </h2>
+          </div>
+
+          <div class="region--lead-paragraph">
+            {{blockHeader.content.contents|safe}}
+          </div>
+        </div>
+
+        <div class="col-sm-4 hidden-xs">
+          <div class="region--comparator-list">
+            <p class="region--instruction">
+              {{ labels.select_comparator[locale.code] }}
+            </p>
+
+            <ul class="region--list__bullet">
+              {% for point in proofPoints %}
+                <li class="region--list__bullet--entry--bullet__teal">
+                  <a class="region--list__bullet--entry" href="#{{point.content.title | replace(' ', '_')}}">
+                    <span class="lower-case">{{point.content.title}}</span>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {% if quotation %}
+        </div> <!-- closing the container to allow the quote to go full width -->
+
+        <div class="region--block__quote">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8">
+                <blockquote class="region--block__quote--quote" cite="{{quotation.content.source}}">
+                  {{quotation.content.contents|safe}}
+                  <div class="region--small-text">
+                    <p>
+                      {{quotation.content.source}}
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+
+              <!-- <div class="col-sm-4 hidden-xs">
+                Image placeholder
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+      {% endif %}
+
+      {% for point in proofPoints %}
+        <div id="{{point.content.title | replace(' ', '_')}}" class="row region--block">
+          <div class="col-md-8 region--proof-point">
+            <div class="region--section-heading">
+              <h2>
+                {{point.content.title}}
+              </h2>
+            </div>
 
             {{point.content.contents|safe}}
 
             {% if point.content.table_headers %}
-              <table class="wti--table">
+              <table class="region--table">
                 <thead>
                   {% for header in point.content.table_headers %}
                     <tr>
