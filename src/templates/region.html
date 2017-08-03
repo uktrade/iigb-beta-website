@@ -54,7 +54,7 @@
             <ul class="region--list__bullet">
               <li class="region--list__bullet--entry--bullet__teal">
                 <a class="region--list__bullet--entry" href="#invest_in">
-                  {{regionOverview.content.invest_in}} {{ blockHeader.content.title }}
+                  {{regionOverview.content.invest_in}}
                 </a>
               </li>
 
@@ -93,7 +93,7 @@
               {% for point in proofPoints %}
                 <li class="region--list__bullet--entry--bullet__teal">
                   <a class="region--list__bullet--entry" href="#{{point.content.title | replace(' ', '_')}}">
-                    <span class="lower-case">{{point.content.title}}</span>
+                    {{point.content.title}}
                   </a>
                 </li>
               {% endfor %}
@@ -134,7 +134,7 @@
           <div class="col-md-8 region--proof-point">
             <div class="region--section-heading">
               <h2>
-                {{point.content.title}}
+                <span class="capitalise">{{point.content.title}}</span>
               </h2>
             </div>
 
