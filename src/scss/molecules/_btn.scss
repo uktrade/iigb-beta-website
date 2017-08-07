@@ -117,8 +117,8 @@
 }
 
 .dit-btn--call {
-  border: 2px solid $link-colour;
-  border-radius: 3px;
+  border: 3px solid $white;
+  border-radius: 5px;
   font-size: 24px;
   font-weight: 300;
   display: inline-block;
@@ -138,8 +138,6 @@
   }
 
   @media (max-width: $screen-md-max) {
-    border: 2px solid $link-colour;
-    border-radius: 3px;
     font-size: 20px;
     font-weight: 300;
     display: inline-block;
@@ -150,8 +148,6 @@
   }
 
   @media (max-width: $screen-xs-max) {
-    border: 2px solid $link-colour !important;
-    border-radius: 3px;
     font-size: 20px;
     font-weight: 300;
     display: inline-block;
