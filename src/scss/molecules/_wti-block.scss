@@ -199,7 +199,7 @@
         font-weight: 400;
         line-height: 48px;
 
-        &__yellow, &__purple, &__red, &__blue {
+        &__yellow, &__purple, &__red, &__blue, &__grey {
           &--map-indicator {
             display: inline;
             padding: 0px 6px;
@@ -230,6 +230,12 @@
         &__blue {
           &--map-indicator {
             background-color: #31608a;
+          }
+        }
+
+        &__grey {
+          &--map-indicator {
+            background-color: #333333;
           }
         }
       }
@@ -290,33 +296,33 @@
       }
 
       &__enterprise {
-        background-color: #8ae2fb;
+        background-color: #333333;
         font-weight: 600;
         padding-left: 0.3em;
         height:25px;
       }
 
-      &__research, &__enterprise {
+      &__salary {
+        .right.positive {
+          background-color: #B8E673;
+          font-weight: 600;
+          padding-left: 0.3em;
+          height: 25px;
+        }
+
+        .left.negative { 
+          background-color: #E98174;
+          font-weight: 600;
+          padding-left: 0.3em;
+          height: 25px;
+          float: right;
+        }
+      }
+
+      &__research, &__enterprise, &__salary {
         &.zero {
           background-color: #FFFFFF;
         }
-      }
-    }
-
-    &#salary-difference-table {
-      .right.positive {
-        background-color: #B8E673;
-        font-weight: 600;
-        padding-left: 0.3em;
-        height: 25px;
-      }
-
-      .left.negative { 
-        background-color: #E98174;
-        font-weight: 600;
-        padding-left: 0.3em;
-        height: 25px;
-        float: right;
       }
     }
   }
