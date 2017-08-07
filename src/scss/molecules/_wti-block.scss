@@ -201,11 +201,14 @@
 
         &__yellow, &__purple, &__red, &__blue, &__grey {
           &--map-indicator {
-            display: inline;
+            display: inline-block;
             padding: 0px 6px;
-            border-radius: 15px;
+            border-radius: 50%;
             font-weight: 600;
             color: #FFFFFF;
+            width: 30px;
+            height: 30px;
+            text-align: center;
           }
         }
 
