@@ -287,7 +287,16 @@
         font-weight: 600;
         padding-left: 0.3em;
         height:25px;
+      }
 
+      &__enterprise {
+        background-color: #8ae2fb;
+        font-weight: 600;
+        padding-left: 0.3em;
+        height:25px;
+      }
+
+      &__research, &__enterprise {
         &.zero {
           background-color: #FFFFFF;
         }

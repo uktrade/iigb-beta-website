@@ -71,13 +71,19 @@
                 </div> -->
 
                 <li class="wti--list__bullet--entry--bullet__teal">
-                  <a class="wti--list__bullet--entry" href="#salary">
+                  <a class="wti--list__bullet--entry" href="#r-and-d">
                     <span class="lower-case">{{ labels.research_and_development_hubs[locale.code] }} {{ blockHeader.content.title }}</span>
                   </a>
                 </li>
 
                 <li class="wti--list__bullet--entry--bullet__teal">
-                  <a class="wti--list__bullet--entry" href="#r-and-d">
+                  <a class="wti--list__bullet--entry" href="#enterprise">
+                    <span class="lower-case">{{ labels.enterprise_zones[locale.code] }} {{ blockHeader.content.title }}</span>
+                  </a>
+                </li>
+
+                <li class="wti--list__bullet--entry--bullet__teal">
+                  <a class="wti--list__bullet--entry" href="#salary">
                     <span class="lower-case">{{ labels.salary[locale.code] }}</span>
                   </a>
                 </li>
@@ -117,6 +123,12 @@
                 <li class="wti--list__bullet--entry--bullet__teal">
                   <a class="wti--list__bullet--entry" href="#r-and-d">
                     <span class="lower-case">{{ labels.research_and_development_hubs[locale.code] }} {{ blockHeader.content.title }}</span>
+                  </a>
+                </li>
+
+                <li class="wti--list__bullet--entry--bullet__teal">
+                  <a class="wti--list__bullet--entry" href="#enterprise">
+                    <span class="lower-case">{{ labels.enterprise_zones[locale.code] }} {{ blockHeader.content.title }}</span>
                   </a>
                 </li>
 
@@ -212,6 +224,78 @@
                 <img class="wti--map--responsive" src="/{{assets}}/media/wti-maps/{{ researchMap.image }}">
                 <div class="wti--map__mapping">
                   {% for point in researchMap.content.mapping_points %}
+                    <a href="/{{ base }}/where-to-invest/{{ point.link }}/">
+                      <div class="wti--map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                    </a>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="enterprise" class="wti--block">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="wti--section-heading">
+                <h2>
+                  {{ labels.enterprise_zones[locale.code] }} <span class="lower-case">{{ blockHeader.content.title }}</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <table id="enterprise-table" class="wti--table">
+                <thead>
+                  <tr>
+                    <th colspan="2">{{ labels.area[locale.code] }}</th>
+                    <th>{{ labels.ez[locale.code] }}</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  {% for row in ezTable.content.table_rows %}
+                    <tr class="wti--table--row">
+                      <td class="wti--table--cell__map-indicator">
+                        <div class="wti--list__no-bullet--entry__red--map-indicator">
+                          {{ row.mapIndicator }}
+                        </div>
+                      </td>
+                      <td class="wti--table--cell__underline">
+                        <a href="/{{ base }}/where-to-invest/{{ row.link }}/">
+                          {{ row.cell1 }}
+                        </a>
+                      </td>
+                      <td class="wti--table--cell__underline">
+                        <div class="row">
+                          <div class="col-xs-3">
+                            {{ row.cell2 }}
+                          </div>
+                          <div class="col-xs-9">
+                            <div class="wti--table--value__enterprise {{ 'zero' if row.cell2 | int == 0 else '' }}" style="width: {{ row.widthValue }};">
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              
+              <div class="wti--small-text">
+                <p>
+                  {{blockTitles.content.ez_source}}
+                </p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="wti--map">
+                <img class="wti--map--responsive" src="/{{assets}}/media/wti-maps/{{ ezMap.image }}">
+                <div class="wti--map__mapping">
+                  {% for point in ezMap.content.mapping_points %}
                     <a href="/{{ base }}/where-to-invest/{{ point.link }}/">
                       <div class="wti--map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
                     </a>
