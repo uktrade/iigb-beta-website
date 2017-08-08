@@ -335,15 +335,6 @@ function debounce(func, wait, immediate) {
   }
 }
 
-
-
-function responsiveTable() {
-  var isTable = $('table').length
-  if (isTable) {
-    $('table').wrap('<div class="dit-table__responsive" />')
-  }
-}
-
 function selector() {
   $('.lang-link')
     .each(function() {

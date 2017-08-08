@@ -100,7 +100,29 @@
             </ul>
           </div>
         </div>
+
+        <div class="col-sm-8">
+          <div class="row region--block__map">
+            <div class="region--block__header">
+              <div class="region--section-heading">
+                <h2>
+                  Map of {{ blockHeader.content.title }}
+                </h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-8">
+                <img class="region--map--responsive__no-margin" src="/{{assets}}/media/wti-maps/regional-maps/{{regionOverview.image}}">
+              </div>
+
+              <div class="col-xs-4">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
 
       {% if quotation %}
         </div> <!-- closing the container to allow the quote to go full width -->

@@ -109,6 +109,12 @@
         border:none;
       }
     }
+
+    &__map {
+      background: #f5f2ed;
+      margin-bottom: 1em;
+      padding: 20px;
+    }
   }
 
   &--industry-link {
@@ -146,6 +152,11 @@
       margin-top: -30px;
 
       @media (max-width: $screen-xs-max) {
+        margin-top: 0px;
+      }
+
+      &__no-margin {
+        @extend .region--map--responsive;
         margin-top: 0px;
       }
     }
