@@ -61,7 +61,7 @@
               {% for point in proofPoints %}
                 <li class="region--list__bullet--entry--bullet__teal">
                   <a class="region--list__bullet--entry" href="#{{point.content.title | replace(' ', '_')}}">
-                    {{point.content.title}}
+                    {{point.content.link}}
                   </a>
                 </li>
               {% endfor %}
