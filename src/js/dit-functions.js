@@ -57,7 +57,6 @@ function onLoaded() {
     ifOtherSelected()
     search()
     jsSearch()
-    responsiveTable()
     playVid()
     jsEnhanceExternalLinks()
     addAltTrackingPixel()
