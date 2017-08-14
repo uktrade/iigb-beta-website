@@ -19,15 +19,22 @@
 <main role="main" class="container">
   <section class="dit-content-section">
     <div class="row">
-      <div class="col-xs-8">
+      <div class="col-sm-8">
         {{ markups.intro(sections[0]) }}
       </div>
 
       {% if whereToInvest %}
-        <div class="col-xs-8">
+        <div class="col-sm-8">
           <h2>{{ whereToInvest.content.title }}</h2>
-          {{ whereToInvest.content.contents|safe }}
-          {{ clusters.content.contents|safe }}
+          <div class="row">
+            <div class="col-sm-6">
+              <img src="/{{assets}}/media/wti-maps/{{ clusters.image }}" class="wti--map--responsive">
+            </div>
+            <div class="col-sm-6">
+              {{ whereToInvest.content.contents|safe }}
+              {{ clusters.content.contents|safe }}
+            </div>
+          </div>
         </div>
       {% endif %}
     </div>
