@@ -10,53 +10,61 @@
 <!--
 [cms-fields]
   sections:
-    type: content
-    multiple: true
-    label: Sections
+  type: content
+  multiple: true
+  label: Sections
 [/cms-fields]
 -->
 
 <main role="main" class="container">
-    <section class="dit-content-section">
-        <div class="row">
-            <div class="col-xs-12">
-                {{ markups.intro(sections[0]) }}
-            </div>
-        </div>
-    </section>
+  <section class="dit-content-section">
+    <div class="row">
+      <div class="col-xs-8">
+        {{ markups.intro(sections[0]) }}
+      </div>
 
-    <!--
-    [cms-fields]
-      subContent:
-        type: content
-        multiple: true
-        label: Sub contents
-        fields:
-          content:
-            type: text
-            label: Content
-            help: Choose content to appear in this section
-          thumbnail:
-            type: text
-            label: Thumbnail image
-            help: Choose thumbnail image for tile
-          link:
-            type: text
-            label: Link target for thumbnail
-    [/cms-fields]
-      -->
-
-    {% if subContent | length %}
-    <section class="dit-content-section">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 id="sub-sectors">
-                    {{ labels.related_industries[locale.code] }}</h2>
-                {{ markups.tilesWithBottomDescription(list = subContent, base = base, assets = assets) }}
-            </div>
+      {% if whereToInvest %}
+        <div class="col-xs-8">
+          <h2>{{ whereToInvest.content.title }}</h2>
+          {{ whereToInvest.content.contents|safe }}
+          {{ clusters.content.contents|safe }}
         </div>
-    </section>
-    {% endif %}
+      {% endif %}
+    </div>
+  </section>
+
+  <!--
+  [cms-fields]
+    subContent:
+    type: content
+    multiple: true
+    label: Sub contents
+    fields:
+      content:
+      type: text
+      label: Content
+      help: Choose content to appear in this section
+      thumbnail:
+      type: text
+      label: Thumbnail image
+      help: Choose thumbnail image for tile
+      link:
+      type: text
+      label: Link target for thumbnail
+  [/cms-fields]
+    -->
+
+  {% if subContent | length %}
+  <section class="dit-content-section">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 id="sub-sectors">
+          {{ labels.related_industries[locale.code] }}</h2>
+        {{ markups.tilesWithBottomDescription(list = subContent, base = base, assets = assets) }}
+      </div>
+    </div>
+  </section>
+  {% endif %}
 </main>
 
 {% endblock %}
