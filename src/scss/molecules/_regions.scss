@@ -116,6 +116,14 @@
       color: #FFFFFF;
       padding-top: 15px;
 
+      footer {
+        color: #FFFFFF;
+
+        &:before {
+          content: '';
+        }
+      }
+
       &--quote {
         padding-left: 0px;
         padding-right: 0px;
