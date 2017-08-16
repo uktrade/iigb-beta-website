@@ -55,14 +55,14 @@
 
             <ul class="region--list__bullet">
               <li class="region--list__bullet--entry--bullet__teal">
-                <a class="region--list__bullet--entry" href="#invest_in">
+                <a class="region--list__bullet--entry link--list" href="#invest_in">
                   {{regionOverview.content.invest_in}}
                 </a>
               </li>
 
               {% for point in proofPoints %}
                 <li class="region--list__bullet--entry--bullet__teal">
-                  <a class="region--list__bullet--entry" href="#{{point.content.title | replace(' ', '_')}}">
+                  <a class="region--list__bullet--entry link--list" href="#{{point.content.title | replace(' ', '_')}}">
                     {{point.content.link}}
                   </a>
                 </li>
@@ -94,7 +94,7 @@
             <ul class="region--list__bullet">
               {% for point in proofPoints %}
                 <li class="region--list__bullet--entry--bullet__teal">
-                  <a class="region--list__bullet--entry" href="#{{point.content.title | replace(' ', '_')}}">
+                  <a class="region--list__bullet--entry link--list" href="#{{point.content.title | replace(' ', '_')}}">
                     {{point.content.link}}
                   </a>
                 </li>

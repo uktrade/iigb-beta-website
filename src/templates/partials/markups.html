@@ -69,10 +69,10 @@
         {% for l in list %}
           <li class="dit-big-list__item--home-guide">
             {% if header %}
-              <h3><a href="/{{base}}{{ l.link }}">{{ l.content.title }}</a></h3>
+              <h3><a class="link--standalone" href="/{{base}}{{ l.link }}">{{ l.content.title }}</a></h3>
               {{ l.content.contents | safe }}
             {% else %}
-              <h2 class="dit-big-list__title"><a href="/{{base}}{{ l.link }}">{{ l.content.title }}</a></h2>
+              <h2 class="dit-big-list__title"><a class="link--standalone" href="/{{base}}{{ l.link }}">{{ l.content.title }}</a></h2>
               {{ l.content.contents | safe }}
             {% endif %}
           </li>
@@ -181,7 +181,7 @@
       {% for tile in list %}
       <div class="col-xs-12 col-sm-6 dit-industries__item">    
         <a href="/{{ base }}{{ tile.link }}" class="dit-industries__link">
-          <div class="dit-industries__text">{{ tile.content.title }}</div>
+          <div class="dit-industries__text"><span class="link--standalone">{{ tile.content.title }}</span></div>
           <img src="/{{assets}}/media/hero-img/{{ tile.thumbnail }}" alt="{{ tile.content.title }}" class="dit-industries__image">
         </a>
       </div>
@@ -202,7 +202,7 @@
         <ul class="dit-sectors__list">
           {% for tile in list %}
             <li class="dit-sectors__list-item">
-              <a href="/{{ base }}{{ tile.link }}" class="dit-sectors__list-link">{{ tile.content.title }}</a>
+              <a href="/{{ base }}{{ tile.link }}" class="link--list">{{ tile.content.title }}</a>
             </li>
           {% endfor %}
         </ul>
