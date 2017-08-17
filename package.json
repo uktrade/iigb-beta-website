@@ -52,7 +52,7 @@
     "envify": "^4.0.0",
     "express": "^4.14.0",
     "iigb-aws-helpers": "uktrade/iigb-aws-helpers",
-    "iigb-beta-content": "uktrade/iigb-beta-content",
+    "iigb-beta-content": "uktrade/iigb-beta-content#staging",
     "iigb-cms-tags": "uktrade/iigb-cms-tags",
     "jasmine": "^2.5.3",
     "jasmine-console-reporter": "^1.2.7",
