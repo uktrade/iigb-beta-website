@@ -64,6 +64,7 @@ function onLoaded() {
     ioppsToggles()
     renderInvestmentChart()
     showLabelsToggle()
+    enablePinchZoom()
   } catch (e) {
     error('On loaded failed!', e)
   }
@@ -397,6 +398,12 @@ function showLabelsToggle() {
         toggle.text('Hide labels');
       }
   })
+}
+
+function enablePinchZoom() {
+  if (window.location.pathname.split('/')[2] === 'where-to-invest') {
+    document.querySelector('meta[name=viewport]').setAttribute('content','width=device-width,initial-scale=1,maximum-scale=4,user-scalable=yes');
+  }
 }
 
 
