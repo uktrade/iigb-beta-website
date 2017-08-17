@@ -18,7 +18,7 @@
     "start": "export IIGB_BUILD=dev && npm run clean && npm run build && node lib/server.js",
     "clean": "rimraf build && mkdirp build",
     "build": "npm run html && npm run sass && npm run js && npm run assets",
-    "build-dev": "export DIT_ENV='development' && npm run assets && { npm run sass & npm run js & npm run html; }",
+    "build-dev": "export FORMS_PROCESSOR='development' && export DIT_ENV='development' && npm run assets && { npm run sass & npm run js & npm run html; }",
     "html": "DEBUG=\"$npm_package_config_debug, $DEBUG\" node ./lib/build-pages.js",
     "sass": "./lib/build-sass.sh",
     "js": "./lib/build-js.sh",
@@ -72,7 +72,7 @@
     "uglify-js": "^2.7.5",
     "underscore": "^1.8.3",
     "watchify": "^3.8.0",
-    "webdriverio": "^4.6.2",
-    "wdio-jasmine-framework": "^0.3.1"
+    "wdio-jasmine-framework": "^0.3.1",
+    "webdriverio": "^4.6.2"
   }
 }
