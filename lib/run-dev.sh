@@ -58,4 +58,4 @@ if [[ $useLocal == $useLocalTrue ]]; then
 fi
 
 echo "Starting server"
-#npm run dev
+npm run dev
