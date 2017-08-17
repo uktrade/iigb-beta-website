@@ -48,7 +48,7 @@ if [[ $useLocal == $useLocalTrue ]]; then
         if [ $resetPaths == $resetTrue ]; then
             source ./lib/set-dependency-paths.sh
         else
-            echo "Using existing existing dependency paths"
+            echo "Using existing dependency paths"
         fi
     else
         echo "Path to the sites dependencies need setting"

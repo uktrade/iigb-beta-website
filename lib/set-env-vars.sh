@@ -40,7 +40,7 @@ fi
 
 #Get the user(dev) to set the variable values for the current environment.
 echo "Set the environment variables for where you are running the service [Default value]"
-echo -n "Enter base url for the site [$defaultSiteURL] > "
+echo "Enter base url for the site [$defaultSiteURL] > "
 read baseURL
 if [[ -n $baseURL ]]; then
     export BASE_IIGB_URL=$baseURL
@@ -48,7 +48,7 @@ else
     export BASE_IIGB_URL=$defaultSiteURL
 fi
 
-echo -n "Enter port for the site [$defaultPort] > "
+echo "Enter port for the site [$defaultPort] > "
 read port
 if [[ -n $port ]]; then
     export PORT=$port
@@ -56,7 +56,7 @@ else
     export PORT=$defaultPort
 fi
 
-echo -n "Enter HHTPs port for the site [$defaultHttpsPort] > "
+echo "Enter HHTPs port for the site [$defaultHttpsPort] > "
 read httpPort
 if [[ -n $httpPort ]]; then
     export HTTPS_PORT=$httpPort
@@ -64,7 +64,7 @@ else
     export HTTPS_PORT=$defaultHttpsPort
 fi
 
-echo -n "Enter search url for the site [$defaultSearch] > "
+echo "Enter search url for the site [$defaultSearch] > "
 read search
 if [[ -n $search ]]; then
     export IIGB_SEARCH=$search
@@ -72,7 +72,7 @@ else
     export IIGB_SEARCH=$defaultSearch
 fi
 
-echo -n "Enter environment name for the site [$defaultEnv] > "
+echo "Enter environment name for the site [$defaultEnv] > "
 read env
 if [[ -n $env ]]; then
     export DIT_ENV=$env
@@ -80,7 +80,7 @@ else
     export DIT_ENV=$defaultEnv
 fi
 
-echo -n "Enter subdomain for the environment [$defaultSubdomain] > "
+echo "Enter subdomain for the environment [$defaultSubdomain] > "
 read subdomain
 if [[ -n $subdomain ]]; then
     export SUBDOMAIN=$subdomain
