@@ -111,7 +111,10 @@ function addActive() {
   var url = window.location.pathname
   var base_url = '/' + document.base_url + '/'
   var child = ''
-  if (url.match(/\/industries\//)) {
+  if (url.match(/\-in-the-uk\//)) {
+    child = 'where-to-invest/';
+    debug('Adding active style to where to invest')
+  } else if (url.match(/\/industries\//)) {
     child = 'industries/'
     debug('Adding active style to industries')
   } else if (url.match(/\/setup-guide\//)) {
