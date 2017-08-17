@@ -89,13 +89,14 @@
     behavior: url(PIE.htc); /* remove if you don't care about IE8 */
 
     width: 46px;
-    height: 36px;
+    height: 46px;
     padding: 8px 14px;
 
     border: 2px solid $text-colour;
     color: $text-colour;
     text-align: center;
     margin-right: 12px;
+    display: inline-block;
   }
 
   .glyphicon-triangle-#{$left} {
