@@ -34,7 +34,6 @@ function renderInvestmentChart() {
   // load the data
   var build = document.iigbBuild ? document.iigbBuild + '/' : '';
   var chartDataUrl = '/assets/' + build + 'data.json';
-  console.log(chartDataUrl);
   d3.json(chartDataUrl, function(error, data) {
 
       data.forEach(function(d) {

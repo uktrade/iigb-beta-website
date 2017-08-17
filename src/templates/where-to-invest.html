@@ -1,0 +1,298 @@
+{% extends "base/index.html" %}
+
+{% block content %}
+{% include "partials/top-bar-no_contact.html" %}
+{% include "partials/header-nav.html" %}
+
+<div id="content" tabindex="-1"></div> <!--"Skip to content" link navigates to this in order to skip naviagtion links-->
+
+<main role="main">
+  <div class="dit-generic-section">
+    <div class="container">
+
+      <div id="sector-list" class="wti-sector-list--xs">
+        <p>{{ labels.investment_opts_select_industry[locale.code] }}</p>
+        <div class="wti-sector-list__sector">
+          <a href="/{{ base }}/industries/aerospace/aerospace-in-the-uk" class="sector">{{ labels.sectors.aerospace[locale.code] }}</a>
+        </div>
+        <div class="wti-sector-list__sector">
+          <a href="/{{ base }}/industries/advanced-manufacturing/advanced-manufacturing-in-the-uk" class="sector">{{ labels.sectors.advanced_manufacturing[locale.code] }}</a>
+        </div>
+        <div class="wti-sector-list__sector">
+          <a href="/{{ base }}/industries/automotive/automotive-in-the-uk" class="sector">{{ labels.sectors.automotive[locale.code] }}</a>
+        </div>
+        <div class="wti-sector-list__sector">
+          <a href="/{{ base }}/industries/creative/creative-in-the-uk" class="sector">{{ labels.sectors.creative[locale.code] }}</a>
+        </div>
+        <div class="wti-sector-list__sector">
+          <a href="/{{ base }}/industries/energy/energy-in-the-uk" class="sector">{{ labels.sectors.energy[locale.code] }}</a>
+        </div>
+        <div class="wti-sector-list__sector">
+          <a href="/{{ base }}/industries/financial-services/financial-services-in-the-uk" class="sector">{{ labels.sectors.financial_services[locale.code] }}</a>
+        </div>
+        <div class="wti-sector-list__sector">
+          <a href="/{{ base }}/industries/food-and-drink-manufacturing/food-and-drink-manufacturing-in-the-uk" class="sector">{{ labels.sectors.food_and_drink_manufacturing[locale.code] }}</a>
+        </div>
+        <div class="wti-sector-list__sector">
+          <a href="/{{ base }}/industries/health-and-life/health-and-life-in-the-uk" class="sector">{{ labels.sectors.health_and_life_sciences[locale.code] }}</a>
+        </div>
+        <div class="wti-sector-list__sector">
+          <a href="/{{ base }}/industries/retail/retail-in-the-uk" class="sector">{{ labels.sectors.retail[locale.code] }}</a>
+        </div>
+        <div class="wti-sector-list__sector">
+          <a href="/{{ base }}/industries/technology/technology-in-the-uk" class="sector">{{ labels.sectors.technology[locale.code] }}</a>
+        </div>
+      </div>
+      
+      {% if blockHeader %}
+      <div id="filter-list" class="wti-comparator-list--xs">
+        <p>{{ labels.choose_a_comparator[locale.code] }}</p>
+        <!-- <div class="wti-comparator-list__comparator">
+          <a href="#universities" class="filter">{{ labels.universities[locale.code] }}</a>
+        </div> -->
+
+        <div class="wti-comparator-list__comparator">
+          <a href="#salary" class="filter">{{ labels.salary[locale.code] }}</a>
+        </div>
+
+        <div class="wti-comparator-list__comparator">
+          <a href="#r-and-d" class="filter">{{ labels.research_and_development_hubs[locale.code] }}</a>
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="row">
+        <div class="col-sm-3 hidden-xs" id="sticky-nav">
+          <div class="wti-sector-list">
+            <div class="wti-sector-list__sector">
+              <a href="/{{ base }}/industries/aerospace/aerospace-in-the-uk" class="sector">{{ labels.sectors.aerospace[locale.code] }}</a>
+            </div>
+            <div class="wti-sector-list__sector">
+              <a href="/{{ base }}/industries/advanced-manufacturing/advanced-manufacturing-in-the-uk" class="sector">{{ labels.sectors.advanced_manufacturing[locale.code] }}</a>
+            </div>
+            <div class="wti-sector-list__sector">
+              <a href="/{{ base }}/industries/automotive/automotive-in-the-uk" class="sector">{{ labels.sectors.automotive[locale.code] }}</a>
+            </div>
+            <div class="wti-sector-list__sector">
+              <a href="/{{ base }}/industries/creative/creative-in-the-uk" class="sector">{{ labels.sectors.creative[locale.code] }}</a>
+            </div>
+            <div class="wti-sector-list__sector">
+              <a href="/{{ base }}/industries/energy/energy-in-the-uk" class="sector">{{ labels.sectors.energy[locale.code] }}</a>
+            </div>
+            <div class="wti-sector-list__sector">
+              <a href="/{{ base }}/industries/financial-services/financial-services-in-the-uk" class="sector">{{ labels.sectors.financial_services[locale.code] }}</a>
+            </div>
+            <div class="wti-sector-list__sector">
+              <a href="/{{ base }}/industries/food-and-drink-manufacturing/food-and-drink-manufacturing-in-the-uk" class="sector">{{ labels.sectors.food_and_drink_manufacturing[locale.code] }}</a>
+            </div>
+            <div class="wti-sector-list__sector">
+              <a href="/{{ base }}/industries/health-and-life/health-and-life-in-the-uk" class="sector">{{ labels.sectors.health_and_life_sciences[locale.code] }}</a>
+            </div>
+            <div class="wti-sector-list__sector">
+              <a href="/{{ base }}/industries/retail/retail-in-the-uk" class="sector">{{ labels.sectors.retail[locale.code] }}</a>
+            </div>
+            <div class="wti-sector-list__sector">
+              <a href="/{{ base }}/industries/technology/technology-in-the-uk" class="sector">{{ labels.sectors.technology[locale.code] }}</a>
+            </div>
+          </div>
+          
+          {% if blockHeader %}
+          <div class="wti-comparator-list">
+            <!-- <div class="wti-comparator-list__comparator">
+              <a href="#universities">{{ labels.universities[locale.code] }}</a>
+            </div> -->
+
+            <div class="wti-comparator-list__comparator">
+              <a href="#salary">{{ labels.salary[locale.code] }}</a>
+            </div>
+
+            <div class="wti-comparator-list__comparator">
+              <a href="#r-and-d">{{ labels.research_and_development_hubs[locale.code] }}</a>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="col-xs-12 col-sm-9">
+          <h1>{{ labels.where_to_invest[locale.code] }}</h1>
+
+        {% if blockHeader %}
+          
+          <div class="wti-block">
+            <h2 class="hidden-xs">{{ labels.for[locale.code] }} <span class="sector-name">{{ blockHeader.content.title }}</span></h2>
+            <h2 class="hidden-sm hidden-md hidden-lg hidden-xl">{{ labels.for[locale.code] }} <span class="sector-toggle">{{ blockHeader.content.title }}</span></h2>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-5">
+                <div class="wti-map">
+                  <img id="clusterMapImage" src="/{{assets}}/media/wti-maps/{{ clusterMap.labelledImage }}">
+                </div>
+              </div>
+              <!-- <div class="col-xs-12 col-sm-7">
+                <div class="wti-summary">
+                </div>
+              </div> -->
+            </div>
+            <span id="labels-toggle">Hide labels</span>
+          </div>
+
+<!--           <div id="universities" class="wti-block">
+            <h2 class="hidden-xs">{{ labels.for[locale.code] }} <span class="sector-name">{{ blockHeader.content.title }}</span></h2>
+            <h2 class="hidden-sm hidden-md hidden-lg hidden-xl">{{ labels.for[locale.code] }} <span class="sector-toggle sector-name">{{ blockHeader.content.title }}</span></h2>
+            <h3 class="hidden-xs">{{ labels.showing[locale.code] }} <span class="filter-name">{{ labels.universities[locale.code] }}</span></h3>
+            <h3 class="hidden-sm hidden-md hidden-lg hidden-xl">{{ labels.showing[locale.code] }} <span class="filter-toggle filter-name">{{ labels.universities[locale.code] }}</span></h3>
+
+            <div class="row">
+              <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
+                <div class="wti-map">
+                  <img src="/{{assets}}/media/wti-maps/{{ universitiesMap.image }}">
+                  <div class="wti-map__mapping">
+                    {% for point in universitiesMap.content.mapping_points %}
+                      <a href="/{{ base }}/where-to-invest/{{ point.link }}/">
+                        <div class="wti-map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                      </a>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>              
+
+              <div class="col-xs-12 col-sm-8">                
+                <table id="universities-table">
+                  <thead>
+                    <tr>
+                      <th><span class="visuallyhidden">{{ labels.map_indicator[locale.code] }}</span></th>
+                      <th>{{ labels.university[locale.code] }}</th>
+                      <th>{{ labels.region[locale.code] }}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for row in universitiesTable.content.table_rows %}
+                      <tr>
+                        <td><span class="map-indicator">{{ row.mapIndicator }}</span></td>
+                        <td>{{ row.cell1 }}</td>
+                        <td><a href="/{{ base }}/where-to-invest/{{ row.link }}">{{ row.cell2 }}</a></td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div> -->
+
+          <div id="salary" class="wti-block">
+            <h2 class="hidden-xs">{{ labels.for[locale.code] }} <span class="sector-name">{{ blockHeader.content.title }}</span></h2>
+            <h2 class="hidden-sm hidden-md hidden-lg hidden-xl">{{ labels.for[locale.code] }} <span class="sector-toggle sector-name">{{ blockHeader.content.title }}</span></h2>
+            <h3 class="hidden-xs">{{ labels.showing[locale.code] }} <span class="filter-name">{{ labels.salary[locale.code] }}</span></h3>
+            <h3 class="hidden-sm hidden-md hidden-lg hidden-xl">{{ labels.showing[locale.code] }} <span class="filter-toggle filter-name">{{ labels.salary[locale.code] }}</span></h3>
+
+            <div class="row">
+              <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
+                <div class="wti-map">
+                  <img src="/{{assets}}/media/wti-maps/{{ salaryMap.image }}">
+                  <div class="wti-map__mapping">
+                    {% for point in salaryMap.content.mapping_points %}
+                      <!-- <a href="/{{ base }}/where-to-invest/{{ point.link }}/"> -->
+                        <div class="wti-map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                      <!-- </a> -->
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xs-12 col-sm-8">
+
+                <table id="salary-difference-table">
+                  <thead>
+                    <tr>
+                      <th><span class="visuallyhidden">{{ labels.map_indicator[locale.code] }}</span></th>
+                      <th>{{ labels.region[locale.code] }}</th>
+                      <th>{{ labels.salary_difference[locale.code] }}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for row in salaryTable.content.table_rows %}
+                      <tr>
+                        <td><span class="map-indicator">{{ row.mapIndicator }}</span></td>
+                        <td><!-- <a href="/{{ base }}/where-to-invest/{{ row.link }}"> -->{{ row.cell1 }}<!-- </a> --></td>
+                        <td><div class="{{ 'positive' if row.cell2 | int > 0 else 'negative' }}" style="width: {{ row.widthValue }};">{{ row.cell2 }}</div></td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+                
+              </div>
+            </div>
+          </div>
+
+          <div id="r-and-d" class="wti-block">
+            <h2 class="hidden-xs">{{ labels.for[locale.code] }} <span class="sector-name">{{ blockHeader.content.title }}</span></h2>
+            <h2 class="hidden-sm hidden-md hidden-lg hidden-xl">{{ labels.for[locale.code] }} <span class="sector-toggle sector-name">{{ blockHeader.content.title }}</span></h2>
+            <h3 class="hidden-xs">{{ labels.showing[locale.code] }} <span class="filter-name">{{ labels.research_and_development_hubs[locale.code] }}</span></h3>
+            <h3 class="hidden-sm hidden-md hidden-lg hidden-xl">{{ labels.showing[locale.code] }} <span class="filter-toggle filter-name">{{ labels.research_and_development_hubs[locale.code] }}</span></h3>
+
+            <div class="row">
+              <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-4">
+                <div class="wti-map">
+                  <img src="/{{assets}}/media/wti-maps/{{ researchMap.image }}">
+                  <div class="wti-map__mapping">
+                    {% for point in researchMap.content.mapping_points %}
+                      <!-- <a href="/{{ base }}/where-to-invest/{{ point.link }}/"> -->
+                        <div class="wti-map__mapping-point" style="top: {{ point.top }};left: {{ point.left }}; width: {{ point.width }}; height: {{ point.height }}"><span class="visuallyhidden">{{ point.text }}</span></div>
+                      <!-- </a> -->
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xs-12 col-sm-8">
+
+                <table id="r-and-d-table">
+                  <thead>
+                    <tr>
+                      <th><span class="visuallyhidden">{{ labels.map_indicator[locale.code] }}</span></th>
+                      <th>{{ labels.region[locale.code] }}</th>
+                      <th>{{ labels.activity[locale.code] }}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for row in researchTable.content.table_rows %}
+                      <tr>
+                        <td><span class="map-indicator">{{ row.mapIndicator }}</span></td>
+                        <td><!-- <a href="/{{ base }}/where-to-invest/{{ row.link }}/"> -->{{ row.cell1 }}<!-- </a> --></td>
+                        <td><div class="value" style="width: {{ row.widthValue }};">{{ row.cell2 }}</div></td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
+
+        {% else %}
+
+          <div class="wti-block">
+            <h3 class="hidden-xs">{{ labels.select_your_industry[locale.code] }}</h3>
+            <h3 class="hidden-sm hidden-md hidden-lg hidden-xl"><span class="sector-toggle">{{ labels.select_your_industry[locale.code] }}</span></h3>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-5">
+                <div class="wti-map">
+                  <img src="/{{assets}}/media/wti-maps/uk-map.png">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        {% endif %}
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

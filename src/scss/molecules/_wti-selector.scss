@@ -1,0 +1,32 @@
+#sticky-nav {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+.wti-sector-list, .wti-comparator-list {
+	margin-top: 20px;
+
+	&--xs {
+		display: none;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		z-index: 100;
+		background-color: white;
+		height: 100vh;
+		width: 100%;
+		padding:10px;
+	}
+
+	&__sector, &__comparator {
+		font-weight: 300;
+    	padding: 7px;
+	}
+
+}
+
+.wti-comparator-list {
+	padding-top: 20px;
+    border-top: 1px solid #EEE;
+}

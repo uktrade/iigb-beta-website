@@ -1,0 +1,90 @@
+.wti-block {
+	border-bottom: 1px solid #EEE;
+	padding-bottom: 20px;
+
+	.wti-summary {
+		p {
+			font-size: 18px;
+		}
+	}
+
+	.wti-map {
+		position: relative;
+
+		&__mapping-point {
+			position: absolute;
+			border-radius: 10px;
+			font-size: 14px;
+			text-align: center;
+			font-weight: bold;
+		}
+	}
+
+	#labels-toggle {
+		display: none;
+		cursor: pointer;
+		text-decoration: underline;
+		color: $link-colour;
+		font-size: 15px;
+
+		&:hover {
+			color: $link-colour-hover;
+		}
+	}
+	
+	.sector-toggle, .filter-toggle {
+		color: skyblue;	
+	}
+
+	table {
+		width: 100%;
+		
+		td, th {
+			width: 47.5%;
+			font-weight: 100;
+			font-size: 18px;
+
+			&:first-child {
+				width: 5%;
+				padding-#{$left}: 0;
+			}
+		}
+
+		thead > tr { 
+			border-bottom: 2px solid;
+
+			th {
+				text-align: center;
+				font-weight: 600;
+			}
+		}
+
+		tbody > tr {
+			border-bottom: 1px solid #BFC1C3;
+		}
+
+		.map-indicator {
+			font-weight: bold;
+		}
+
+		.value {
+		    background-color: #e0de92;
+		    font-weight: 600;
+		    padding-left: 0.3em;
+		}
+	}
+
+	#salary-difference-table {
+		.positive {
+			background-color: #B8E673;
+		    font-weight: 600;
+		    padding-left: 0.3em;
+		}
+
+		.negative { 
+			background-color: #E98174;
+    		font-weight: 600;
+    		padding-left: 0.3em;
+		}
+	}
+}
