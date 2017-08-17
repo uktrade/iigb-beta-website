@@ -4,7 +4,7 @@ exports.config = {
   updateJob: false,
   specs: [
     './spec/features/search.js',
-    // './spec/features/form.js',  //  TODO Reimplement for the new form MN
+    './spec/features/form.js',
     './spec/features/georedirect.js'
   ],
   exclude: [],

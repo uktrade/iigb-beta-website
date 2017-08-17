@@ -22,22 +22,33 @@ module.exports = {
 window.radioButtonGroup = false
 
 function init() {
+  setFormsActionAttribute()
   resolveForms()
 }
+
+function setFormsActionAttribute() {
+  if (process.env.FORMS_PROCESSOR === 'development') {
+    $('form').each(function() {
+      var form = $(this)
+      if (form.attr('id') === 'ist-form') {
+        form.attr('action', 'https://iigb-forms-staging.herokuapp.com/form')
+      } else if (form.attr('id') === 'feedback-form') {
+        form.attr('action', 'https://iigb-forms-staging.herokuapp.com/feedback')
+      }
+    });
+  }
+}
+
 
 function resolveForms() {
   $('form').each(function() {
     var form = $(this)
-    var formBody = $('#old-format')
-    debug('formBodyOld', formBody)
     var formBodyNF = $('#new-format')
     debug('formBodyNew', formBodyNF)
     if (form.attr('id') === 'ist-form') {
       debug('Found IST form ', form)
       logger.name('IST Form')
-      if (formBody.length > 0) {
-        prepareISTForm(form, formBody)
-      } else if (formBodyNF.length > 0) {
+      if (formBodyNF.length > 0) {
         prepareISTFormNF(form, formBodyNF)
       }
     } else {
@@ -47,170 +58,6 @@ function resolveForms() {
   })
 
 }
-
-/** IST FORM **/
-function prepareISTForm(form, formBody) {
-  debug('Preparing')
-  var formWrapper = formBody.find('.dit-form-wrapper-old')
-  var stepWrappers = form.find('.setup-content')
-  enhanceISTForm()
-
-  function enhanceISTForm() {
-    debug('Enhancing')
-    setJsSwitch(form)
-    disableNativeValidation(form)
-    prepareSteps()
-    prepareLocationBlock()
-    prepareAutocomplete()
-    listenInputs(form)
-  }
-
-  function prepareSteps() {
-    debug('Preparing steps')
-    var currentStep = 1
-    var nextBtn = form.find('.nextBtn')
-    var prevBtn = form.find('.prevBtn')
-    var stepWizard = form.find('.stepwizard')
-    show(nextBtn, prevBtn, stepWizard)
-    var steps = form.find('.dit-form-section__step')
-    steps.css('min-height', '70rem')
-    steps.removeClass('final_step')
-    prepareStep2()
-    prepareNavList()
-    form.submit(submit)
-    adjustSize()
-
-    debug('Registering resize listener')
-    $(window).on('resize', function() {
-      adjustSize()
-    })
-
-
-    function prepareStep2() {
-      debug('Preparing step 2')
-      formWrapper.find('#step-2')
-        .on('click', '.radio-group a', function() {
-          debug('Location option changed to ', $(this))
-          var sel = $(this).data('title')
-          var tog = $(this).data('toggle')
-          var parent = $(this).parent()
-          parent.next('.' + tog).prop('value', sel)
-          parent
-            .find('a[data-toggle="' + tog + '"]')
-            .not('[data-title="' + sel + '"]')
-            .removeClass('active')
-            .addClass('notActive')
-          parent
-            .find('a[data-toggle="' + tog + '"][data-title="' + sel + '"]')
-            .removeClass('notActive')
-            .addClass('active')
-        })
-    }
-
-    function prepareNavList() {
-      debug('Preparing nav list items')
-      var navListItems = form.find('div.setup-panel div a')
-      navListItems.click(function(e) {
-        e.preventDefault()
-        var target = parseInt($(this).attr('id').split('-')[1])
-        debug('Nav item clicked,target:', target)
-        gotoStep(target)
-      })
-      nextBtn.click(next)
-      prevBtn.click(previous)
-    }
-
-    function submit(e) {
-      e.preventDefault()
-      next()
-      if (currentStep > steps.length) {
-        debug('Submitting form')
-        submitForm(form, formBody)
-      }
-    }
-
-    function next() {
-      info('Next')
-      gotoStep(currentStep + 1)
-    }
-
-    function previous() {
-      info('Previous')
-      gotoStep(currentStep - 1)
-    }
-
-    function gotoStep(step) {
-      var currentNav = stepWizard.find('#step-' + currentStep)
-      var nextNav = stepWizard.find('#step-' + step)
-      if (step === currentStep) {
-        return
-      }
-      var current = formWrapper.find('#step-' + currentStep)
-      debug('Current', current)
-      if (step > currentStep) {
-        if (!validateInputs(current)) {
-          return
-        }
-        nextNav.removeAttr('disabled')
-      }
-      go()
-
-      function go() {
-        debug('Changing step from ', currentStep, ' to ', step)
-        var target = formWrapper.find('#step-' + step)
-        debug('Target', target)
-        currentNav.removeClass('active-selection')
-        nextNav.addClass('active-selection')
-        currentStep = step
-        adjustSize(true)
-        location.hash = '#step-' + currentStep
-      }
-    }
-
-    function adjustSize(animate) {
-      debug('Adjusting size')
-      var width = formBody.width()
-      debug('Form body size', width)
-      $(stepWrappers).each(function() {
-        $(this).css('width', width)
-      })
-
-      wrap(formWrapper, stepWrappers.length, width)
-      shift(formWrapper, (-(currentStep - 1) * width), animate)
-    }
-  }
-
-  function prepareAutocomplete() {
-    debug('Preparing form autocomplete')
-    form.find('#country').autocomplete({
-      lookup: document.countries,
-      onSelect: function(suggestion) {
-        form.find('#country_en').val(document.countries_en[suggestion.data])
-      }
-    })
-  }
-
-
-  function prepareLocationBlock() {
-    debug('Preparing location block')
-    var locationBlock = form.find('.location_block')
-    var locationSelectors = form.find('#location_selectors')
-    show(locationBlock)
-    hide(locationSelectors)
-    form.find('#location_radio_yes')
-      .click(function() {
-        show(locationSelectors)
-      })
-
-    form.find('#location_radio_no')
-      .click(function() {
-        form.find('#location').prop('selectedIndex', 0)
-        hide(locationSelectors)
-      })
-  }
-
-}
-
 
 
 /** IST FORM New Format **/

@@ -15,11 +15,7 @@
     {{ markups.bullet_list(list = listItems, base = base) }}
 </main>
 
-{% if locale.language === 'en' %}
 {% include "partials/contact-us-link.html" %}
-{% else %}
-{% include "partials/form.html" %}
-{% endif %}
 
 {% endblock %}
 
