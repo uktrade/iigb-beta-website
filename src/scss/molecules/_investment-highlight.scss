@@ -1,0 +1,17 @@
+.investment-highlight {
+	font-weight: bold;
+	margin: 10px 0 10px;
+
+	&__number {
+		display: inline-block;
+		line-height: 1;
+		font-size: 70px;
+	}
+
+	&__text {
+		display: inline-block;
+		margin-left: 10px;
+		font-size: 20px;
+		width: 60%;
+	}
+}

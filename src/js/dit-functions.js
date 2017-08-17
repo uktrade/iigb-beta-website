@@ -2,6 +2,7 @@ var geoLocation = require('./geo-location')
 var form = require('./form')
 var equalheight = require('./equalHeight')
 var drawMap = require('./map-draw.js');
+var renderInvestmentChart = require('./investment-chart')
 var logger = require('./logger')('DIT Functions')
 var debug = logger.debug
 var error = logger.error
@@ -63,6 +64,7 @@ function onLoaded() {
     jsEnhanceExternalLinks()
     addAltTrackingPixel()
     drawMap()
+    renderInvestmentChart()
   } catch (e) {
     error('On loaded failed!', e)
   }
