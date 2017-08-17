@@ -186,6 +186,10 @@
       }
     }
 
+    &--overlay {
+      margin-top: -100%;
+    }
+
     &__mapping-point {
       position: absolute;
       border-radius: 10px;
