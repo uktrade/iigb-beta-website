@@ -1,0 +1,3054 @@
+{
+  "baseValue": 15,
+  "radius": 6,
+  "points": [
+    {
+      "x_axis": 20,
+      "y_axis": 1,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 1,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 2,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 2,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 3,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 3,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 4,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 4,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 4,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 4,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 4,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 4,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 4,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 4,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 5,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 5,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 5,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 5,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 5,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 5,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 5,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 6,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 6,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 6,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 6,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 6,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 6,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 7,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 7,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 7,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 7,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 7,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 7,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 7,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 8,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 8,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 8,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 8,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 8,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 8,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 8,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 8,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 8,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 8,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 8,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 8,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 8,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 9,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 9,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 9,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 9,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 9,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 9,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 9,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 9,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 9,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 9,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 9,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 9,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 10,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 10,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 10,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 10,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 10,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 10,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 10,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 10,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 10,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 10,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 11,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 11,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 11,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 11,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 11,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 11,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 11,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 11,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 11,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 11,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 11,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 12,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 12,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 12,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 12,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 12,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 12,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 12,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 12,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 12,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 12,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 13,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 13,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 13,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 13,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 13,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 13,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 13,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 13,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 14,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 14,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 14,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 14,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 14,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 14,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 14,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 14,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 15,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 15,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 15,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 15,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 15,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 15,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 15,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 15,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 15,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 16,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 16,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 16,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 16,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 16,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 16,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 16,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 16,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 16,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 17,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 17,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 17,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 17,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 17,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 17,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 17,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 17,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 17,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 17,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 17,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 17,
+      "class": "uk-dot",
+      "region": "north-east-england"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 17,
+      "class": "uk-dot",
+      "region": "north-east-england"
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 18,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 18,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "north-east-england"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "north-east-england"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 18,
+      "class": "uk-dot",
+      "region": "north-east-england"
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 19,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "scotland"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "north-east-england"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "north-east-england"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 19,
+      "class": "uk-dot",
+      "region": "north-east-england"
+    },
+    {
+      "x_axis": 1,
+      "y_axis": 20,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 20,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 20,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 20,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 20,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 20,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 20,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 20,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 20,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 20,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 20,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 20,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 20,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 20,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 20,
+      "class": "uk-dot",
+      "region": "north-east-england"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 20,
+      "class": "uk-dot",
+      "region": "north-east-england"
+    },
+    {
+      "x_axis": 1,
+      "y_axis": 21,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 21,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 21,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 21,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 21,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 21,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 21,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 21,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 21,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 21,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 21,
+      "class": "uk-dot",
+      "region": "northern-ireland"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 21,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 21,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 21,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 21,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 21,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 21,
+      "class": "uk-dot",
+      "region": "north-east-england"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 21,
+      "class": "uk-dot",
+      "region": "north-east-england"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 21,
+      "class": "uk-dot",
+      "region": "north-east-england"
+    },
+    {
+      "x_axis": 1,
+      "y_axis": 22,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 22,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 22,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 22,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 22,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 22,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 22,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 22,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 22,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 22,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 22,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 22,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 22,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 22,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 22,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 22,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 22,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 22,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 22,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 22,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 23,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 23,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 23,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 23,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 23,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 23,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 23,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 23,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 23,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 23,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 23,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 23,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 23,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 23,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 23,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 23,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 23,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 24,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 24,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 24,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 24,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 24,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 24,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 24,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 24,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 24,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 24,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 24,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 24,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 24,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 24,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 24,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 24,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 25,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 25,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 25,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 25,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 25,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 25,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 25,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 25,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 25,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 25,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 25,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 25,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 25,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 25,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 25,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 25,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 25,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 26,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 26,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 26,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 26,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 26,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 26,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 26,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 26,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 26,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 26,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 26,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 26,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 26,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 26,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 26,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 26,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 26,
+      "class": "uk-dot",
+      "region": "yorkshire-and-the-humber"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 26,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 26,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 26,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 27,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 27,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 27,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 27,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 27,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 27,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 27,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 27,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 27,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 27,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 27,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 27,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 27,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 27,
+      "class": "uk-dot",
+      "region": "north-west-england"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 27,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 27,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 27,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 27,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 27,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 27,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 27,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 1,
+      "y_axis": 28,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 28,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 28,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 28,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 28,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 28,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 28,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 28,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 28,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 28,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 28,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 28,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 28,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 28,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 28,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 28,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 28,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 28,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 28,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 28,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 28,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 26,
+      "y_axis": 28,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 1,
+      "y_axis": 29,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 29,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 29,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 29,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 29,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 29,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 29,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 29,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 29,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 29,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 25,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 26,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 27,
+      "y_axis": 29,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 1,
+      "y_axis": 30,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 30,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 30,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 30,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 30,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 30,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 7,
+      "y_axis": 30,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 8,
+      "y_axis": 30,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 30,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 25,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 26,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 27,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 28,
+      "y_axis": 30,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 1,
+      "y_axis": 31,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 2,
+      "y_axis": 31,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 3,
+      "y_axis": 31,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 4,
+      "y_axis": 31,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 5,
+      "y_axis": 31,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 6,
+      "y_axis": 31,
+      "class": "non-uk-dot",
+      "region": ""
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 25,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 26,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 27,
+      "y_axis": 31,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "west-midlands"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "east-midlands"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 25,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 26,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 27,
+      "y_axis": 32,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 33,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 33,
+      "class": "uk-dot",
+      "region": "wales"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 33,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 33,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 33,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 33,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 33,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 33,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 33,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 25,
+      "y_axis": 33,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 26,
+      "y_axis": 33,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 34,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 34,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 34,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 34,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 34,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 34,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 34,
+      "class": "uk-dot",
+      "region": "london"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 34,
+      "class": "uk-dot",
+      "region": "london"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 34,
+      "class": "uk-dot",
+      "region": "london"
+    },
+    {
+      "x_axis": 25,
+      "y_axis": 34,
+      "class": "uk-dot",
+      "region": "east-of-england"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "london"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "london"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "london"
+    },
+    {
+      "x_axis": 25,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 26,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 27,
+      "y_axis": 35,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 15,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-west-england",
+      "automotive": 1000
+    },
+    {
+      "x_axis": 16,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 19,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 21,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 25,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 26,
+      "y_axis": 36,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 37,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 12,
+      "y_axis": 37,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 37,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 37,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 17,
+      "y_axis": 37,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 18,
+      "y_axis": 37,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 20,
+      "y_axis": 37,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 22,
+      "y_axis": 37,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 23,
+      "y_axis": 37,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 24,
+      "y_axis": 37,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 25,
+      "y_axis": 37,
+      "class": "uk-dot",
+      "region": "south-east-england"
+    },
+    {
+      "x_axis": 9,
+      "y_axis": 38,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 38,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 11,
+      "y_axis": 38,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 13,
+      "y_axis": 38,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 14,
+      "y_axis": 38,
+      "class": "uk-dot",
+      "region": "south-west-england"
+    },
+    {
+      "x_axis": 10,
+      "y_axis": 39,
+      "class": "uk-dot",
+      "region": "south-west-england",
+      "aerospace": 900
+    }
+  ],
+  "paths": [
+    {
+      "region": "scotland",
+      "class": "uk-region",
+      "drawPoints": "M 19.5,4.0 L 19.5,5.0 A 0.5 0.5 0 0,1 19.0,5.5 A 0.5 0.5 0 0,0 18.5,6.0 A 0.5 0.5 0 0,1 18.0,6.5 A 0.5 0.5 0 0,0 17.5,7.0 A 0.5 0.5 0 0,0 18.0,7.5 L 23.0,7.5 A 0.5 0.5 0 0,1 23.5,8.0 L 23.5,9.0 A 0.5 0.5 0 0,1 23.0,9.5 A 0.5 0.5 0 0,0 22.5,10.0 A 0.5 0.5 0 0,1 22.0,10.5 A 0.5 0.5 0 0,0 21.5,11.0 L 21.5,12.0 A 0.5 0.5 0 0,1 21.0,12.5 A 0.5 0.5 0 0,0 20.5,13.0 A 0.5 0.5 0 0,1 20.0,13.5 L 19.0,13.5 A 0.5 0.5 0 0,0 18.5,14.0 A 0.5 0.5 0 0,0 19.0,14.5 L 20.0,14.5 A 0.5 0.5 0 0,1 20.5,15.0 L 20.5,16.0 A 0.5 0.5 0 0,1 20.0,16.5 A 0.5 0.5 0 0,0 19.5,17.0 A 0.5 0.5 0 0,1 19.0,17.5 A 0.5 0.5 0 0,0 18.5,18.0 A 0.5 0.5 0 0,1 18.0,18.5 A 0.5 0.5 0 0,0 17.5,19.0 A 0.5 0.5 0 0,1 17.0,19.5 L 13.0,19.5 A 0.5 0.5 0 0,1 12.5,19.0 L 12.5,18.0 A 0.5 0.5 0 0,1 13.0,17.5 A 0.5 0.5 0 0,0 13.5,17.0 A 0.5 0.5 0 0,0 13.0,16.5 L 12.0,16.5 A 0.5 0.5 0 0,1 11.5,16.0 A 0.5 0.5 0 0,1 12.0,15.5 A 0.5 0.5 0 0,0 12.5,15.0 A 0.5 0.5 0 0,0 12.0,14.5 A 0.5 0.5 0 0,0 11.5,15.0 A 0.5 0.5 0 0,1 11.0,15.5 A 0.5 0.5 0 0,1 10.5,15.0 L 10.5,14.0 A 0.5 0.5 0 0,1 11.0,13.5 L 12.0,13.5 A 0.5 0.5 0 0,0 12.5,13.0 A 0.5 0.5 0 0,0 12.0,12.5 A 0.5 0.5 0 0,1 11.5,12.0 A 0.5 0.5 0 0,0 11.0,11.5 A 0.5 0.5 0 0,1 10.5,11.0 A 0.5 0.5 0 0,1 11.0,10.5 L 12.0,10.5 A 0.5 0.5 0 0,0 12.5,10.0 A 0.5 0.5 0 0,0 12.0,9.5 A 0.5 0.5 0 0,1 11.5,9.0 L 11.5,7.0 A 0.5 0.5 0 0,1 12,6.5 A 0.5 0.5 0 0,0 12.0,6.5 A 0.5 0.5 0 0,1 12.5,7.0 A 0.5 0.5 0 0,0 13.0,7.5 A 0.5 0.5 0 0,0 13.5,7.0 L 13.5,6.0A 0.5 0.5 0 0,1 14.0,5.5 A 0.5 0.5 0 0,0 14.5,5.0 L 14.5,4.0 A 0.5 0.5 0 0,1 15.0,3.5 L 19.0,3.5 A 0.5 0.5 0 0,1 19.5,4.0 Z"
+    },
+    {
+      "region": "scotland",
+      "class": "uk-region",
+      "drawPoints": "M 11.5,7.0 A 0.5 0.5 0 0,1 11.0,7.5 A 0.5 0.5 0 0,0 10.5,8.0 A 0.5 0.5 0 0,1 10.0,8.5 A 0.5 0.5 0 0,1 9.5,8.0 L 9.5,7.0 A 0.5 0.5 0 0,1 10.0,6.5 A 0.5 0.5 0 0,0 10.5,6.0 L 10.5,4.0 A 0.5 0.5 0 0,1 11.0,3.5 L 12.0,3.5 A 0.5 0.5 0 0,0 12.5,3.0 A 0.5 0.5 0 0,1 13.0,2.5 A 0.5 0.5 0 0,1 13.5,3.0 L 13.5,4.0 A 0.5 0.5 0 0,1 13.0,4.5 A 0.5 0.5 0 0,0 12.5,5.0 A 0.5 0.5 0 0,1 12.0,5.5 A 0.5 0.5 0 0,0 11.5,6.0 L 11.5,7.0 Z"
+    },
+    {
+      "region": "scotland",
+      "class": "uk-region",
+      "drawPoints": "M 21.5,1.0 A 0.5 0.5 0 0,1 21.0,1.5 A 0.5 0.5 0 0,0 20.5,2.0 L 20.5,3.0 A 0.5 0.5 0 0,1 20.0,3.5 A 0.5 0.5 0 0,1 19.5,3.0 A 0.5 0.5 0 0,0 19.0,2.5 A 0.5 0.5 0 0,1 18.5,2.0 A 0.5 0.5 0 0,1 19.0,1.5 A 0.5 0.5 0 0,0 19.5,1.0 A 0.5 0.5 0 0,1 20.0,0.5 L 21.0,0.5 A 0.5 0.5 0 0,1 21.5,1.0 Z"
+    },
+    {
+      "region": "northern-ireland",
+      "class": "uk-region",
+      "drawPoints": "M 10.5,17.0 A 0.5 0.5 0 0,0 11.0,17.5 A 0.5 0.5 0 0,1 11.5,18.0 L 11.5,21.0 A 0.5 0.5 0 0,1 11.0,21.5 L 9.0,21.5 A 0.5 0.5 0 0,1 8.5,21.0 L 8.5,20.0 A 0.5 0.5 0 0,0 8.0,19.5 A 0.5 0.5 0 0,0 7.5,20.0 L 7.5,21.0 A 0.5 0.5 0 0,1 7.0,21.5 A 0.5 0.5 0 0,1 6.5,21.0 A 0.5 0.5 0 0,0 6.0,20.5 A 0.5 0.5 0 0,1 5.5,20.0 L 5.5,19.0 A 0.5 0.5 0 0,1 6.0,18.5 A 0.5 0.5 0 0,0 6.5,18.0 A 0.5 0.5 0 0,1 7.0,17.5 A 0.5 0.5 0 0,0 7.5,17.0 A 0.5 0.5 0 0,1 8.0,16.5 L 10.0,16.5 A 0.5 0.5 0 0,1 10.5,17.0 Z"
+    },
+    {
+      "region": "north-east-england",
+      "class": "uk-region",
+      "drawPoints": "M 21.5,17.0 L 21.5,20.0 A 0.5 0.5 0 0,0 22.0,20.5 A 0.5 0.5 0 0,1 22.5,21.0 A 0.5 0.5 0 0,1 22.0,21.5 L 20.0,21.5 A 0.5 0.5 0 0,1 19.5,21.0 L 19.5,20.0 A 0.5 0.5 0 0,0 19.0,19.5 A 0.5 0.5 0 0,1 18.5,19.0 L 18.5,18.0 A 0.5 0.5 0 0,1 19.0,17.5 A 0.5 0.5 0 0,0 19.5,17.0 A 0.5 0.5 0 0,1 20.0,16.5 L 21.0,16.5 A 0.5 0.5 0 0,1 21.5,17.0 Z"
+    },
+    {
+      "region": "north-west-england",
+      "class": "uk-region",
+      "drawPoints": "M 14.5,21.0 L 14.5,22.0 A 0.5 0.5 0 0,1 14.0,22.5 L 13.0,22.5 A 0.5 0.5 0 0,1 12.5,22.0  A 0.5 0.5 0 0,1 13.0,21.5 A 0.5 0.5 0 0,0 13.5,21.0 A 0.5 0.5 0 0,1 14.0,20.5 A 0.5 0.5 0 0,1 14.5,21.0 Z"
+    },
+    {
+      "region": "north-west-england",
+      "class": "uk-region",
+      "drawPoints": "M 18.5,19.0 A 0.5 0.5 0 0,0 19.0,19.5 A 0.5 0.5 0 0,1 19.5,20.0 L 19.5,21.0 A 0.5 0.5 0 0,1 19.0,21.5 A 0.5 0.5 0 0,0 18.5,22.0 A 0.5 0.5 0 0,0 19.0,22.5 A 0.5 0.5 0 0,1 19.5,23.0 L 19.5,25.0 A 0.5 0.5 0 0,1 19.0,25.5 A 0.5 0.5 0 0,0 18.5,26.0 A 0.5 0.5 0 0,1 18.0,26.5 A 0.5 0.5 0 0,0 17.5,27.0 A 0.5 0.5 0 0,1 17.0,27.5 A 0.5 0.5 0 0,1 16.5,27.0 L 16.5,24.0 A 0.5 0.5 0 0,1 17.0,23.5 A 0.5 0.5 0 0,0 17.5,23.0 A 0.5 0.5 0 0,0 17.0,22.5 A 0.5 0.5 0 0,1 16.5,22.0 A 0.5 0.5 0 0,0 16.0,21.5 A 0.5 0.5 0 0,1 15.5,21.0 A 0.5 0.5 0 0,1 16.0,20.5 A 0.5 0.5 0 0,0 16.5,20.0 A 0.5 0.5 0 0,1 17.0,19.5 A 0.5 0.5 0 0,0 17.5,19.0 A 0.5 0.5 0 0,1 18.0,18.5 A 0.5 0.5 0 0,1 18.5,19.0 Z"
+    },
+    {
+      "region": "yorkshire-and-the-humber",
+      "class": "uk-region",
+      "drawPoints": "M 23.5,22.0 A 0.5 0.5 0 0,0 24.0,22.5 A 0.5 0.5 0 0,1 24.5,23.0 L 24.5,25.0 A 0.5 0.5 0 0,1 24.0,25.5 L 22.0,25.5 A 0.5 0.5 0 0,0 21.5,26.0 A 0.5 0.5 0 0,1 21.0,26.5 A 0.5 0.5 0 0,1 20.5,26.0 A 0.5 0.5 0 0,0 20.0,25.5 A 0.5 0.5 0 0,1 19.5,25.0 L 19.5,23.0 A 0.5 0.5 0 0,0 19.0,22.5 A 0.5 0.5 0 0,1 18.5,22.0 A 0.5 0.5 0 0,1 19.0,21.5 L 23.0,21.5 A 0.5 0.5 0 0,1 23.5,22.0 Z"
+    },
+    {
+      "region": "east-midlands",
+      "class": "uk-region",
+      "drawPoints": "M 24.5,26.0 L 24.5,29.0 A 0.5 0.5 0 0,1 24.0,29.5 L 23.0,29.5 A 0.5 0.5 0 0,0 22.5,30.0 L 22.5,31.0 A 0.5 0.5 0 0,1 22.0,31.5 A 0.5 0.5 0 0,0 21.5,32.0 A 0.5 0.5 0 0,1 21.0,32.5 A 0.5 0.5 0 0,1 20.5,32.0 L 20.5,28.0 A 0.5 0.5 0 0,0 20.0,27.5 A 0.5 0.5 0 0,1 19.5,27.0 L 19.5,26.0 A 0.5 0.5 0 0,1 20.0,25.5 A 0.5 0.5 0 0,1 20.5,26.0 A 0.5 0.5 0 0,0 21.0,26.5 A 0.5 0.5 0 0,0 21.5,26.0 A 0.5 0.5 0 0,1 22.0,25.5 L 24.0,25.5 A 0.5 0.5 0 0,1 24.5,26.0 Z"
+    },
+    {
+      "region": "west-midlands",
+      "class": "uk-region",
+      "drawPoints": "M 19.5,26.0 L 19.5,27.0 A 0.5 0.5 0 0,0 20.0,27.5 A 0.5 0.5 0 0,1 20.5,28.0 L 20.5,31.0 A 0.5 0.5 0 0,1 20.0,31.5 L 18.0,31.5 A 0.5 0.5 0 0,0 17.5,32.0 A 0.5 0.5 0 0,1 17.0,32.5 A 0.5 0.5 0 0,1 16.5,32.0 A 0.5 0.5 0 0,0 16.0,31.5 A 0.5 0.5 0 0,1 15.5,31.0 L 15.5,28.0 A 0.5 0.5 0 0,1 16.0,27.5 L 17.0,27.5 A 0.5 0.5 0 0,0 17.5,27.0 A 0.5 0.5 0 0,1 18.0,26.5 A 0.5 0.5 0 0,0 18.5,26.0 A 0.5 0.5 0 0,1 19.0,25.5 A 0.5 0.5 0 0,1 19.5,26.0 Z"
+    },
+    {
+      "region": "wales",
+      "class": "uk-region",
+      "drawPoints": "M 14.5,25.0 A 0.5 0.5 0 0,0 15.0,25.5 L 16.0,25.5 A 0.5 0.5 0 0,1 16.5,26.0 L 16.5,27.0 A 0.5 0.5 0 0,1 16.0,27.5 A 0.5 0.5 0 0,0 15.5,28.0 L 15.5,31.0 A 0.5 0.5 0 0,0 16.0,31.5 A 0.5 0.5 0 0,1 16.5,32.0 L 16.5,33.0 A 0.5 0.5 0 0,1 16.0,33.5 L 15.0,33.5 A 0.5 0.5 0 0,1 14.5,33.0 A 0.5 0.5 0 0,0 14.0,32.5 L 12.0,32.5 A 0.5 0.5 0 0,1 11.5,32.0 A 0.5 0.5 0 0,0 11.0,31.5 A 0.5 0.5 0 0,1 10.5,31.0 A 0.5 0.5 0 0,1 11.0,30.5 L 12.0,30.5 A 0.5 0.5 0 0,0 12.5,30.0 A 0.5 0.5 0 0,1 13.0,29.5 A 0.5 0.5 0 0,0 13.5,29.0 L 13.5,28.0 A 0.5 0.5 0 0,0 13.0,27.5 A 0.5 0.5 0 0,1 12.5,27.0 A 0.5 0.5 0 0,1 13.0,26.5 A 0.5 0.5 0 0,0 13.5,26.0 L 13.5,25.0 A 0.5 0.5 0 0,1 14.0,24.5 A 0.5 0.5 0 0,1 14.5,25.0 Z"
+    },
+    {
+      "region": "east-of-england",
+      "class": "uk-region",
+      "drawPoints": "M 26.5,28.0 A 0.5 0.5 0 0,0 27.0,28.5 A 0.5 0.5 0 0,1 27.5,29.0 A 0.5 0.5 0 0,0 28.0,29.5 A 0.5 0.5 0 0,1 28.5,30.0 A 0.5 0.5 0 0,1 28.0,30.5 A 0.5 0.5 0 0,0 27.5,31.0 L 27.5,32.0 A 0.5 0.5 0 0,1 27.0,32.5 A 0.5 0.5 0 0,0 26.5,33.0 A 0.5 0.5 0 0,1 26.0,33.5 A 0.5 0.5 0 0,0 25.5,34.0 A 0.5 0.5 0 0,1 25.0,34.5 A 0.5 0.5 0 0,1 24.5,34.0 A 0.5 0.5 0 0,0 24.0,33.5 L 22.0,33.5 A 0.5 0.5 0 0,1 21.5,33.0 L 21.5,32.0 A 0.5 0.5 0 0,1 22.0,31.5 A 0.5 0.5 0 0,0 22.5,31.0 L 22.5,30.0 A 0.5 0.5 0 0,1 23.0,29.5 L 24.0,29.5 A 0.5 0.5 0 0,0 24.5,29.0 A 0.5 0.5 0 0,1 25.0,28.5 A 0.5 0.5 0 0,0 25.5,28.0 A 0.5 0.5 0 0,1 26.0,27.5 A 0.5 0.5 0 0,1 26.5,28.0 Z"
+    },
+    {
+      "region": "south-east-england",
+      "class": "uk-region",
+      "drawPoints": "M 20.5,32.0 A 0.5 0.5 0 0,0 21.0,32.5 A 0.5 0.5 0 0,1 21.5,33.0 L 21.5,35.0 A 0.5 0.5 0 0,0 22.0,35.5 L 24.0,35.5 A 0.5 0.5 0 0,0 24.5,35.0 A 0.5 0.5 0 0,1 25.0,34.5 L 27.0,34.5 A 0.5 0.5 0 0,1 27.5,35.0 A 0.5 0.5 0 0,1 27.0,35.5 A 0.5 0.5 0 0,0 26.5,36.0 A 0.5 0.5 0 0,1 26.0,36.5 A 0.5 0.5 0 0,0 25.5,37.0 A 0.5 0.5 0 0,1 25.0,37.5 L 22.0,37.5 A 0.5 0.5 0 0,1 21.5,37.0 A 0.5 0.5 0 0,0 21.0,36.5 A 0.5 0.5 0 0,0 20.5,37.0 A 0.5 0.5 0 0,1 20.0,37.5 A 0.5 0.5 0 0,1 19.5,37.0 A 0.5 0.5 0 0,0 19.0,36.5 A 0.5 0.5 0 0,1 18.5,36.0 L 18.5,32.0 A 0.5 0.5 0 0,1 19.0,31.5 L 20.0,31.5 A 0.5 0.5 0 0,1 20.5,32.0 Z"
+    },
+    {
+      "region": "south-west-england",
+      "class": "uk-region",
+      "drawPoints": "M 18.5,32.0 L 18.5,37.0 A 0.5 0.5 0 0,1 18.0,37.5 L 17.0,37.5 A 0.5 0.5 0 0,1 16.5,37.0 A 0.5 0.5 0 0,0 16.0,36.5 L 15.0,36.5 A 0.5 0.5 0 0,0 14.5,37.0 L 14.5,38.0 A 0.5 0.5 0 0,1 14.0,38.5 L 13.0,38.5 A 0.5 0.5 0 0,1 12.5,38.0 A 0.5 0.5 0 0,0 12.0,37.5 A 0.5 0.5 0 0,0 11.5,38.0 A 0.5 0.5 0 0,1 11.0,38.5 A 0.5 0.5 0 0,0 10.5,39.0 A 0.5 0.5 0 0,1 10.0,39.5 A 0.5 0.5 0 0,1 9.5,39.0 A 0.5 0.5 0 0,0 9.0,38.5 A 0.5 0.5 0 0,1 8.5,38.0 A 0.5 0.5 0 0,1 9.0,37.5 L 10.0,37.5 A 0.5 0.5 0 0,0 10.5,37.0 A 0.5 0.5 0 0,1 11.0,36.5 A 0.5 0.5 0 0,0 11.5,36.0 L 11.5,35.0 A 0.5 0.5 0 0,1 12.0,34.5 A 0.5 0.5 0 0,0 12.5,34.0 A 0.5 0.5 0 0,1 13.0,33.5 A 0.5 0.5 0 0,1 13.5,34.0 A 0.5 0.5 0 0,0 14.0,34.5 L 16.0,34.5 A 0.5 0.5 0 0,0 16.5,34.0 A 0.5 0.5 0 0,1 17.0,33.5 A 0.5 0.5 0 0,0 17.5,33.0 L 17.5,32.0 A 0.5 0.5 0 0,1 18.0,31.5 A 0.5 0.5 0 0,1 18.5,32.0 Z"
+    },
+    {
+      "region": "london",
+      "class": "uk-region",
+      "drawPoints": "M 24.5,34.0 L 24.5,35.0 A 0.5 0.5 0 0,1 24.0,35.5 L 22.0,35.5 A 0.5 0.5 0 0,1 21.5,35.0 L 21.5,34.0 A 0.5 0.5 0 0,1 22.0,33.5 L 24.0,33.5 A 0.5 0.5 0 0,1 24.5,34.0 Z"
+    },
+    {
+      "region": "ireland",
+      "class": "non-uk-region",
+      "drawPoints": "M 7.5,17.0 A 0.5 0.5 0 0,1 7.0,17.5 A 0.5 0.5 0 0,0 6.5,18.0 A 0.5 0.5 0 0,1 6.0,18.5 A 0.5 0.5 0 0,0 5.5,19.0 L 5.5,20.0 A 0.5 0.5 0 0,0 6.0,20.5 A 0.5 0.5 0 0,1 6.5,21.0 A 0.5 0.5 0 0,0 7.0,21.5 A 0.5 0.5 0 0,0 7.5,21.0 L 7.5,20.0 A 0.5 0.5 0 0,1 8.0,19.5 A 0.5 0.5 0 0,1 8.5,20.0 L 8.5,21.0 A 0.5 0.5 0 0,0 9.0,21.5 L 11.0,21.5 A 0.5 0.5 0 0,1 11.5,22.0 L 11.5,23.0 A 0.5 0.5 0 0,1 11.0,23.5 A 0.5 0.5 0 0,0 10.5,24.0 L 10.5,29.0 A 0.5 0.5 0 0,1 10.0,29.5 A 0.5 0.5 0 0,0 9.5,30.0 A 0.5 0.5 0 0,1 9.0,30.5 L 7.0,30.5 A 0.5 0.5 0 0,0 6.5,31.0 A 0.5 0.5 0 0,1 6.0,31.5 L 1.0,31.5 A 0.5 0.5 0 0,1 0.5,31.0 L 0.5,28.0 A 0.5 0.5 0 0,1 1.0,27.5 A 0.5 0.5 0 0,0 1.5,27.0 L 1.5,26.0 A 0.5 0.5 0 0,1 2.0,25.5 A 0.5 0.5 0 0,0 2.5,25.0 L 2.5,24.0 A 0.5 0.5 0 0,0 2.0,23.5 A 0.5 0.5 0 0,1 1.5,23.0 A 0.5 0.5 0 0,0 1.0,22.5 A 0.5 0.5 0 0,1 0.5,22.0 L 0.5,20.0 A 0.5 0.5 0 0,1 1.0,19.5 L 4.0,19.5 A 0.5 0.5 0 0,0 4.5,19.0 L 4.5,18.0 A 0.5 0.5 0 0,1 5.0,17.5 A 0.5 0.5 0 0,0 5.5,17.0 A 0.5 0.5 0 0,1 6.0,16.5 L 7.0,16.5 A 0.5 0.5 0 0,1 7.5,17.0 Z"
+    }
+  ]
+}

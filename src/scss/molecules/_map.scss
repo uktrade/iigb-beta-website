@@ -25,4 +25,83 @@
 
 .region-map {
 	width: 100%;
+
+#mapCanvas {
+  width: 540px;
+
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
+  }
+
+  .uk-region {
+    cursor: pointer;
+    fill: #CCC;
+    stroke: black;
+    // display: none;
+  }
+
+  .non-uk-region {
+    cursor: pointer;
+    fill: #CCC;
+    stroke: red;
+    // display: none;
+  }
+
+  .uk-dot {
+    cursor: pointer;
+    // display: none;
+
+    &.scotland {
+      fill: pink;
+    }
+
+    &.northern-ireland {
+      fill: green;
+    }
+
+    &.north-east-england {
+      fill: yellowgreen;
+    }
+
+    &.north-west-england {
+      fill: lightblue;
+    }
+
+    &.yorkshire-and-the-humber {
+      fill: green;
+    }
+
+    &.wales {
+      fill: orange;
+    }
+
+    &.west-midlands {
+      fill: pink;
+    }
+
+    &.east-midlands {
+      fill: orange;
+    }
+
+    &.east-of-england {
+      fill: lightblue;
+    }
+
+    &.south-west-england {
+      fill: yellowgreen;
+    }
+
+    &.south-east-england {
+      fill: green;
+    }
+
+    &.london {
+      fill: purple;
+    }
+  }
+
+  .non-uk-dot {
+    fill: #DCDCDC;
+    // display: none;
+  }
 }
