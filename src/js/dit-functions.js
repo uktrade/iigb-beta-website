@@ -57,7 +57,6 @@ function onLoaded() {
     ifOtherSelected()
     search()
     jsSearch()
-    responsiveTable()
     playVid()
     jsEnhanceExternalLinks()
     addAltTrackingPixel()
@@ -332,15 +331,6 @@ function debounce(func, wait, immediate) {
     clearTimeout(timeout)
     timeout = setTimeout(later, wait)
     if (callNow) func.apply(context, args)
-  }
-}
-
-
-
-function responsiveTable() {
-  var isTable = $('table').length
-  if (isTable) {
-    $('table').wrap('<div class="dit-table__responsive" />')
   }
 }
 

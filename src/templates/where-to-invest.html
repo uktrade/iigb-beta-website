@@ -241,6 +241,10 @@
                 <h2>
                   {{ labels.enterprise_zones[locale.code] }} <span class="lower-case">{{ blockHeader.content.title }}</span>
                 </h2>
+
+                <p>
+                  {{blockTitles.content.ez_introduction}}
+                </p>
               </div>
             </div>
           </div>
@@ -623,24 +627,25 @@
 
           <div class="row wti--block">
             <div class="col-sm-6 hidden-xs">
-              <ul class="wti--list__no-bullet">
-                {% for row in regionTable.content.table_rows %}
-                  <li class="wti--list__no-bullet--entry">
-                    <div class="row wti--list__no-bullet--entry__yellow">
-                      <div class="col-xs-2">
+              <table id="airport-table" class="wti--table">
+                <tbody>
+                  {% for row in regionTable.content.table_rows %}
+                    <tr class="wti--table--row">
+                      <td class="wti--table--cell__map-indicator">
                         <div class="wti--list__no-bullet--entry__yellow--map-indicator">
                           {{ row.mapIndicator }}
                         </div>
-                      </div>
-                      <div class="col-xs-10">
+                      </td>
+
+                      <td>
                         <a href="/{{ base }}/where-to-invest/{{ row.link }}/">
                           {{ row.cell1 }}
                         </a>
-                      </div>
-                    </div>
-                  </li>
-                {% endfor %}
-              </ul>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
             </div>
 
             <div class="col-sm-6">
