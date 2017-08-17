@@ -76,19 +76,25 @@
           background-color: #FFFFFF;
         }
     }
-  }
 
-  #salary-difference-table {
-    .positive {
-      background-color: #B8E673;
-        font-weight: 600;
-        padding-left: 0.3em;
+    &#airport-table {
+      td, th {
+        width: 13.5%;
+      }
     }
 
-    .negative { 
-      background-color: #E98174;
-        font-weight: 600;
-        padding-left: 0.3em;
+    &#salary-difference-table {
+      .positive {
+        background-color: #B8E673;
+          font-weight: 600;
+          padding-left: 0.3em;
+      }
+
+      .negative { 
+        background-color: #E98174;
+          font-weight: 600;
+          padding-left: 0.3em;
+      }
     }
   }
 }
