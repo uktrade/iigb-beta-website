@@ -24,7 +24,7 @@
         color: $background-colour;
 
         &:hover {
-          border-bottom: 1px solid $background-colour;
+          background-color: #000000;
         }
       }
     }
@@ -61,15 +61,6 @@
   }
 }
 
-.issue_container{
+.issue_container {
   padding: 30px 15px;
-}
-
-.issue_link{
-  text-decoration: underline; 
-  color: darkslategray;
-}
-
-.issue_link:hover{
-  color: gray;
 }

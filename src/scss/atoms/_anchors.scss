@@ -11,3 +11,63 @@ a {
     text-decoration: none;
   }
 }
+
+p {
+  a {
+    text-decoration: underline;
+    color: #000000;
+
+    &:visited {
+      color: #4c2c92;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: #00549f;
+      background-color: #FFBF47;
+      text-decoration: underline;
+    }
+
+    &:hover, &:focus {
+      color: #000000;
+      background-color: #FFBF47;
+      text-decoration: underline;
+    }
+  }
+}
+
+.link {
+  &--standalone {
+    color: #00549f;
+    text-decoration: underline;
+
+    &:visited {
+      color: #4c2c92;
+      text-decoration: underline;
+    }
+
+    &:active, &:hover, &:focus {
+      color: #00549f;
+      background-color: #FFBF47;
+      text-decoration: underline;
+    }
+  }
+
+  &--list {
+    color: #00549f;
+
+    &:visited {
+      color: #4c2c92;
+    }
+
+    &:active {
+      color: #136EBF;
+      background-color: #FFBF47;
+    }
+
+    &:hover, &:focus {
+      color: #00549f;
+      background-color: #FFBF47;
+    }
+  }
+}
