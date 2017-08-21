@@ -7,7 +7,6 @@
 
   h2 {
     font-size: 40px;
-    font-weight: 100;
     margin: flip-side-values(40px 0 24px 0);
 
     @media (max-width: $screen-xs-max) {
@@ -30,6 +29,5 @@
   h2 {
     margin: flip-side-values(20px 0 24px 0);
     font-size: 24px;
-    font-weight: 300;
   }
 }
