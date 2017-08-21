@@ -1,5 +1,7 @@
 p {
   font-weight: 400;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .jumbotron p {
@@ -9,5 +11,7 @@ p {
 .dit {
   &--reference-source {
     font-size: 13px;
+    line-height: 1.1em;
+    margin-top: -1.5em;
   }
 }
