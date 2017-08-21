@@ -1,0 +1,13 @@
+p {
+  font-weight: 400;
+}
+
+.jumbotron p {
+  font-weight: 400;
+}
+
+.dit {
+  &--reference-source {
+    font-size: 13px;
+  }
+}

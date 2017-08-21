@@ -24,7 +24,6 @@
 
   h3 {
     margin: flip-side-values(20px 0 24px 0);
-    font-weight: 300;
   }
 
   //Add external link icon
@@ -64,7 +63,6 @@
 
     & p {
       font-size: 21px;
-      font-weight: 100;
       width: 80%;
 
       @media (max-width: $screen-md-max) {

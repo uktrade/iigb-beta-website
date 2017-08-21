@@ -1,0 +1,20 @@
+<section class="dit-content-section">
+  <div class="col-md-12 dit-content-section__lead">
+    <h2 class="dit-content-section__heading">{{ whyTheUk.content.title }}</h2>
+  </div>
+  <div class="row check-height">
+    {% for reason in reasons %}
+      <div class="col-sm-4">
+        <div class="dit-ind-side-desc-list__item">
+          <h3 class="dit-ind-side-desc-list__title">{{ reason.content.title }}</h3>
+
+          <p>{{ reason.content.point1 }}</p>
+          <p class="dit--reference-source">Source: {{ reason.content.point1Source }}</p>
+
+          <p>{{ reason.content.point2 }}</p>
+          <p class="dit--reference-source">Source: {{ reason.content.point2Source }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
