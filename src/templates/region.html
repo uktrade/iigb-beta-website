@@ -46,28 +46,27 @@
 <main role="main">
   <div class="region">
     <div class="container">
-      <div class="row region--block hidden-sm hidden-md hidden-lg hidden-xl">
+      <div class="row region--block">
         <div class="col-xs-12">
-          <div class="region--comparator-list">
-            <p class="region--instruction">
-              {{ labels.select_comparator[locale.code] }}
+          <div class="region--comparator-list dit-toc">
+            <p class="dit-toc__heading">
+              {{ labels.on_this_page[locale.code] }}
             </p>
 
-            <ul class="region--list__bullet">
-              <li class="region--list__bullet--entry--bullet__teal">
-                <a class="region--list__bullet--entry link--list" href="#invest_in">
+            <ol class="dit-toc__list">
+              <li class="dit-toc__list-item hidden-sm hidden-md hidden-lg hidden-xl">
+                <a href="#invest_in">
                   {{regionOverview.content.invest_in}}
                 </a>
               </li>
-
               {% for point in proofPoints %}
-                <li class="region--list__bullet--entry--bullet__teal">
-                  <a class="region--list__bullet--entry link--list" href="#{{point.content.title | replace(' ', '_')}}">
+                <li class="dit-toc__list-item">
+                  <a href="#{{point.content.title | replace(' ', '_')}}">
                     {{point.content.link}}
                   </a>
                 </li>
               {% endfor %}
-            </ul>
+            </ol>
           </div>
         </div>
       </div>
@@ -85,23 +84,6 @@
           </div>
         </div>
 
-        <div class="col-sm-4 hidden-xs">
-          <div class="region--comparator-list">
-            <p class="region--instruction">
-              {{ labels.select_comparator[locale.code] }}
-            </p>
-
-            <ul class="region--list__bullet">
-              {% for point in proofPoints %}
-                <li class="region--list__bullet--entry--bullet__teal">
-                  <a class="region--list__bullet--entry link--list" href="#{{point.content.title | replace(' ', '_')}}">
-                    {{point.content.link}}
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
 
         <div class="col-sm-8">
           <div class="row region--block__map">
