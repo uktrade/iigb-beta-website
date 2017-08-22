@@ -73,16 +73,15 @@
 
       <div id="invest_in" class="row region--block">
         <div class="region--block__header col-sm-8">
-          <div class="region--section-heading hidden-sm hidden-md hidden-lg hidden-xl">
-            <h2>
-              {{ blockHeader.content.tagline }}
-            </h2>
-          </div>
+          <h2 class="region--section-heading hidden-sm hidden-md hidden-lg hidden-xl">
+            {{ blockHeader.content.tagline }}
+          </h2>
 
           <div class="region--lead-paragraph">
             {{blockHeader.content.contents|safe}}
           </div>
         </div>
+      </div>
 
 
         <div class="col-sm-8">
@@ -140,11 +139,9 @@
       {% for point in proofPoints %}
         <div id="{{point.content.title | replace(' ', '_')}}" class="row region--block">
           <div class="col-md-8 region--proof-point">
-            <div class="region--section-heading">
-              <h2>
-                {{point.content.title}}
-              </h2>
-            </div>
+            <h3 class="region--section-heading">
+              {{point.content.title}}
+            </h3>
 
             {{point.content.contents|safe}}
 
