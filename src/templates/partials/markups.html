@@ -1,17 +1,19 @@
 {% macro section(s, labels, language) %}
     <section id="{{ s.content.title|slug(language) }}" class="dit-content-section" tabindex="-1">
-        <div class="col-md-10 col-sm-10 dit-main-content__body">
-        {% if s.content.title %}
-          <header>
-              <h2>{{ s.content.title }}</h2>
-          </header>
-        {% endif %}
+        <div class="row">
+            <div class="col-md-10 col-sm-10 dit-main-content__body">
+                {% if s.content.title %}
+                  <header>
+                      <h2>{{ s.content.title }}</h2>
+                  </header>
+                {% endif %}
 
-        {{ s.content.contents|safe }}
+                {{ s.content.contents|safe }}
 
-        <!--<a href="#top" class="dit-back-to-top">{{ labels.back_to_top[locale.code] }} <span class="glyphicon glyphicon-arrow-up"-->
-                                                      <!--aria-hidden="true"></span></a>-->
+                <!--<a href="#top" class="dit-back-to-top">{{ labels.back_to_top[locale.code] }} <span class="glyphicon glyphicon-arrow-up"-->
+                                                          <!--aria-hidden="true"></span></a>-->
             </div>
+        </div>
     </section>
 {% endmacro %}
 
@@ -58,8 +60,10 @@
     <section class="dit-content-section">
         <div class="row">
             {% if header %}
-                <div class="col-md-10 dit-content-section__lead">
+                <div class="col-md-12 dit-content-section__lead">
                     <h2 class="dit-content-section__heading">{{ header.content.title }}</h2>
+                </div>
+                <div class="col-md-8">
                     {{ header.content.contents | safe }}
                 </div>
             {% endif %}

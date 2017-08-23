@@ -18,6 +18,7 @@
     padding: flip-side-values(15px 60px 30px 15px);
     width: 50%;
     float: #{$left};
+    margin-bottom: 0px;
 
     @media (max-width: $screen-md-max) {
       padding: flip-side-values(15px 30px 30px 60px);
