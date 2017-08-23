@@ -20,6 +20,9 @@
     font-size: 36px;
     margin: flip-side-values(1.5em 0 0.5em 0);
 
+    @media (max-width: $screen-sm-max) {
+      font-size: 24px;
+    }
   }
 
   h3 {
