@@ -32,10 +32,10 @@
 
 .region {
   p {
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 400;
-    line-height: 36px;
-    margin-bottom: 36px;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
 
     @media (max-width: $screen-xs-max) {
       font-size: 18px;
@@ -43,27 +43,22 @@
       line-height: 1.6em;
       margin-bottom: 1.6em;
     }
-  } 
-
-  @media (min-width: $screen-xs-max) {
-    &--lead-paragraph {
-      p {
-        font-size: 32px !important;
-        line-height: 42px !important;
-      }
-    }
   }
 
   &--small-text {
     p {
       margin-top: -1em;
-      font-size: 21px !important;
+      font-size: 18px !important;
       line-height: 1.1em !important;
 
       @media (max-width: $screen-xs-max) {
         font-size: 15px !important;
         line-height: 1.4em !important;
       }
+    }
+
+    &__no-margin {
+        margin-top: 0 !important;
     }
   }
 
@@ -112,6 +107,7 @@
     }
 
     &__quote {
+      min-height: 237px;
       background: #1e1348 top right;
       color: #FFFFFF;
       padding-top: 15px;
@@ -145,7 +141,7 @@
           position: absolute;
           margin-left: -11px;
           padding-top: 10px;
-          font-size: 24px;
+          font-size: 21px;
         }
       }
     }
@@ -243,7 +239,7 @@
       padding-left: 30px;
 
       &--entry {
-        font-size: 24px;
+        font-size: 21px;
         font-weight: 400;
         line-height: 1em;
 
@@ -253,15 +249,8 @@
 
         &--bullet {
           &__teal {
-            font-size: 24px;
-            line-height: 1em;
             color: #0d7da4;
-            margin-bottom: 24px;
-
-            @media (max-width: $screen-xs-max) {
-              font-size: 25px;
-              margin-bottom: 18px;
-            }
+            margin-bottom: 1em;
           }
         }
       }
@@ -329,7 +318,7 @@
       padding-left: 25px;
 
       li {
-        font-size: 24px;
+        font-size: 21px;
         font-weight: 400;
         margin-bottom: 1em;
 
