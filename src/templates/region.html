@@ -6,7 +6,7 @@
 
 {% if pageHeader.heroImage %}
   <style>
-    .jumbotron--region {
+    .jumbotron {
       background-image: url("/{{assets}}/media/hero-img/{{pageHeader.heroImage}}");
     }
   </style>
@@ -24,18 +24,20 @@
   </div>
 </div>
 
-<div class="jumbotron--region">  
-  <div class="region--gradient">
-    <div class="container">
-      <div class="dit-hero__content">
-        <div class="row region--block__page-header">
-          <div id="{{ blockHeader.content.title }}" class="col-sm-12 col-md-12 region--block__page-header--text">
-            <h1>
-              {{ blockHeader.content.title }}
-            </h1>
-            <h2 class="hidden-xs">
-              {{ blockHeader.content.tagline }}
-            </h2>
+<div class="jumbotron">  
+  <div class="jumbotron--region--gradient">
+    <div class="jumbotron--text-wrapper">
+      <div class="container">
+        <div class="dit-hero__content">
+          <div class="row region--block__page-header">
+            <div id="{{ blockHeader.content.title }}" class="col-sm-12 col-md-12 region--block__page-header--text">
+              <h1>
+                {{ blockHeader.content.title }}
+              </h1>
+              <h2 class="hidden-xs">
+                {{ blockHeader.content.tagline }}
+              </h2>
+            </div>
           </div>
         </div>
       </div>
@@ -49,9 +51,9 @@
       <div class="row region--block">
         <div class="col-xs-12">
           <div class="region--comparator-list dit-toc">
-            <p class="dit-toc__heading">
+            <h3 class="region--section-heading hidden-xs">
               {{ labels.on_this_page[locale.code] }}
-            </p>
+            </h3>
 
             <ol class="dit-toc__list">
               <li class="dit-toc__list-item hidden-sm hidden-md hidden-lg hidden-xl">

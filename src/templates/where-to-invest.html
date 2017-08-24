@@ -6,7 +6,7 @@
 
 {% if pageHeader.heroImage %}
   <style>
-    .jumbotron--wti {
+    .jumbotron {
       background-image: url("/{{assets}}/media/hero-img/{{pageHeader.heroImage}}");
     }
   </style>
@@ -23,7 +23,7 @@
   </div>
 </div>
 
-<div class="jumbotron--wti">
+<div class="jumbotron">
   <div class="wti--gradient">
     <div class="container">
       <div class="dit-hero__content">
@@ -36,7 +36,7 @@
                 <span class="lower-case">{{ blockHeader.content.title }}</span>
               </h2>
               <div class="wti--industry-link">
-                <a href="/int/where-to-invest/change-industry">{{ labels.change_industry[locale.code] }}</a>
+                <a href="/int/where-to-invest/change-industry" class="dit-btn">{{ labels.change_industry[locale.code] }}</a>
               </div>
             {% else %}
               <h2>

@@ -8,7 +8,7 @@
   background: $background-jumbotron-empty top #{$right} no-repeat;
   padding: 0;
   margin-bottom: 0;
-  height: 500px;
+  min-height: 360px;
   border-bottom: 5px solid $red-line-colour;
   background-size: cover;
 
@@ -53,6 +53,12 @@
     @media (max-width: $screen-md-max) {
       font-size: 18px;
     }
+  }
+
+  &--text-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
   }
 
   .container {
@@ -102,17 +108,10 @@
   }
 
   &--auto {
-    color: $white;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
-    position: relative;
-    overflow: hidden;
+    @extend .jumbotron;
     background: $background-jumbotron-empty top #{$right};
-    background-size: auto 100%;
     padding: flip-side-values(50px 0 50px 0);
-    height: auto;
-    max-height: none;
-    min-height: inherit;
-    border-bottom: 5px solid $red-line-colour;
+    background-size: auto 100%;
 
     h1 {
       @extend .h1;

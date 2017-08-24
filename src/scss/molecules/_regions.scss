@@ -6,27 +6,37 @@
   text-transform: lowercase;
 }
 
-.jumbotron--region {
-  color: #FFF;
-  text-shadow: 0px 0px 20px black;
-  position: relative;
-  overflow: hidden;
-  background: #1E1348 top right;
-  height: auto;
-  max-height: none;
-  min-height: inherit;
-  background-repeat: no;
-  background-size: 100%;
-  margin-bottom: 36px;
+.jumbotron {
+  &--region {
+    color: #FFF;
+    text-shadow: 0px 0px 20px black;
+    position: relative;
+    overflow: hidden;
+    background: #1E1348 top right;
+    height: auto;
+    max-height: none;
+    min-height: 360px;
+    background-repeat: no;
+    background-size: 100%;
+    margin-bottom: 36px;
 
-  @media (max-width: $screen-sm-max) {
-    background-position: right -200px top 0;
-    background-size: auto;
-  }
+    @media (max-width: $screen-sm-max) {
+      background-position: right -200px top 0;
+      background-size: auto;
+    }
 
-  @media (max-width: $screen-xs-max) {
-    background-position: right -400px top 0;
-    background-size: auto;
+    @media (max-width: $screen-xs-max) {
+      background-position: right -400px top 0;
+      background-size: auto;
+    }
+
+    &--gradient {
+      background: -webkit-linear-gradient(left,rgba(0,0,0,0), rgba(200,200,200,0.2),rgba(0,0,0,1)); /*Safari 5.1-6*/
+      background: -o-linear-gradient(right,rgba(0,0,0,0), rgba(200,200,200,0.2),rgba(0,0,0,1)); /*Opera 11.1-12*/
+      background: -moz-linear-gradient(right,rgba(0,0,0,0), rgba(200,200,200,0.2),rgba(0,0,0,1)); /*Fx 3.6-15*/
+      background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(200,200,200,0.2), rgba(30,30,30,1)); /*Standard*/
+      min-height: 360px;
+    }
   }
 }
 
@@ -66,13 +76,6 @@
     .region--small-text p {
       margin-top: 0.5em;
     }
-  }
-
-  &--gradient {
-    background: -webkit-linear-gradient(left,rgba(0,0,0,0), rgba(200,200,200,0.2),rgba(0,0,0,1)); /*Safari 5.1-6*/
-    background: -o-linear-gradient(right,rgba(0,0,0,0), rgba(200,200,200,0.2),rgba(0,0,0,1)); /*Opera 11.1-12*/
-    background: -moz-linear-gradient(right,rgba(0,0,0,0), rgba(200,200,200,0.2),rgba(0,0,0,1)); /*Fx 3.6-15*/
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(200,200,200,0.2), rgba(30,30,30,1)); /*Standard*/
   }
 
   &--block {
@@ -167,6 +170,7 @@
   }
 
   &--section-heading {
+    margin-top: 1em;
     font-size: 36px;
     font-weight: 500;
     line-height: 1.1em;
