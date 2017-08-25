@@ -156,8 +156,11 @@
                   &checkmark;
                 </div>
 
-                <span id="clusters-labels-text" class="wti--labels-toggle--text">
-                  Hide cities
+                <span id="clusters-labels-text" class="wti--labels-toggle--text hide-cities active">
+                  {{ labels.hide_cities[locale.code] }}
+                </span>
+                <span id="clusters-labels-text" class="wti--labels-toggle--text show-cities">
+                  {{ labels.show_cities[locale.code] }}
                 </span>
               </div>
             </div>
@@ -666,8 +669,11 @@
                     &checkmark;
                   </div>
 
-                  <span id="region-labels-text" class="wti--labels-toggle--text">
-                    Hide cities
+                  <span id="clusters-labels-text" class="wti--labels-toggle--text hide-cities active">
+                    {{ labels.hide_cities[locale.code] }}
+                  </span>
+                  <span id="clusters-labels-text" class="wti--labels-toggle--text show-cities">
+                    {{ labels.show_cities[locale.code] }}
                   </span>
                 </div>
               </div>

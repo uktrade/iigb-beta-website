@@ -379,39 +379,43 @@ function addAltTrackingPixel() {
 
 function showLabelsToggle() {
   regionToggle = $('#region-labels-toggle');
-  regionToggleText = $('#region-labels-text');
+  hideToggle = $('.hide-cities');
+  showToggle = $('.show-cities');
   regionToggleBox = $('#region-labels-checkbox');
   if (regionToggle.length > 0) {
     regionToggle.show();
     var regionMapUrl = $('#regionMapImage')[0].src
     regionToggle.click(function() {
-      if (regionToggleText.text() === 'Hide cities') {
+      if (hideToggle.hasClass('active')) {
           regionReplacedMapUrl = regionMapUrl.replace('labelled-', '');
           $('#regionMapImage')[0].src = regionReplacedMapUrl;
-          regionToggleText.text('Show cities');
+          showToggle.addClass('active');
+          hideToggle.removeClass('active');
           regionToggleBox.text('');
         } else {
           $('#regionMapImage')[0].src = regionMapUrl;
-          regionToggleText.text('Hide cities');
+          hideToggle.addClass('active');
+          showToggle.removeClass('active');
           regionToggleBox.html('&checkmark;');
         }
     })
   }
   toggle = $('#clusters-labels-toggle');
-  toggleText = $('#clusters-labels-text');
   toggleBox = $('#clusters-labels-checkbox');
   if (toggle.length > 0) {
     toggle.show();
     var mapUrl = $('#clusterMapImage')[0].src
     toggle.click(function() {
-      if (toggleText.text() === 'Hide cities') {
-            replacedMapUrl = mapUrl.replace('labelled-', '');
-            $('#clusterMapImage')[0].src = replacedMapUrl;
-            toggleText.text('Show cities');
-            toggleBox.text('');
+      if (hideToggle.hasClass('active')) {
+          replacedMapUrl = mapUrl.replace('labelled-', '');
+          $('#clusterMapImage')[0].src = replacedMapUrl;
+          showToggle.addClass('active');
+          hideToggle.removeClass('active');
+          toggleBox.text('');
         } else {
           $('#clusterMapImage')[0].src = mapUrl;
-          toggleText.text('Hide cities');
+          hideToggle.addClass('active');
+          showToggle.removeClass('active');
           toggleBox.html('&checkmark;');
         }
     })
