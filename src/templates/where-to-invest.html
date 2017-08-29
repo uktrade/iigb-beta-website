@@ -28,7 +28,7 @@
     <div class="container">
       <div class="dit-hero__content">
         <div class="row wti--block__page-header">
-          <div class="col-sm-10 col-md-10 wti--block__page-header--text">
+          <div class="col-sm-10 wti--block__page-header--text">
             <h1>{{ labels.where_to_invest[locale.code] }} {{ labels.in_uk[locale.code] }}</h1>
             {% if blockHeader %}
               <h2> 
@@ -36,7 +36,7 @@
                 <span class="lower-case">{{ blockHeader.content.title }}</span>
               </h2>
               <div class="wti--industry-link">
-                <a href="/int/where-to-invest/change-industry" class="dit-btn">{{ labels.change_industry[locale.code] }}</a>
+                <a href="/int/where-to-invest/change-industry" class="dit-btn--call">{{ labels.change_industry[locale.code] }}</a>
               </div>
             {% else %}
               <h2>
@@ -203,7 +203,7 @@
                       </td>
                       <td class="wti--table--cell__underline">
                         <div class="row">
-                          <div class="col-xs-3">
+                          <div class="col-xs-3 align-right">
                             {{ row.cell2 }}
                           </div>
                           <div class="col-xs-9">
@@ -279,7 +279,7 @@
                       </td>
                       <td class="wti--table--cell__underline">
                         <div class="row">
-                          <div class="col-xs-3">
+                          <div class="col-xs-3 align-right">
                             {{ row.cell2 }}
                           </div>
                           <div class="col-xs-9">
@@ -362,7 +362,7 @@
                             <div class="left {{ 'positive' if row.cell2 | int > 0 else 'negative' }}" style="width: {{ row.widthValue }};">
                             </div>
                           </div>
-                          <div class="col-xs-4">
+                          <div class="col-xs-4 align-right">
                             {{ row.cell2 }}
                           </div>
                           <div class="col-xs-4 wti--table--value__salary">
@@ -447,29 +447,29 @@
                       </td>
                       {% for headerRow in airportTable.content.table_headers %}
                           <td>{{ headerRow.cell2 }}</td>
-                          <td>{{ airportTable.content.table_rows[i].cell2 }}</td>
+                          <td class="align-right">{{ airportTable.content.table_rows[i].cell2 }}</td>
                         </tr>
                         <tr class="wti--table--row">
                           <td>{{ headerRow.cell3 }}</td>
-                          <td>{{ airportTable.content.table_rows[i].cell3 }}</td>
+                          <td class="align-right">{{ airportTable.content.table_rows[i].cell3 }}</td>
                         </tr>
                         <tr class="wti--table--row">
                           <td>{{ headerRow.cell4 }}</td>
-                          <td>{{ airportTable.content.table_rows[i].cell4 }}</td>
+                          <td class="align-right">{{ airportTable.content.table_rows[i].cell4 }}</td>
                         </tr>
                         <tr class="wti--table--row">
                           <td>{{ headerRow.cell5 }}</td>
-                          <td>{{ airportTable.content.table_rows[i].cell5 }}</td>
+                          <td class="align-right">{{ airportTable.content.table_rows[i].cell5 }}</td>
                         </tr>
                         <tr class="wti--table--row">
                           <td>{{ headerRow.cell6 }}</td>
-                          <td>{{ airportTable.content.table_rows[i].cell6 }}</td>
+                          <td class="align-right">{{ airportTable.content.table_rows[i].cell6 }}</td>
                         </tr>
                         <tr class="wti--table--row">
                           <td class="wti--table--cell__underline">
                             {{ headerRow.cell7 }}
                           </td>
-                          <td class="wti--table--cell__underline">
+                          <td class="align-right wti--table--cell__underline">
                             {{ airportTable.content.table_rows[i].cell7 }}
                           </td>
                       {% endfor %}
@@ -501,29 +501,29 @@
                         </td>
                         {% for headerRow in airportTable.content.table_headers %}
                             <td>{{ headerRow.cell2 }}</td>
-                            <td>{{ airportTable.content.table_rows[i].cell2 }}</td>
+                            <td class="align-right">{{ airportTable.content.table_rows[i].cell2 }}</td>
                           </tr>
                           <tr class="wti--table--row">
                             <td>{{ headerRow.cell3 }}</td>
-                            <td>{{ airportTable.content.table_rows[i].cell3 }}</td>
+                            <td class="align-right">{{ airportTable.content.table_rows[i].cell3 }}</td>
                           </tr>
                           <tr class="wti--table--row">
                             <td>{{ headerRow.cell4 }}</td>
-                            <td>{{ airportTable.content.table_rows[i].cell4 }}</td>
+                            <td class="align-right">{{ airportTable.content.table_rows[i].cell4 }}</td>
                           </tr>
                           <tr class="wti--table--row">
                             <td>{{ headerRow.cell5 }}</td>
-                            <td>{{ airportTable.content.table_rows[i].cell5 }}</td>
+                            <td class="align-right">{{ airportTable.content.table_rows[i].cell5 }}</td>
                           </tr>
                           <tr class="wti--table--row">
                             <td>{{ headerRow.cell6 }}</td>
-                            <td>{{ airportTable.content.table_rows[i].cell6 }}</td>
+                            <td class="align-right">{{ airportTable.content.table_rows[i].cell6 }}</td>
                           </tr>
                           <tr class="wti--table--row">
                             <td class="wti--table--cell__underline">
                               {{ headerRow.cell7 }}
                             </td>
-                            <td class="wti--table--cell__underline">
+                            <td class="align-right wti--table--cell__underline">
                               {{ airportTable.content.table_rows[i].cell7 }}
                             </td>
                         {% endfor %}
