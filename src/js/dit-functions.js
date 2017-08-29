@@ -59,6 +59,7 @@ function onLoaded() {
     jsSearch()
     responsiveTable()
     playVid()
+    closeVid()
     jsEnhanceExternalLinks()
     addAltTrackingPixel()
   } catch (e) {
@@ -79,8 +80,17 @@ function playVid() {
     $('.dit-hero__content').hide() // Hide jumobtron text from screen readers
     var extVid = $('.video-wrapper').attr('data-video')
     var ytApi = '<iframe width="560" height="315" src="' + extVid + '&amp;modestbranding=1&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>'
-    $('.video-wrapper').addClass('video-active') // This class adds z-index to video-wrapper in order to cover jumbotron
+    $('.video-wrapper').addClass('video-active')
     $('.video-wrapper').append(ytApi)
+  })
+}
+
+function closeVid() {
+  debug('Closing video');
+  $('#closeVid').on('click', function() {
+    $('.dit-hero__content').show();
+    $('.video-wrapper').removeClass('video-active');
+    $('iframe').remove();
   })
 }
 

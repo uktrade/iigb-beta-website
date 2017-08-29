@@ -5,6 +5,7 @@ video {
 }
 
 .video-wrapper {
+  background-color: #000000;
   position: relative;
   min-height: 540px;
   width: 100%;
@@ -12,10 +13,10 @@ video {
 
   iframe {
     position: absolute;
-    top: 0;
+    top: -50px;
     #{$left}: 0;
     width: 100% !important;
-    height: 100% !important;
+    height: 110% !important;
   }
 
 }
@@ -29,4 +30,17 @@ video {
 *::-webkit-media-controls-start-playback-button {
   display: none !important;
   -webkit-appearance: none;
+}
+
+.video-close {
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  right: 20px;
+  background-color: #B00D23;
+  font-size: 21px;
+  line-height: 1em;
+  padding: 10px;
+  text-shadow: none;
+  cursor: pointer;
 }
