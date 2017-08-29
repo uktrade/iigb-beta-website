@@ -44,11 +44,9 @@
 
     a {
       color: $text-colour;
-      border-bottom: 1px solid $tile-border-colour;
-
+      
       &:hover {
         color: $link-colour;
-        border-bottom: 1px solid $link-colour;
       }
     }
   }
