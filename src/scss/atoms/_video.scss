@@ -6,8 +6,9 @@ video {
 
 .video-wrapper {
   position: relative;
-  height: 100%;
+  min-height: 540px;
   width: 100%;
+  display: none;
 
   iframe {
     position: absolute;
@@ -21,6 +22,7 @@ video {
 
 .video-active {
   z-index: 6;
+  display: block;
 }
 
 //hide video play button on iOS

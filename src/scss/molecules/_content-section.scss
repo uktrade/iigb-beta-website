@@ -29,18 +29,6 @@
     margin: flip-side-values(0.18em 0 1.36em 0);
   }
 
-  //Add external link icon
-  // nice to have but would add external icon on non js without a target='_blank'
-  //a:not( [ href*='great.gov.uk'] ):not( [href^='#'] ):not( [href^='/'] ):after {
-  a[target=_blank]:after {
-    content: "";
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    @extend .dit-icon-external-link;
-    margin-left: 4px;
-  }
-
   .dit-big-list {
     &__title {
       font-size: 24px;
@@ -88,9 +76,8 @@
 }
 
 .dit-updated {
-  margin-top: -48px;
-  float: #{$right};
-  font-style: italic;
+  margin-top: 15px;
+  float: #{$left};
   font-size: 14px;
-  margin-bottom: 42px;
+  margin-bottom: 0px;
 }

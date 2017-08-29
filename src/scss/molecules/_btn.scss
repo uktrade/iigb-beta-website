@@ -4,9 +4,10 @@
   border: 3px solid $link-colour;
   border-radius: 6px;
   font-size: 20px;
-  padding: 8px 40px;
+  padding: 8px 20px;
   color: $link-colour;
   background-color: $white;
+  text-shadow: none;
 
   &:hover {
     background: $link-colour;
@@ -105,9 +106,9 @@
 }
 
 .dit-btn--call {
-  border: 2px solid $link-colour;
-  border-radius: 3px;
-  font-size: 24px;
+  border: 3px solid $white;
+  border-radius: 5px;
+  font-size: 21px;
   display: inline-block;
   padding: 8px 20px !important;
   margin: flip-side-values(0 0 16px 15px);

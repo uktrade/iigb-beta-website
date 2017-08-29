@@ -29,3 +29,12 @@ h3 {
     font-size: 20px;
   }
 }
+
+h4 {
+  font-size: 21px;
+  font-weight: 400;
+
+  @media (max-width: $screen-md-max) {
+    font-size: 18px;
+  }
+}
