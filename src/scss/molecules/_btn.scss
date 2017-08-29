@@ -1,6 +1,7 @@
 //_btn.scss
 
 .dit-btn {
+  vertical-align: middle;
   border: 3px solid $link-colour;
   border-radius: 6px;
   font-size: 20px;
@@ -23,6 +24,7 @@
 }
 
 .dit-btn--sm {
+  vertical-align: middle;
   border: 3px solid $link-colour;
   border-radius: 6px;
   font-size: 18px;
@@ -115,8 +117,8 @@
 }
 
 .dit-btn--call {
-  border: 2px solid $link-colour;
-  border-radius: 3px;
+  border: 3px solid $white;
+  border-radius: 5px;
   font-size: 24px;
   font-weight: 300;
   display: inline-block;
@@ -136,8 +138,6 @@
   }
 
   @media (max-width: $screen-md-max) {
-    border: 2px solid $link-colour;
-    border-radius: 3px;
     font-size: 20px;
     font-weight: 300;
     display: inline-block;
@@ -148,8 +148,6 @@
   }
 
   @media (max-width: $screen-xs-max) {
-    border: 2px solid $link-colour !important;
-    border-radius: 3px;
     font-size: 20px;
     font-weight: 300;
     display: inline-block;
@@ -169,29 +167,30 @@
   }
 }
 
-//old format form
-.dit-btn--radio {
-  border: 1px solid $tile-border-colour;
+.dit-btn--region-selector {
+  vertical-align: middle;
+  line-height: 1;
+  border: 3px solid $link-colour;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 100;
-  padding: 8px 30px;
-  color: $text-colour;
+  padding: 6px 9px;
+  color: $link-colour;
   background-color: $white;
 
   &:hover {
-    background: $toc-colour;
-    color: $text-colour;
+    background: $link-colour;
+    color: $white;
+    font-weight: 300;
   }
 
   &:focus {
-    background: $toc-colour;
-    color: $text-colour;
+    background: $link-colour;
+    color: $white;
+    font-weight: 300;
   }
 
-  &.active {
-    color: $text-colour;
-    background-color: $toc-colour;
-    font-weight: 700;
+  @media (max-width: $screen-xs-max) {
+    padding: 8px 4px;
   }
 }

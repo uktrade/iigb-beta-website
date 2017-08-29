@@ -53,12 +53,10 @@ function resolveForms() {
       }
     } else {
       debug('Found a form', form)
-      prepareForm(form)
+      prepareForm(form);
     }
   })
-
 }
-
 
 /** IST FORM New Format **/
 function prepareISTFormNF(form, formBody) {
@@ -106,8 +104,6 @@ function prepareISTFormNF(form, formBody) {
 /** OTHER FORMS **/
 function prepareForm(form) {
   var formBody = $('.dit-form-section__body')
-  // var formWrapper = form.find('div').first()
-  // var width=formBody.width()
   debug('Preparing')
   enhanceForm()
   form.submit(submit)
@@ -116,16 +112,25 @@ function prepareForm(form) {
     debug('Enhancing')
     setJsSwitch(form)
     disableNativeValidation(form)
-    // wrap(formWrapper, 1, width)
     listenInputs(form)
+    prepareAutocomplete()
   }
 
   function submit(e) {
     e.preventDefault()
     if (validateInputs(form)) {
-      // shift(formWrapper, -1 * width, true)
       submitForm(form, formBody)
     }
+  }
+
+  function prepareAutocomplete() {
+    debug('Preparing form autocomplete')
+    form.find('#country').autocomplete({
+      lookup: document.countries,
+      onSelect: function (suggestion) {
+        form.find('#country_en').val(document.countries_en[suggestion.data])
+      }
+    })
   }
 
 }
@@ -210,7 +215,7 @@ function validateField(field, keepErrors) {
 function listenInputs(parent) {
   parent
     .find('input:not([type=hidden])')
-    .filter(':visible')
+    // .filter(':visible')
     .each(function() {
       $(this)
         .blur(function() {
@@ -220,7 +225,7 @@ function listenInputs(parent) {
 
   parent
     .find('select')
-    .filter(':visible')
+    // .filter(':visible')
     .each(function() {
       $(this)
         .change(function() {

@@ -1,6 +1,8 @@
 var geoLocation = require('./geo-location')
 var form = require('./form')
 var equalheight = require('./equalHeight')
+var ioppsToggles = require('./iopps.js');
+var renderInvestmentChart = require('./investment-chart')
 var logger = require('./logger')('DIT Functions')
 var debug = logger.debug
 var error = logger.error
@@ -42,9 +44,7 @@ function init() {
       checkHeight()
       setGradientHeight()
     })
-
   }
-
 }
 
 function onLoaded() {
@@ -57,10 +57,13 @@ function onLoaded() {
     ifOtherSelected()
     search()
     jsSearch()
-    responsiveTable()
     playVid()
     jsEnhanceExternalLinks()
     addAltTrackingPixel()
+    ioppsToggles()
+    renderInvestmentChart()
+    showLabelsToggle()
+    enablePinchZoom()
   } catch (e) {
     error('On loaded failed!', e)
   }
@@ -107,15 +110,18 @@ function addActive() {
   var url = window.location.pathname
   var base_url = '/' + document.base_url + '/'
   var child = ''
-  if (url.match(/\/industries\//)) {
+  if (url.match(/\-in-the-uk\//)) {
+    child = 'where-to-invest/';
+    debug('Adding active style to where to invest')
+  } else if (url.match(/\/industries\//)) {
     child = 'industries/'
     debug('Adding active style to industries')
   } else if (url.match(/\/setup-guide\//)) {
     child = 'setup-guide/'
     debug('Adding active style to setup guide')
-  } else if (url.match('\/location-guide\/')) {
-    child = 'location-guide/'
-    debug('Adding active style to location guide')
+  } else if (url.match('\/where-to-invest\/')) {
+    child = 'where-to-invest/'
+    debug('Adding active style to where to invest')
   } else if (url.match(/\/\w{2,3}\/$/)) {
     debug('Not setting active style on current page')
     child = ''
@@ -328,15 +334,6 @@ function debounce(func, wait, immediate) {
   }
 }
 
-
-
-function responsiveTable() {
-  var isTable = $('table').length
-  if (isTable) {
-    $('table').wrap('<div class="dit-table__responsive" />')
-  }
-}
-
 function selector() {
   $('.lang-link')
     .each(function() {
@@ -378,6 +375,57 @@ function addAltTrackingPixel() {
     // Adds empty alt attribute to tracking pixel (marketing) meaning it's a decorative image so that it passes accessibility
     $('img[src$="https://stags.bluekai.com/site/38648?limit=1"]').attr('alt', '');
   }, 500);
+}
+
+function showLabelsToggle() {
+  regionToggle = $('#region-labels-toggle');
+  hideToggle = $('.hide-cities');
+  showToggle = $('.show-cities');
+  regionToggleBox = $('#region-labels-checkbox');
+  if (regionToggle.length > 0) {
+    regionToggle.show();
+    var regionMapUrl = $('#regionMapImage')[0].src
+    regionToggle.click(function() {
+      if (hideToggle.hasClass('active')) {
+          regionReplacedMapUrl = regionMapUrl.replace('labelled-', '');
+          $('#regionMapImage')[0].src = regionReplacedMapUrl;
+          showToggle.addClass('active');
+          hideToggle.removeClass('active');
+          regionToggleBox.text('');
+        } else {
+          $('#regionMapImage')[0].src = regionMapUrl;
+          hideToggle.addClass('active');
+          showToggle.removeClass('active');
+          regionToggleBox.html('&checkmark;');
+        }
+    })
+  }
+  toggle = $('#clusters-labels-toggle');
+  toggleBox = $('#clusters-labels-checkbox');
+  if (toggle.length > 0) {
+    toggle.show();
+    var mapUrl = $('#clusterMapImage')[0].src
+    toggle.click(function() {
+      if (hideToggle.hasClass('active')) {
+          replacedMapUrl = mapUrl.replace('labelled-', '');
+          $('#clusterMapImage')[0].src = replacedMapUrl;
+          showToggle.addClass('active');
+          hideToggle.removeClass('active');
+          toggleBox.text('');
+        } else {
+          $('#clusterMapImage')[0].src = mapUrl;
+          hideToggle.addClass('active');
+          showToggle.removeClass('active');
+          toggleBox.html('&checkmark;');
+        }
+    })
+  }
+}
+
+function enablePinchZoom() {
+  if (window.location.pathname.split('/')[2] === 'where-to-invest') {
+    document.querySelector('meta[name=viewport]').setAttribute('content','width=device-width,initial-scale=1,maximum-scale=4,user-scalable=yes');
+  }
 }
 
 

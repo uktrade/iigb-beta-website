@@ -1,0 +1,32 @@
+
+.dit-regions {
+	font-size: 20px;
+
+	&__header {
+		font-size: 22px;
+		font-weight: 600;
+	}
+
+	&__info {
+		margin: 8px 0;
+		color: #666;
+	}
+
+	&__form {
+
+		input {
+			border-radius: 3px;
+			height: 38px;
+		}
+
+		.form-control {
+			display: inline-block;
+			width: 70%;
+		}
+	}
+
+	&__link {
+		text-decoration: underline;
+		margin-bottom: 12px;
+	}
+}

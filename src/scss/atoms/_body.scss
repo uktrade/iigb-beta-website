@@ -12,7 +12,7 @@ body {
   max-width:2000px;
   margin: auto;
 
-  @media (max-width: $screen-md-max) {
+  @media (max-width: $screen-sm-max) {
     font-size: 16px;
   }
 

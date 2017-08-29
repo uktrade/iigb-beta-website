@@ -232,5 +232,23 @@
     "urlExtension": "/int/setup-guide/understand-tax",
     "exclusions": [
     ]
+  },
+  {
+    "pageName": "Where to invest",
+    "urlExtension": "/int/where-to-invest",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Where to invest - industry example",
+    "urlExtension": "/int/industries/aerospace/aerospace-in-the-uk",
+    "exclusions": [
+    ]
+  },
+  {
+    "pageName": "Where to invest - region example",
+    "urlExtension": "/int/where-to-invest/scotland",
+    "exclusions": [
+    ]
   }
 ]

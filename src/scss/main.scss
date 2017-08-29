@@ -9,6 +9,7 @@
 @import "utilities/colours";
 @import "utilities/loading";
 @import "utilities/skip-to-content-links";
+@import "utilities/accessibility";
 
 //atoms
 @import "atoms/body";
@@ -18,6 +19,9 @@
 @import "atoms/anchors";
 @import "atoms/table";
 @import "atoms/forms";
+@import "atoms/icons";
+@import "atoms/inputs";
+@import "atoms/paragraphs";
 
 
 //molecules
@@ -39,7 +43,6 @@
 @import "molecules/home-section-anchors";
 @import "molecules/big-list";
 @import "molecules/list-reasons";
-@import "molecules/icons";
 @import "molecules/content-section";
 @import "molecules/form-section";
 @import "molecules/form-section-small";
@@ -52,6 +55,19 @@
 @import "molecules/selector";
 @import "molecules/modal-selector";
 @import "molecules/page-header";
+@import "molecules/regions-selector";
+@import "molecules/generic-section";
+@import "molecules/quote";
+@import "molecules/map";
+@import "molecules/references-list";
+@import "molecules/useful-links";
+@import "molecules/carousel-form";
+@import "molecules/contact-points";
+@import "molecules/investment-highlight";
+@import "molecules/wti-selector";
+@import "molecules/wti-block";
+@import "molecules/regions";
+@import "molecules/phase-banner";
 
 
 //organisms

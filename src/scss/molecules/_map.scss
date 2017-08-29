@@ -1,0 +1,156 @@
+.map-legend {
+	font-weight: 600;
+	border: none;
+	margin-bottom: 20px;
+}
+
+.map-options .multiple-choice {
+  padding-left: 0px;
+}
+
+.map-tools {
+	font-size: 19px;
+
+
+	&__layers {
+		display: inline-block;
+		width: 45%;
+		margin-right: 5%;
+	}
+
+	&__filters {
+		display: inline-block;
+	}
+}
+
+.map-industries {
+	font-size: 19px;
+}
+
+#investment-chart {
+  width: 100%;
+}
+
+#mapCanvas {
+  width: 540px;
+
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
+  }
+
+  .uk-region {
+    fill: #AFAFAF;
+    stroke: #CCC;
+    // display: none;
+  }
+
+  .non-uk-region {
+    fill: #FFFFFF;
+    stroke: #CCC;
+    // display: none;
+  }
+
+  .uk-map {
+    .uk-dot, .uk-region {
+      cursor: pointer;
+    }
+  }
+
+  .uk-mini-map {
+    fill: transparent;
+    stroke: #B3B3B3;
+  }
+
+  .uk-dot {
+    display: none;
+
+    &.scotland {
+      fill: pink;
+    }
+
+    &.northern-ireland {
+      fill: green;
+    }
+
+    &.north-east-england {
+      fill: yellowgreen;
+    }
+
+    &.north-west-england {
+      fill: lightblue;
+    }
+
+    &.yorkshire-and-the-humber {
+      fill: green;
+    }
+
+    &.wales {
+      fill: orange;
+    }
+
+    &.west-midlands {
+      fill: pink;
+    }
+
+    &.east-midlands {
+      fill: orange;
+    }
+
+    &.east-of-england {
+      fill: lightblue;
+    }
+
+    &.south-west-england {
+      fill: yellowgreen;
+    }
+
+    &.south-east-england {
+      fill: green;
+    }
+
+    &.london {
+      fill: purple;
+    }
+  }
+
+  .region-dot {
+    fill: #E9E9E8;
+
+    &.highlight-out{
+      fill: #81CCEB;
+    }
+
+    &.highlight-in {
+      stroke: #0D227F;
+    }
+
+    &.mini-map {
+      fill: #B3B3B3;
+    }
+  }
+
+  .non-uk-dot {
+    display: none;
+  }
+
+  .label-highlight {
+    font-size: 9px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    text-anchor: middle;
+    dominant-baseline: middle;
+
+    &.out {
+      fill: #81CCEB;
+    }
+
+    &.in {
+      fill: black;
+    }
+
+    &.capital {
+      font-size: 10px;
+      font-weight: 600;
+    }
+  }
+}

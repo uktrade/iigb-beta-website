@@ -1,0 +1,19 @@
+#sticky-nav {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+.wti--sector-list, .wti--comparator-list, .wti--region-list {
+	margin-top: 20px;
+
+	&__sector, &__comparator, &__region {
+		font-weight: 300;
+    	padding: 7px;
+	}
+
+}
+
+.wti--comparator-list {
+	padding-top: 20px;
+}

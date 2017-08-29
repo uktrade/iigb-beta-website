@@ -36,9 +36,12 @@
         <img src="/{{assets}}/media/spin.gif" alt="loading_spinner" id="img-load">
       </div>
       <div class="dit-form-wrapper">
-        <form enctype='application/x-www-form-urlencoded' role="form"
-            action="https://forms.invest.great.gov.uk/feedback"
-            method="post" autocomplete="off">
+        <form enctype='application/x-www-form-urlencoded'
+              id="feedback-form"
+              role="form"
+              action="https://forms.invest.great.gov.uk/feedback"
+              method="post" 
+              autocomplete="off">
           <div class="form-group form_top_block">
               <label class="control-label" for="userName">{{ labels.feedback_name[locale.code] }}</label>
               <p class="error-help">{{ labels.form_enter_full_name[locale.code] }}</p>
