@@ -3,6 +3,10 @@
 .modal-lang-selector {
   color: $text-colour;
 
+  p {
+    margin-bottom: 1em;
+  }
+
   ul {
     list-style: none;
     margin: 0;
@@ -11,7 +15,8 @@
   }
 
   li {
-    margin-top: 28px;
+    margin-top: 20px;
+    margin-bottom: 0px;
   }
 
   a {
@@ -47,6 +52,10 @@
 .modal-reg-selector {
   color: $text-colour;
 
+  p {
+    margin-bottom: 1em;
+  }
+
   ul {
     list-style: none;
     margin: 0;
@@ -55,7 +64,8 @@
   }
 
   li {
-    margin-top: 48px;
+    margin-top: 35px;
+    margin-bottom: 0px;
   }
 
   a {

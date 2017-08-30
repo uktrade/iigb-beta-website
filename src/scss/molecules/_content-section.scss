@@ -1,10 +1,8 @@
 //content-section.scss
 
 .dit-content-section {
-  padding: flip-side-values(24px 24px 16px 24px);
-  margin: 60px 0 50px;
+  padding-bottom: 16px;
   background-color: $white;
-  border: 1px solid $tile-border-colour;
   border-bottom: 5px solid $red-line-colour;
   overflow: hidden;
 
@@ -19,31 +17,22 @@
 
   h2 {
     @extend .h1;
-    margin: flip-side-values(24px 0 16px 0);
+    font-size: 36px;
+    margin: flip-side-values(1.5em 0 0.5em 0);
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 24px;
+    }
   }
 
   h3 {
-    margin: flip-side-values(20px 0 24px 0);
-    font-weight: 300;
-  }
-
-  //Add external link icon
-  // nice to have but would add external icon on non js without a target='_blank'
-  //a:not( [ href*='great.gov.uk'] ):not( [href^='#'] ):not( [href^='/'] ):after {
-  a[target=_blank]:after {
-    content: "";
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    @extend .dit-icon-external-link;
-    margin-left: 4px;
+    margin: flip-side-values(0.18em 0 1.36em 0);
   }
 
   .dit-big-list {
     &__title {
       font-size: 24px;
       margin: flip-side-values(20px 0 24px 0);
-      font-weight: 300;
 
       @media (max-width: 991px) {
         font-size: 20px;
@@ -64,8 +53,6 @@
 
     & p {
       font-size: 21px;
-      font-weight: 100;
-      width: 80%;
 
       @media (max-width: $screen-md-max) {
         font-size: 18px;
@@ -73,7 +60,6 @@
 
       @media (max-width: $screen-sm-max) {
         font-size: 16px;
-        width: 100%;
       }
     }
   }
@@ -90,9 +76,8 @@
 }
 
 .dit-updated {
-  margin-top: -48px;
-  float: #{$right};
-  font-style: italic;
+  margin-top: 15px;
+  float: #{$left};
   font-size: 14px;
-  margin-bottom: 42px;
+  margin-bottom: 0px;
 }

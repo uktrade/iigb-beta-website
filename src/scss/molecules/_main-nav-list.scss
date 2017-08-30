@@ -31,9 +31,16 @@
   }
 
   > li > a {
+    text-decoration: none;
     color: $text-colour !important;
     font-size: 16px;
     padding: 4px 0;
+
+    &.nav-link {
+      &:hover {
+        border-bottom: 2px solid #777777;
+      }
+    }
 
     //hack to make it work. Cascading not working
     &.dit-btn--contact {

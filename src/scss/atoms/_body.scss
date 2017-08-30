@@ -3,10 +3,8 @@ html {
 }
 
 body {
-  background-color: $background-colour;
   font-family: Roboto, sans-serif;
-  font-size: 18px;
-  font-weight: 100;
+  font-size: 21px;
   color: $text-colour;
   height: 100%;
   max-width:2000px;
@@ -53,4 +51,8 @@ body {
   #{$left}: 0px;
   #{$right}: 0px;
   background: rgb(255, 255, 255);
+}
+
+.align-right {
+  text-align: right;
 }
