@@ -14,12 +14,10 @@
 
   a {
     color: $text-colour;
-    border-bottom: 1px solid $light-gray;
     padding-bottom: 1px;
 
     &:hover {
       color: $link-colour;
-      border-bottom: 1px solid $link-colour;
     }
   }
 }
