@@ -11,6 +11,7 @@
     color: $white;
     h1 {
       font-size: 24px;
+      font-weight: 500;
     }
   }
 
@@ -22,6 +23,7 @@
 
   &__heading {
     font-size: 32px;
+    font-weight: 500;
 
     @media (max-width: $screen-xs-max) {
       font-size: 40px;
@@ -70,6 +72,7 @@
   &__category {
     h2 {
       font-size: 32px;
+      font-weight: 500;
     }
   }
 
@@ -157,6 +160,7 @@
 }
 
 .autocomplete-suggestions strong {
+  font-weight: normal;
   color: #B00D23;
 }
 
@@ -244,7 +248,7 @@
 }
 
 .dit-not-label {
-  font-weight: 400;
+  font-weight: 300;
   height: 36px;
 }
 

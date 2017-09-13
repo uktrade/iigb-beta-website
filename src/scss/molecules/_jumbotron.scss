@@ -11,7 +11,6 @@
   min-height: 360px;
   border-bottom: 5px solid $red-line-colour;
   background-size: cover;
-  margin-bottom: 0px;
 
   &:before {
     content: '';
@@ -74,6 +73,8 @@
   .glyphicon-play {
     font-size: 24px;
     padding-#{$left}: 14px;
+    color: $background-colour;
+    text-shadow: 0 0 0 white;
     float: #{$right};
   }
 

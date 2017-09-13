@@ -11,11 +11,9 @@
     <div class="container">
         <div class="dit-hero__content">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-sm-10 col-md-10">
                     <h1>{{ pageHeader.content.title }}</h1>
-                </div>
-                <div class="col-md-8 col-sm-10">
-                    {{ pageHeader.content.contents | safe }}
+                    <p id="more-info">{{ pageHeader.content.contents | safe }}</p>
                 </div>
             </div>
         </div>

@@ -1,68 +1,64 @@
 {% if pageHeader.heroImage %}
-  <style>
-    .jumbotron {
-      background-image: url("/{{assets}}/media/hero-img/{{pageHeader.heroImage}}");
-    }
-    @media (max-width: 767px) {
-      .jumbotron {
-        background-image: url("/{{assets}}/media/hero-img-mobile/{{pageHeader.heroImage}}");
-      }
-    }
-  </style>
+    <style>
+        .jumbotron {
+          background-image: url("/{{assets}}/media/hero-img/{{pageHeader.heroImage}}");
+        }
+        @media (max-width: 767px) {
+            .jumbotron {
+              background-image: url("/{{assets}}/media/hero-img-mobile/{{pageHeader.heroImage}}");
+            }
+        }
+    </style>
 {% endif %}
 
 <div class="jumbotron">
-  <div class="container">
-    <div class="dit-hero__content">
+    <div class="container">
+        <div class="dit-hero__content">
 
-      <div class="row">
-        <div class="col-xs-12 dit-jumbotron-content">
-          <h1>{{ pageHeader.content.title }}</h1>
-        </div>
-        <div class="col-md-8 col-sm-10">
-          {{ pageHeader.content.contents | safe }}
-        </div>
-      </div>
+            <div class="row">
+                <div class="col-sm-10 col-md-8 dit-jumbotron-content">
+                    <h1>{{ pageHeader.content.title }}</h1>
+                    {{ pageHeader.content.contents | safe }}
+                </div>
+            </div>
 
-      {% if pageHeader.externalVideo %}
-        <!--[if ! IE]><!-->
-        <p>
-          <a href="#"
-             class="bg-video-inactive bg-video-play dit-text-decoration-none"
-             id="playVid">
-            <span class="dit-btn">{{ labels.watch_video[locale.code] }}
-              <span class="glyphicon glyphicon-play"></span>
-            </span>
-          </a>
-        </p>
-        <!--<![endif]-->
-        <!--[if gte IE 9]>
-        <p>
-          <a href="#"
-             class="bg-video-inactive bg-video-play dit-text-decoration-none"
-             id="playVid">
-              <span class="dit-btn">{{ labels.watch_video[locale.code] }}
-                <span class="glyphicon glyphicon-play"></span>
-              </span>
-          </a>
-        </p>
-        <![endif]-->
-        <!--No videos to show in IE8.-->
-        <!--[if lte IE 8]><![endif]-->
-      {% endif %}
-      {% if pageHeader.externalVideoCN %}
-        <p>
-          <a href="{{pageHeader.externalVideoCN}}" target="_blank">
-            <span class="dit-btn">{{ labels.watch_video[locale.code] }}
-              <span class="glyphicon glyphicon-play"></span>
-            </span>
-          </a>
-        </p>
-       {% endif %}
+            {% if pageHeader.externalVideo %}
+                <!--[if ! IE]><!-->
+                <p>
+                    <a href="#"
+                       class="bg-video-inactive bg-video-play dit-text-decoration-none"
+                       id="playVid">
+                        <span class="dit-btn-home__video">{{ labels.watch_video[locale.code] }}
+                            <span class="glyphicon glyphicon-play"></span>
+                        </span>
+                    </a>
+                </p>
+                <!--<![endif]-->
+                <!--[if gte IE 9]>
+                <p>
+                    <a href="#"
+                       class="bg-video-inactive bg-video-play dit-text-decoration-none"
+                       id="playVid">
+                            <span class="dit-btn-home__video">{{ labels.watch_video[locale.code] }}
+                                <span class="glyphicon glyphicon-play"></span>
+                            </span>
+                    </a>
+                </p>
+                <![endif]-->
+                <!--No videos to show in IE8.-->
+                <!--[if lte IE 8]><![endif]-->
+            {% endif %}
+            {% if pageHeader.externalVideoCN %}
+                <p>
+                    <a href="{{pageHeader.externalVideoCN}}" target="_blank">
+                        <span class="dit-btn-home__video">{{ labels.watch_video[locale.code] }}
+                            <span class="glyphicon glyphicon-play"></span>
+                        </span>
+                    </a>
+                </p>
+           {% endif %}
+        </div>
     </div>
-  </div>
+    <div class="video-wrapper" data-video="{{pageHeader.externalVideo}}"></div>
 
-  <div class="video-wrapper" data-video="{{pageHeader.externalVideo}}">
-    <span id="closeVid" class="video-close">{{labels.close[locale.code]}}</span>
-  </div>
 </div>

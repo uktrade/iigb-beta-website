@@ -7,22 +7,21 @@
   -->
 
 {% if firstSection.content %}
-    <section class="dit-content-section">
-        <div class="row">
-            <div class="col-md-12 dit-content-section__lead">
-                <h2 class="dit-content-section__heading">{{firstSection.content.title}}</h2>
-            </div>
-            <div class="col-md-8">
-                {{firstSection.content.contents|safe}}
-            </div>
-            <ul class="dit-list-reasons">
-                {% for l in firstSection.content.list %}
-                    <li class="dit-list-reasons__item">
-                        <div class="dit-icon dit-icon-{{l.icon}}"></div>
-                        {{l.text | safe}}
-                    </li>
-                {% endfor %}
-            </ul>
+<section class="dit-content-section">
+    <div class="row">
+        <div class="col-md-12 dit-content-section__lead">
+            <h2 class="dit-content-section__heading">{{firstSection.content.title}}</h2>
+            {{firstSection.content.contents|safe}}
+            <!--<h3 class="dit-content-section__subheading">{{firstSection.content.listTitle}}</h3>-->
         </div>
-    </section>
+        <ul class="dit-list-reasons">
+        {% for l in firstSection.content.list %}
+            <li class="dit-list-reasons__item">
+                <div class="dit-icon dit-icon-{{l.icon}}"></div>
+                {{l.text | safe}}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</section>
 {% endif %}
