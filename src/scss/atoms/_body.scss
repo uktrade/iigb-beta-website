@@ -3,14 +3,16 @@ html {
 }
 
 body {
+  background-color: $background-colour;
   font-family: Roboto, sans-serif;
-  font-size: 21px;
+  font-size: 18px;
+  font-weight: 100;
   color: $text-colour;
   height: 100%;
   max-width:2000px;
   margin: auto;
 
-  @media (max-width: $screen-sm-max) {
+  @media (max-width: $screen-md-max) {
     font-size: 16px;
   }
 
@@ -51,8 +53,4 @@ body {
   #{$left}: 0px;
   #{$right}: 0px;
   background: rgb(255, 255, 255);
-}
-
-.align-right {
-  text-align: right;
 }

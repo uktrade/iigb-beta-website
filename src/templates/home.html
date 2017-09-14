@@ -9,31 +9,25 @@
 
 <div id="content" tabindex="-1"></div> <!--"Skip to content" link navigates to this in order to skip naviagtion links-->
 
-<div class="jumbotron--home">
-  {% include "partials/jumbotron.html" %}
-</div>
+{% include "partials/jumbotron.html" %}
 
 <main role="main" class="container">
 
-  {% if whyTheUk %}
-    {% include "partials/why-the-uk.html" %}
-  {% endif %}
-
-  <section class="dit-content-section">
-      <div class="row">
-        <div class="col-md-12">
-          {{ markups.tilesWithSideDescription( header = labels.great_british_industries[locale.code], list = tileItems, base = base, assets = assets  ) }}
-          <div class="dit-section-cta">
-            <a href="industries" class="dit-btn">{{ labels.discover[locale.code] }}</a>
-          </div>
+<section class="dit-content-section">
+    <div class="row">
+      <div class="col-md-12">
+        {{ markups.tilesWithSideDescription( header = labels.great_british_industries[locale.code], list = tileItems, base = base, assets = assets  ) }}
+        <div class="dit-section-cta">
+          <a href="industries" class="dit-btn">{{ labels.discover[locale.code] }}</a>
         </div>
       </div>
-  </section>
+    </div>
+</section>
 
 
-  {{ markups.bullet_list( header = listHeader, list = listItems, base = base  ) }}
+{{ markups.bullet_list( header = listHeader, list = listItems, base = base  ) }}
 
-  {% include "partials/about-us.html" %}
+{% include "partials/about-us.html" %}
 
 
 </main>

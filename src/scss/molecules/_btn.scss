@@ -1,31 +1,32 @@
 //_btn.scss
 
 .dit-btn {
-  vertical-align: middle;
   border: 3px solid $link-colour;
   border-radius: 6px;
   font-size: 20px;
-  padding: 8px 20px;
+  font-weight: 100;
+  padding: 8px 40px;
   color: $link-colour;
   background-color: $white;
-  text-shadow: none;
 
   &:hover {
     background: $link-colour;
     color: $white;
+    font-weight: 300;
   }
 
   &:focus {
     background: $link-colour;
     color: $white;
+    font-weight: 300;
   }
 }
 
 .dit-btn--sm {
-  vertical-align: middle;
   border: 3px solid $link-colour;
   border-radius: 6px;
   font-size: 18px;
+  font-weight: 100;
   padding: 8px 16px;
   color: $link-colour;
   background-color: $white;
@@ -33,11 +34,13 @@
   &:hover {
     background: $link-colour;
     color: $white;
+    font-weight: 300;
   }
 
   &:focus {
     background: $link-colour;
     color: $white;
+    font-weight: 300;
   }
 
   @media (max-width: $screen-xs-max) {
@@ -49,6 +52,7 @@
   border: 2px solid $link-colour;
   border-radius: 3px;
   font-size: 16px;
+  font-weight: 100;
   display: inline-block;
   padding: 2px 12px;
   margin-#{$left}: 8px;
@@ -69,6 +73,7 @@
     border: 2px solid $link-colour;
     border-radius: 3px;
     font-size: 16px;
+    font-weight: 100;
     display: inline-block;
     color: $white !important;
     background-color: $link-colour;
@@ -80,6 +85,7 @@
     border: 2px solid $link-colour !important;
     border-radius: 3px;
     font-size: 16px;
+    font-weight: 100;
     display: inline-block;
     padding: 2px 12px;
     color: $white !important;
@@ -92,6 +98,7 @@
   border: 3px solid $background-colour;
   border-radius: 6px;
   font-size: 20px;
+  font-weight: 100;
   padding: 8px 40px;
   margin-top: 12px;
   display: inline-block;
@@ -108,9 +115,10 @@
 }
 
 .dit-btn--call {
-  border: 3px solid $white;
-  border-radius: 5px;
-  font-size: 21px;
+  border: 2px solid $link-colour;
+  border-radius: 3px;
+  font-size: 24px;
+  font-weight: 300;
   display: inline-block;
   padding: 8px 20px !important;
   margin: flip-side-values(0 0 16px 15px);
@@ -128,7 +136,10 @@
   }
 
   @media (max-width: $screen-md-max) {
+    border: 2px solid $link-colour;
+    border-radius: 3px;
     font-size: 20px;
+    font-weight: 300;
     display: inline-block;
     color: $white !important;
     background-color: $link-colour;
@@ -137,7 +148,10 @@
   }
 
   @media (max-width: $screen-xs-max) {
+    border: 2px solid $link-colour !important;
+    border-radius: 3px;
     font-size: 20px;
+    font-weight: 300;
     display: inline-block;
     padding: 4px 20px !important;
     color: $white !important;
@@ -155,30 +169,29 @@
   }
 }
 
-.dit-btn--region-selector {
-  vertical-align: middle;
-  line-height: 1;
-  border: 3px solid $link-colour;
+//old format form
+.dit-btn--radio {
+  border: 1px solid $tile-border-colour;
   border-radius: 6px;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 100;
-  padding: 6px 9px;
-  color: $link-colour;
+  padding: 8px 30px;
+  color: $text-colour;
   background-color: $white;
 
   &:hover {
-    background: $link-colour;
-    color: $white;
-    font-weight: 300;
+    background: $toc-colour;
+    color: $text-colour;
   }
 
   &:focus {
-    background: $link-colour;
-    color: $white;
-    font-weight: 300;
+    background: $toc-colour;
+    color: $text-colour;
   }
 
-  @media (max-width: $screen-xs-max) {
-    padding: 8px 4px;
+  &.active {
+    color: $text-colour;
+    background-color: $toc-colour;
+    font-weight: 700;
   }
 }
