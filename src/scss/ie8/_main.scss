@@ -39,6 +39,11 @@
   &--uk {
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
                     src= '/assets/media/flags/flag-uk.png', sizingMethod='scale');
+  }  
+
+  &--fr {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src= '/assets/media/flags/flag-fr.png', sizingMethod='scale');
   }
 }
 

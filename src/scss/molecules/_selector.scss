@@ -40,6 +40,10 @@
 
   &--uk {
     background-image: url(../media/flags/flag-uk.svg);
+  }  
+
+  &--fr {
+    background-image: url(../media/flags/flag-fr.svg);
   }
 
   @media (max-width: $screen-xs-max) {
