@@ -1,0 +1,3 @@
+[submodule "s3-rewrite"]
+	path = conf/s3
+	url = git@github.com:uktrade/great-s3-rewrites.git
