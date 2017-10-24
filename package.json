@@ -30,7 +30,7 @@
     "integration-tests": "./lib/run-integration-tests.sh",
     "browser-test-full": "node_modules/.bin/wdio conf/parallel.conf.js",
     "browser-test-single": "node_modules/.bin/wdio conf/single.conf.js",
-    "postinstall": "npm install uktrade/iigb-beta-structure#\"$npm_package_config_cms_branch\" github:uktrade/iigb-beta-structure#\"$npm_package_config_cms_branch\"",
+    "postinstall": "npm install uktrade/iigb-beta-structure#\"$npm_package_config_cms_branch\" github:uktrade/iigb-beta-content#\"$npm_package_config_cms_branch\"",
     "release": "node_modules/iigb-aws-helpers/release.sh",
     "rollback": "node_modules/iigb-aws-helpers/rollback.sh"
   },
